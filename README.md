@@ -83,7 +83,7 @@ and low failed these checks; enrichment and verification stay at low. Memo calls
 | 3 | Memo numbers linked to correct calculations and source evidence | [`outputs/memo.md`](outputs/memo.md) cites claims C1–C10 → [`grading/claims.csv`](grading/claims.csv), checked against [`grading/ranking.csv`](grading/ranking.csv) by code and by the course checker; comparisons quote code-computed facts verbatim ([`outputs/memo_inputs.json`](outputs/memo_inputs.json)); quoted review IDs come from the bounded evidence pack; [traced review](#one-real-review-traced-end-to-end); rejected drafts and attempts in [`evals/memo/`](evals/memo/) |
 | 4 | Coherent recommendation, alternatives and limitations | [Recommendation](#recommendation-stage-6-memo-code-checked) section and [`outputs/memo.md`](outputs/memo.md) (billing-support; usability, playback and access compared); [Limitations](#limitations) |
 | **Testing & evaluation** | | |
-| 5 | 50 human labels, per-field comparisons and error analysis | **Pending** — Jack labels [`evals/golden_50_labels.csv`](evals/golden_50_labels.csv) ([definitions](evals/golden_50_DEFINITIONS.md)); comparison script ready: `python -m pipeline eval golden` → `evals/golden/` |
+| 5 | 50 human labels, per-field comparisons and error analysis | **Pending** — Jack labels [`evals/golden_50_labels.xlsx`](evals/golden_50_labels.xlsx) (dropdowns; same rows as [the CSV](evals/golden_50_labels.csv)) ([definitions](evals/golden_50_DEFINITIONS.md)); comparison script ready: `python -m pipeline eval golden` → `evals/golden/` |
 | 6 | Independent verification plus planted-error and injection tests | Blind verifier on 500 ([`evals/verify/verify_summary.json`](evals/verify/verify_summary.json)) with 16 disagreements hand-read ([`DISAGREEMENTS.md`](evals/verify/DISAGREEMENTS.md)); planted errors 40/40 caught ([`evals/planted/`](evals/planted/)); injection 6/6 ([`evals/injection/`](evals/injection/)) |
 | 7 | Real 100-review cold/warm pilot, correct offline calculator, demonstrated retry, spending and recovery controls | [`cost/`](cost/): cold/warm pilot ([`cost/README.md`](cost/README.md), all 4 attempts), [`cost/report.md`](cost/report.md), `python -m pipeline cost --replay`, doubling test; retries/quarantine and spend reservations in [`pipeline/enrich.py`](pipeline/enrich.py) / [`pipeline/state.py`](pipeline/state.py); kill-and-resume in [`evals/resume/`](evals/resume/); [recovery pass](#recovery-pass) in [`evals/recovery/`](evals/recovery/) |
 | **Working result** | | |
@@ -169,7 +169,9 @@ Requested by Jack after the run (2026-10-21), and disclosed in full in [`evals/r
 - **Blind verifier:** [`evals/verify/DISAGREEMENTS.md`](evals/verify/DISAGREEMENTS.md). Of 16 hand-read disagreements,
   enrichment is better in 7, the verifier in 8, and 1 is ambiguous. The main patterns are enrichment over-using `catalog`
   for general praise, and severity 2 vs 3 for premium-gated controls (both directions).
-- **Golden 50:** `evals/golden_50_labels.csv` has blank label columns, with definitions alongside, for Jack to fill. No
+- **Golden 50:** `evals/golden_50_labels.xlsx` (dropdowns for topic, intent, severity, needs_review and ambiguous; built
+  by `evals/make_golden_xlsx.py`) and the same rows in `evals/golden_50_labels.csv` have blank label columns, with
+  definitions alongside, for Jack to fill. No
   model drafted, pre-filled or suggested them. Then run `python -m pipeline eval golden`. It reports topic, intent and
   severity agreement, severity and sentiment MAE (±0.3 tolerance, declared in advance), quote-substring checks, unsupported
   entities, needs_review, ambiguous cases and confusion tables. These 50 cases are diagnostic, not a population estimate.

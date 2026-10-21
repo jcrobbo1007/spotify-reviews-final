@@ -1,4 +1,4 @@
-# Golden 50 — labelling sheet (Jack fills `golden_50_labels.csv`; all label columns start blank)
+# Golden 50 — labelling sheet (Jack fills `golden_50_labels.xlsx`, which has dropdowns, or the same rows in `golden_50_labels.csv`; all label columns start blank)
 
 Nothing here was pre-filled, drafted or suggested by a model. The pipeline classifies these 50 texts as part of the
 declared subset, but these human labels are never used as prompts, examples, thresholds or grouping inputs.
@@ -47,4 +47,4 @@ General "bad app" is a complaint; do not infer a specific defect.
 
 Cancellation intent does not automatically raise severity. Missing context → `needs_review`; do not invent impact.
 
-Run the comparison after labelling: `python -m pipeline eval golden`
+Run the comparison after labelling: `python -m pipeline eval golden` (reads the .xlsx if any row is filled there, otherwise the .csv)

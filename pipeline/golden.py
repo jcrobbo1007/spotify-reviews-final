@@ -24,17 +24,51 @@ def parse_alts(s):
     return out
 
 
+LABELS_XLSX = common.ROOT / "evals" / "golden_50_labels.xlsx"
+
+
+def _cell(v):
+    if v is None:
+        return ""
+    if isinstance(v, bool):
+        return "true" if v else "false"
+    if isinstance(v, float) and v.is_integer():
+        return str(int(v))
+    return str(v)
+
+
+def load_labels():
+    """Read Jack's labels from the dropdown workbook if any row is filled there, else from the CSV."""
+    csv_rows = list(csv.DictReader(open(LABELS, encoding="utf-8-sig", newline="")))  # CSV has a BOM for Excel
+    if LABELS_XLSX.exists():
+        from openpyxl import load_workbook
+        ws = load_workbook(LABELS_XLSX, read_only=True)["Labels"]
+        it = ws.iter_rows(values_only=True)
+        hdr = [str(h) for h in next(it)]
+        xrows = [{h: _cell(v) for h, v in zip(hdr, row)} for row in it if row and row[0]]
+        if any(r["topic"].strip() for r in xrows):
+            return xrows, LABELS_XLSX.name
+    return csv_rows, LABELS.name
+
+
+def load_predictions():
+    import gzip
+    plain, gz = common.OUT / "records.jsonl", common.ROOT / "grading" / "records.jsonl.gz"
+    f = open(plain, encoding="utf-8") if plain.exists() else gzip.open(gz, "rt", encoding="utf-8")
+    with f:
+        return {r["review_id"]: r for r in map(json.loads, f)}
+
+
 def main():
-    rows = list(csv.DictReader(open(LABELS, encoding="utf-8-sig", newline="")))  # sheet is saved with a BOM for Excel
+    rows, source = load_labels()
     filled = [r for r in rows if r["topic"].strip() and r["intent"].strip() and r["severity"].strip()]
     if len(filled) < len(rows):
-        print(f"{len(rows) - len(filled)} of {len(rows)} golden rows are not labelled yet; fill evals/golden_50_labels.csv first.")
+        print(f"{len(rows) - len(filled)} of {len(rows)} golden rows are not labelled yet in {source}; "
+              "fill evals/golden_50_labels.xlsx (dropdowns) or .csv first.")
         if not filled:
             return None
-    preds = {}
-    for line in open(common.OUT / "records.jsonl", encoding="utf-8"):
-        r = json.loads(line)
-        preds[r["review_id"]] = r
+    print(f"labels read from {source}")
+    preds = load_predictions()
     EV.mkdir(parents=True, exist_ok=True)
     out, tot = [], Counter()
     conf = {f: Counter() for f in ("topic", "intent")}
