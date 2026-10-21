@@ -5,9 +5,12 @@ _Last updated: 2026-10-21 09:10 PDT. Recovery pass done and pushed; nothing is r
 ## Waiting on Jack (blocking items first)
 1. **Label the golden 50** in `evals/golden_50_labels.csv` (blank columns; definitions in `evals/golden_50_DEFINITIONS.md`).
    Then run `python -m pipeline eval golden` and add the results to the README "Results summary" (currently says pending).
-2. **Repo history has two 83 MB files** (`outputs/records.jsonl`, `outputs/enriched.jsonl`) from commit 45f8cd2. They hold no
-   secrets (labels, IDs, quotes from the CC0 dataset) and are no longer tracked; gzipped copies are. Removing them from
-   history needs a rewrite and force-push of the public repo, so I left it for you. `.git` is 154 MB. Your call.
+2. ~~Repo history has two 83 MB files~~ **Done (your request):** history rewritten with `git filter-repo` and
+   force-pushed. Removed from every commit: the plain `outputs/records.jsonl` / `outputs/enriched.jsonl`, their
+   `outputs/*.jsonl.gz` copies, the plain `outputs/calls_raw_responses.jsonl`, and the superseded pre-recovery blob of
+   `outputs/full_corpus_accounting.jsonl.gz`. The two record files are release assets
+   ([data-v1](https://github.com/jcrobbo1007/spotify-reviews-final/releases/tag/data-v1)). Commit hashes after milestone 1
+   changed; the table below uses the new ones. Backup bundle of the old history: kept locally outside the repo.
 3. **Drive link for the raw CSV:** CLAUDE.md asks the README to link the Drive source. I don't have it; the README links
    the Kaggle source and records the SHA-256. Paste the Drive link if you want it added.
 4. ~~40 quarantined subset reviews~~ **Done (recovery pass, your request):** 30 salvaged from saved truncated responses
@@ -27,12 +30,12 @@ conservative enrichment projection fits $4.00 → 173,000 (`config/run_decisions
 | Milestone | Commit | Result |
 |---|---|---|
 | 1 Ingest + calculator + 100 pilot | c6cfb11 | brief counts match; final pilot: 100/100 cold, warm 0 calls |
-| 2 500 run + refresh | 4a18dc4 | 500/500, $0.008424 |
-| 3 10,000 run + refresh | 61bb629 | 10,000/10,000, +$0.137564 |
-| 4 Full subset + resume demo | 06ec5ea | 172,960 completed; kill mid-batch, resume, 0 completed IDs resent |
-| 5 Verify/group/rank/memo/export/checker | 45f8cd2 (+0749fcc gz) | verifier 0.900/0.942/0.888; planted 40/40; injection 6/6; checker: only the 40 quarantines |
-| 6 DB + dashboard + README | 557a4c9 | Supabase loaded, RLS anon read-only; https://spotify-reviews-final-energy-43a6.vercel.app (public); dashboard ranking = ranking.csv (35/35) |
-| 7 Recovery pass + memo regenerated at effort high | see git log | 172,999 completed, 1 quarantined; memo passed first try at high; DB reloaded; live API = ranking.csv |
+| 2 500 run + refresh | 797ecf5 | 500/500, $0.008424 |
+| 3 10,000 run + refresh | 7a0e9b5 | 10,000/10,000, +$0.137564 |
+| 4 Full subset + resume demo | fbba714 | 172,960 completed; kill mid-batch, resume, 0 completed IDs resent |
+| 5 Verify/group/rank/memo/export/checker | b1c8526 | verifier 0.900/0.942/0.888; planted 40/40; injection 6/6; checker: only the 40 quarantines |
+| 6 DB + dashboard + README | 36c8e11 | Supabase loaded, RLS anon read-only; https://spotify-reviews-final-energy-43a6.vercel.app (public); dashboard ranking = ranking.csv (35/35) |
+| 7 Recovery pass + memo regenerated at effort high | bce05c3 | 172,999 completed, 1 quarantined; memo passed first try at high; DB reloaded; live API = ranking.csv |
 
 ## Deviations (all disclosed in README / run_decisions.json)
 - Recovery pass on the 40 quarantines (your request) and one memo regeneration at effort high (your approval), after

@@ -18,7 +18,7 @@ inspected without paid model calls, and the ranking reruns deterministically.
 |---|---|---|
 | Source rows accounted for | 660,622 (all brief counts match) | [`outputs/ingestion_report.json`](outputs/ingestion_report.json) |
 | Declared subset | 173,000 = analysis_10000 + golden 50 + 162,950 seeded-random | [`outputs/scope/subset_manifest.json`](outputs/scope/subset_manifest.json) |
-| Completed | **172,999** (99.9994% of the subset; 172,960 before the [recovery pass](#recovery-pass)) | [`grading/records.jsonl.gz`](grading/records.jsonl.gz) |
+| Completed | **172,999** (99.9994% of the subset; 172,960 before the [recovery pass](#recovery-pass)) | [`grading/records.jsonl.gz`](grading/records.jsonl.gz); release [data-v1](https://github.com/jcrobbo1007/spotify-reviews-final/releases/tag/data-v1) |
 | Quarantined in subset | **1** (`refusal`; text written in look-alike Cherokee letters). Originally 40: 30 output-cap, 10 refusals | [`outputs/quarantine.jsonl`](outputs/quarantine.jsonl) |
 | Empty-text quarantines / not in model scope | 13 / 487,609 | [`outputs/full_corpus_accounting.jsonl.gz`](outputs/full_corpus_accounting.jsonl.gz) |
 | Exact-text cache reuse | 40,168 rows reuse one of 132,831 model-classified distinct texts | [`outputs/run_summary.json`](outputs/run_summary.json) |
@@ -99,6 +99,11 @@ flowchart LR
 | 5 Rank | code (`pipeline/rank.py`) | membership + records → `ranking.csv`, `aggregates.csv` | none; deterministic |
 | 6 Memo | `prompts/memo_v1.md` + code checks | ranking, aggregates, code-computed facts, ≤3 quotes per top issue → `memo.md`, `claims.csv` | regenerate ≤2 with problem list, then fail loudly |
 
+Full per-record outputs (`records.jsonl.gz`, 173,000 rows; `enriched.jsonl.gz`, completed only) are attached to the
+GitHub release [**data-v1**](https://github.com/jcrobbo1007/spotify-reviews-final/releases/tag/data-v1)
+([records](https://github.com/jcrobbo1007/spotify-reviews-final/releases/download/data-v1/records.jsonl.gz),
+[enriched](https://github.com/jcrobbo1007/spotify-reviews-final/releases/download/data-v1/enriched.jsonl.gz)). They were
+moved out of git history to keep the repo small; `grading/records.jsonl.gz` holds the same final records.
 Each stage logs to [`outputs/run_log.jsonl`](outputs/run_log.jsonl). State is in `state/pipeline.sqlite`, not committed and
 rebuilt by `prepare`. Each batch is committed in one transaction, and raw model responses are saved
 ([`outputs/calls_raw_responses.jsonl.gz`](outputs/calls_raw_responses.jsonl.gz)).

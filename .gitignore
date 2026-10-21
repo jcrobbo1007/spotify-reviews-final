@@ -13,3 +13,5 @@ outputs/scope/subset_*.csv
 outputs/calls_raw_responses.jsonl
 outputs/enriched.jsonl
 outputs/records.jsonl
+outputs/records.jsonl.gz
+outputs/enriched.jsonl.gz
