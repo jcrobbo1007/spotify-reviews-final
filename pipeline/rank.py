@@ -44,8 +44,10 @@ def read_membership(path):
 
 
 def read_severity(records_path):
+    import gzip
     sev = {}
-    with open(records_path, encoding="utf-8") as f:
+    opener = gzip.open if str(records_path).endswith(".gz") else open
+    with opener(records_path, "rt", encoding="utf-8") as f:
         for line in f:
             r = json.loads(line)
             if r.get("status") == "completed":

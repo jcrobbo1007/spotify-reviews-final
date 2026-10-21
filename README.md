@@ -170,7 +170,7 @@ python -m pipeline cost --replay                             # offline calculato
 python -m pipeline cost --pilot --paid --mode cold           # the paid 100-review pilot (then --mode warm)
 ```
 ```bash
-python -m pipeline rank                                      # regenerate ranking.csv from saved files, no model
+python -m pipeline rank                                      # ranking.csv from grading/membership.csv + records.jsonl.gz, no model
 ```
 ```bash
 python -m pipeline eval golden                               # Jack's labels vs predictions (after labelling)
