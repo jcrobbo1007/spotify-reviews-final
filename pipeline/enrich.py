@@ -245,7 +245,8 @@ class Enricher:
                          "attempt": max(a for _, _, a in group) + 1}
         return reqs, meta
 
-    def run_wave(self, texts, scope_ids, max_requests=REQUESTS_PER_WAVE):
+    def run_wave(self, texts, scope_ids, max_requests=None):
+        max_requests = max_requests or REQUESTS_PER_WAVE  # read at call time (was bound at import: bug)
         # Resume any batch submitted before an interruption instead of resubmitting it.
         row = self.db.execute("SELECT batch_id FROM inflight WHERE role='enrich' LIMIT 1").fetchone()
         if row:

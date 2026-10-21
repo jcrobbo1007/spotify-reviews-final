@@ -1,0 +1,36 @@
+[demo 00:52:01] $ -m pipeline run --paid --scope 10000 --stages enrich --requests-per-wave 50
+[demo 00:52:01] calls.jsonl lines before start: 10
+[enrich] start phase=initial label_config=claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups cap_usd=5.0 spent_usd=0.025619 reserved_usd=0
+[enrich] cache_fanout rows=937
+[enrich] batch_submitted batch_id=msgbatch_01VWmJnKDD21CPSQTFEXM1va requests=100 reviews=4953 reserved_usd=0.154101 phase=initial
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+  batch msgbatch_01VWmJnKDD21CPSQTFEXM1va: in_progress processing=100 succeeded=0 errored=0
+[enrich] batch_committed batch_id=msgbatch_01VWmJnKDD21CPSQTFEXM1va completed_reps=4953 wait_s=497.4 usd=0.084542 cap_usd=5.0 spent_usd=0.110162 reserved_usd=0
+[enrich] cache_fanout rows=565
+[enrich] batch_submitted batch_id=msgbatch_01StzkxtfCFGecLnrKmxSFnJ requests=62 reviews=3016 reserved_usd=0.095502 phase=initial
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+  batch msgbatch_01StzkxtfCFGecLnrKmxSFnJ: in_progress processing=62 succeeded=0 errored=0
+[enrich] batch_committed batch_id=msgbatch_01StzkxtfCFGecLnrKmxSFnJ completed_reps=3016 wait_s=436.5 usd=0.053021 cap_usd=5.0 spent_usd=0.163183 reserved_usd=0
+[enrich] cache_fanout rows=29
+[enrich] finished completed=10000 not_in_model_scope=487609 pending=163000 quarantined=13 cap_usd=5.0 spent_usd=0.163183 reserved_usd=0
+[run] enrich_stage_done scope=10000 wall_s=939.7 completed=10000 not_in_model_scope=487609 pending=163000 quarantined=13
+{'completed': 10000, 'not_in_model_scope': 487609, 'pending': 163000, 'quarantined': 13}
+ledger: {'cap_usd': 5.0, 'spent_usd': 0.163183, 'reserved_usd': 0}
+[demo 01:07:41] run ended before the kill point (returncode 0); no interruption happened

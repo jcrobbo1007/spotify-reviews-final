@@ -13,3 +13,13 @@
 {"ts":"2026-10-21T00:51:19-0700","stage":"enrich","event":"cache_fanout","rows":21}
 {"ts":"2026-10-21T00:51:20-0700","stage":"enrich","event":"finished","completed":500,"not_in_model_scope":487609,"pending":172500,"quarantined":13,"cap_usd":5.0,"spent_usd":0.025619,"reserved_usd":0}
 {"ts":"2026-10-21T00:51:20-0700","stage":"run","event":"enrich_stage_done","scope":"500","wall_s":440.1,"completed":500,"not_in_model_scope":487609,"pending":172500,"quarantined":13}
+{"ts":"2026-10-21T00:52:02-0700","stage":"enrich","event":"start","phase":"initial","label_config":"claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups","cap_usd":5.0,"spent_usd":0.025619,"reserved_usd":0}
+{"ts":"2026-10-21T00:52:02-0700","stage":"enrich","event":"cache_fanout","rows":937}
+{"ts":"2026-10-21T00:52:04-0700","stage":"enrich","event":"batch_submitted","batch_id":"msgbatch_01VWmJnKDD21CPSQTFEXM1va","requests":100,"reviews":4953,"reserved_usd":0.154101,"phase":"initial"}
+{"ts":"2026-10-21T01:00:22-0700","stage":"enrich","event":"batch_committed","batch_id":"msgbatch_01VWmJnKDD21CPSQTFEXM1va","completed_reps":4953,"wait_s":497.4,"usd":0.084542,"cap_usd":5.0,"spent_usd":0.110162,"reserved_usd":0}
+{"ts":"2026-10-21T01:00:22-0700","stage":"enrich","event":"cache_fanout","rows":565}
+{"ts":"2026-10-21T01:00:23-0700","stage":"enrich","event":"batch_submitted","batch_id":"msgbatch_01StzkxtfCFGecLnrKmxSFnJ","requests":62,"reviews":3016,"reserved_usd":0.095502,"phase":"initial"}
+{"ts":"2026-10-21T01:07:40-0700","stage":"enrich","event":"batch_committed","batch_id":"msgbatch_01StzkxtfCFGecLnrKmxSFnJ","completed_reps":3016,"wait_s":436.5,"usd":0.053021,"cap_usd":5.0,"spent_usd":0.163183,"reserved_usd":0}
+{"ts":"2026-10-21T01:07:40-0700","stage":"enrich","event":"cache_fanout","rows":29}
+{"ts":"2026-10-21T01:07:41-0700","stage":"enrich","event":"finished","completed":10000,"not_in_model_scope":487609,"pending":163000,"quarantined":13,"cap_usd":5.0,"spent_usd":0.163183,"reserved_usd":0}
+{"ts":"2026-10-21T01:07:41-0700","stage":"run","event":"enrich_stage_done","scope":"10000","wall_s":939.7,"completed":10000,"not_in_model_scope":487609,"pending":163000,"quarantined":13}

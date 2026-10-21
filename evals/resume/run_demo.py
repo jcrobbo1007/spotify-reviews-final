@@ -1,4 +1,5 @@
-"""Interruption/resume demo for the 10,000 stage (CLAUDE.md "Interruption / resume evidence").
+"""Interruption/resume demo, run during the 173,000-subset stage (planned for the 10,000 stage, but a
+wave-size bug let that stage finish in 2 waves before the kill point; disclosed in STATUS/README) (CLAUDE.md "Interruption / resume evidence").
 
 1. start `python -m pipeline run --paid --scope 10000` (one worker, 50 requests per wave)
 2. after 2 waves are committed and a 3rd batch is submitted (in flight), hard-kill the process
@@ -17,8 +18,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 LOG = ROOT / "evals" / "resume" / "terminal.log"
-CMD = [str(ROOT / ".venv" / "Scripts" / "python.exe"), "-u", "-m", "pipeline", "run", "--paid", "--scope", "10000",
-       "--stages", "enrich", "--requests-per-wave", "50"]
+CMD = [str(ROOT / ".venv" / "Scripts" / "python.exe"), "-u", "-m", "pipeline", "run", "--paid", "--scope", "subset",
+       "--stages", "enrich", "--requests-per-wave", "300"]
 
 
 def calls_count():
