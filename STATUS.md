@@ -3,7 +3,7 @@
 _Last updated: 2026-10-21 09:10 PDT. Recovery pass done and pushed; nothing is running._
 
 ## Waiting on Jack (blocking items first)
-1. **Label the golden 50** in `evals/golden_50_labels.csv` (blank columns; definitions in `evals/golden_50_DEFINITIONS.md`).
+1. **Label the golden 50** in `evals/golden_50_labels.csv` (UTF-8 with BOM so Excel shows emoji; blank columns; definitions in `evals/golden_50_DEFINITIONS.md`).
    Then run `python -m pipeline eval golden` and add the results to the README "Results summary" (currently says pending).
 2. ~~Repo history has two 83 MB files~~ **Done (your request):** history rewritten with `git filter-repo` and
    force-pushed. Removed from every commit: the plain `outputs/records.jsonl` / `outputs/enriched.jsonl`, their
@@ -11,13 +11,13 @@ _Last updated: 2026-10-21 09:10 PDT. Recovery pass done and pushed; nothing is r
    `outputs/full_corpus_accounting.jsonl.gz`. The two record files are release assets
    ([data-v1](https://github.com/jcrobbo1007/spotify-reviews-final/releases/tag/data-v1)). Commit hashes after milestone 1
    changed; the table below uses the new ones. Backup bundle of the old history: kept locally outside the repo.
-3. **Drive link for the raw CSV:** CLAUDE.md asks the README to link the Drive source. I don't have it; the README links
-   the Kaggle source and records the SHA-256. Paste the Drive link if you want it added.
+3. **Drive link for the raw CSV:** paste it at the `TODO(Jack)` line in the README "Dataset" section (the course ZIP
+   link is already there).
 4. ~~40 quarantined subset reviews~~ **Done (recovery pass, your request):** 30 salvaged from saved truncated responses
    (no new calls), 9 of 10 refusals completed with single-review requests. **1 remains quarantined** (refused again; text
    in look-alike Cherokee letters). It is the checker's only flag. Details: `evals/recovery/`, README "Recovery pass".
-5. **Rubric map:** the brief's itemised criteria aren't in the repo, so the README maps evidence to the 4/3/3 areas. Check
-   it against the brief.
+5. ~~Rubric map~~ **Done:** 10 rows, one per criterion, with evidence links; criterion 5 stays "Pending" until the golden
+   50 are labelled. Coverage under the full-file checker is 0.4095 (README "Coverage under the course checker").
 6. Optional: rotate nothing. No secret was printed, logged or committed (staged diffs scanned before every push;
    `.env` ignored).
 
