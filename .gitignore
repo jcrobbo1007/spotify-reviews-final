@@ -11,3 +11,5 @@ state/
 outputs/scope/subset_*.csv
 *.tmp
 outputs/calls_raw_responses.jsonl
+outputs/enriched.jsonl
+outputs/records.jsonl
