@@ -227,6 +227,9 @@ checks make zero API calls.
 - 1 subset review is quarantined and excluded from counts; 39 were recovered after the main run (see [Recovery pass](#recovery-pass)).
 
 ## Dataset
+- **Course dataset ZIP (direct download):** https://haas-ai-classes-fall-26.vercel.app/capstone/insight-pipeline/spotify-insight-dataset.zip
+- **Google Drive link (from the bCourses brief):** `TODO(Jack): paste the Drive link here`
+
 Course extract of *3.4 Million Spotify Google Store Reviews* (BwandoWando, CC0, Kaggle v2:
 https://www.kaggle.com/datasets/bwandowando/3-4-million-spotify-google-store-reviews), window 2022-05-17 to 2023-11-17.
 `spotify_reviews_18months.csv`: 97,400,616 bytes, SHA-256
