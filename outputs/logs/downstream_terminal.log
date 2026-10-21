@@ -1,0 +1,3 @@
+[verify] batch_submitted batch_id=msgbatch_01FfyRFqdTMqLP4mHHtiCAL6 requests=10 reviews=500
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0

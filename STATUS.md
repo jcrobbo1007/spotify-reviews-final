@@ -1,6 +1,6 @@
 # STATUS — read first
 
-_Last updated: 2026-10-21 00:55 PDT_
+_Last updated: 2026-10-21 01:10 PDT_
 
 ## Blocked / waiting on Jack
 - Nothing blocking right now. Golden-50 labelling waits for you: `evals/golden_50_labels.csv` (blank) + `evals/golden_50_DEFINITIONS.md`.
@@ -21,17 +21,24 @@ Sizing: largest N whose conservative enrichment projection fits $4.00 → N=173,
 - Supabase project `spotify-reviews-final` (created by Jack), schema + RLS applied; `DATABASE_URL` works.
 
 ## Running / next
-- 500 → 10,000 (interruption/resume demo) → 173,000 subset → verify, group, rank, memo → export + checker → DB load → dashboard deploy → README.
+- **Running:** 173,000-subset enrichment (waves of 300 requests) with the kill-and-resume demo (kill during wave 3).
+- **Deviation (disclosed):** the demo was planned for the 10,000 stage, but `--requests-per-wave` was bound at import time, so that stage finished in 2 waves before the kill point. Fixed; demo moved to the subset stage. Log of the uninterrupted 10k run: `evals/resume/terminal_10000_no_interrupt.log`.
+- Next: verify, group, rank, memo → export + checker → DB load → dashboard deploy → README.
+
+## Milestones
+- 500: 500/500 completed, $0.008424, 440 s (commit 4a18dc4)
+- 10,000: 10,000/10,000 completed (8,448 model-classified distinct texts + 1,552 cache reuse), +$0.137, 940 s (commit 61bb629)
+- Projection refreshes: `cost/refresh.md` (after 10k: subset base $2.30, conservative $3.44 — fits)
 
 ## Quote fallback (code-filled evidence_quote)
 | Run | short reviews: whole text | model exact quote | code span repair | code head fallback |
 |---|---|---|---|---|
 | Pilot (final) | 91 | 8 | 0 | 1 (gibberish review) |
-| Main run | — | — | — | — |
+| Main run, after 10k | 8,944 | 1,025 | 18 | 13 |
 
 ## Counts / spend
 | | |
 |---|---|
-| Completed (main run) | 0 |
+| Completed (main run) | 10,000 of 173,000 |
 | Quarantined | 13 (empty text) |
-| Spend vs cap | $0.017195 / $5.00 (all pilot attempts + tests) |
+| Spend vs cap | $0.163183 / $5.00 (all stages incl. pilot) |

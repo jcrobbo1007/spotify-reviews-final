@@ -10,3 +10,4 @@ state/
 *.sqlite*
 outputs/scope/subset_*.csv
 *.tmp
+outputs/calls_raw_responses.jsonl

@@ -12,29 +12,31 @@ import time
 
 from . import common, llm
 
-MAP_VERSION = "issue_map_v1"
+MAP_VERSION = "issue_map_v2"  # v2: patterns added after reading unmatched samples from the 173k run, before ranking/memo
 # Ordered: first match wins inside a topic. Patterns are matched case-insensitively.
 SUBTOPICS = {
     "access": [("login_failure", r"log ?in|sign ?in|can'?t (get )?in|password|verif|code"),
                ("logged_out", r"log(ged|s)? (me )?out|sign(ed|s)? (me )?out"),
                ("account_lost", r"account (was )?(hack|delet|gone|lost|disabl|suspend|ban)|hack")],
     "usability": [("ads", r"\bads?\b|advert|commercial"),
-                  ("shuffle_queue", r"shuffle|queue|repeat|skip"),
+                  ("shuffle_queue", r"shuffle|queue|repeat|skip|select|choose|pick|auto-?play|in order|previous"),
                   ("playlist_library", r"playlist|library|liked songs|like button"),
                   ("ui_layout", r"\bui\b|interface|layout|design|update|navigat|button|home ?(page|screen)|swipe")],
-    "playback": [("crash_freeze", r"crash|freez|clos(e|es|ing) (itself|by itself|on)|force|not open|won'?t open"),
+    "playback": [("crash_freeze", r"crash|freez|clos(e|es|ing) (itself|by itself|on)|force|not open|won'?t open|black screen|stuck|not (working|responding)|doesn'?t work"),
+                 ("song_choice_restricted", r"choose|choice|select|pick|click on|auto-?play|limit"),
                  ("stops_pauses", r"stop|paus|cut(s|ting)? (out|off)|interrupt"),
                  ("connectivity", r"connect|internet|wifi|network|offline|bluetooth|cast|car|android auto"),
-                 ("lag_loading", r"lag|load|buffer|slow|delay"),
+                 ("lag_loading", r"lag|load|buffer|slow|delay|sluggish"),
                  ("audio_quality", r"quality|sound|audio|volume|equali"),
                  ("battery_resource", r"battery|storage|memory|data usage|ram")],
-    "downloads": [("downloads_lost", r"disappear|gone|deleted|lost|remov|re-?download"),
+    "downloads": [("downloads_lost", r"disappear|gone|deleted|lost|remov|re-?download|nothing in|empty"),
                   ("offline_play", r"offline|internet|connection"),
                   ("download_failure", r"download")],
     "catalog": [("missing_content", r"missing|not available|unavailable|removed|grey|gray|can'?t find|region"),
                 ("lyrics", r"lyric"),
                 ("search", r"search"),
-                ("recommendations", r"recommend|algorithm|suggest|discover|smart shuffle|dj")],
+                ("recommendations", r"recommend|algorithm|suggest|discover|smart shuffle|dj"),
+                ("podcasts", r"podcast|episode|audiobook")],
     "billing": [("premium_paywall", r"skip|shuffle|lyric|choose|pick|order|seek|rewind|free (version|users|tier)|without premium|pay(ing)? for"),
                 ("price", r"price|expensive|cost|increase|afford"),
                 ("charges_refund", r"charg|refund|bill|money|deduct|payment|card"),
