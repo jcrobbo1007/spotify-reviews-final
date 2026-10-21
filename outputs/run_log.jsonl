@@ -77,3 +77,13 @@
 {"ts":"2026-10-21T02:51:10-0700","stage":"memo","event":"attempt","attempt":2,"problems":4}
 {"ts":"2026-10-21T02:52:09-0700","stage":"group","event":"names_cache_hit","cache":"group_names_94b6dfb82e320b1c.json"}
 {"ts":"2026-10-21T02:52:13-0700","stage":"memo","event":"cache_hit","cache":"memo_588330347ef2eb2f.json"}
+{"ts":"2026-10-21T08:45:57-0700","stage":"recovery","event":"salvaged","salvaged":30,"of":40}
+{"ts":"2026-10-21T08:46:38-0700","stage":"recovery","event":"single_review_batch_submitted","batch_id":"msgbatch_01Tq6iuzgWUU9KASh4YBabA3","requests":10}
+{"ts":"2026-10-21T08:54:55-0700","stage":"enrich","event":"batch_committed","batch_id":"msgbatch_01Tq6iuzgWUU9KASh4YBabA3","completed_reps":9,"wait_s":497.2,"usd":0.00069,"cap_usd":5.0,"spent_usd":2.42606,"reserved_usd":0}
+{"ts":"2026-10-21T08:56:04-0700","stage":"memo","event":"attempt","attempt":1,"problems":2}
+{"ts":"2026-10-21T08:56:22-0700","stage":"memo","event":"attempt","attempt":2,"problems":4}
+{"ts":"2026-10-21T08:57:34-0700","stage":"memo","event":"attempt","attempt":1,"problems":4}
+{"ts":"2026-10-21T08:57:54-0700","stage":"memo","event":"attempt","attempt":2,"problems":1}
+{"ts":"2026-10-21T08:59:01-0700","stage":"memo","event":"attempt","attempt":1,"problems":1}
+{"ts":"2026-10-21T08:59:16-0700","stage":"memo","event":"attempt","attempt":2,"problems":5}
+{"ts":"2026-10-21T09:02:21-0700","stage":"memo","event":"attempt","attempt":1,"problems":0}

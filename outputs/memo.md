@@ -1,18 +1,24 @@
 ## Recommendation
-Recommend billing-support for next quarter. billing-support is 1st of 4 families on cancellation-language records (2950) [F5]. The highest-ranked billing-support issue is `billing.subscription_entitlement` at rank 3 [F25], with complaint_count 6029 [C1] and priority_score 16533 [C4]. All counts are sample counts from the declared subset.
+Put next quarter's product effort into billing-support, starting with `billing.subscription_entitlement` and `billing.premium_paywall`. Scope: Declared 173,000-review subset — not a full-corpus model run; counts are subset counts (sample counts, not population totals). `other.general_dislike` is at rank 1 but has no topic, so it sits outside the listed areas and is not scored here.
 
 ## Evidence
-Scope: Declared 173,000-review subset — not a full-corpus model run; counts are subset counts.
+The highest-ranked billing-support issue is `billing.subscription_entitlement` at rank 3, with complaint_count 6034 [C1], severity_sum 16547 [C2], mean_severity 2.742294 [C3], and priority_score 16547 [C4]. One reviewer wrote "Amount debited twice but still Premium account not renewed" (5157428f-8f40-4ce7-8e24-2d2c438b212c).
 
-- `billing.subscription_entitlement` (rank 3): complaint_count 6029 [C1], severity_sum 16533 [C2], mean_severity 2.742246 [C3], priority_score 16533 [C4]. Quote: “Amount debited twice but still Premium account not renewed” (5157428f-8f40-4ce7-8e24-2d2c438b212c).
-- `billing.premium_paywall` (rank 4): complaint_count 5303 [C5], priority_score 15505 [C6]. Quote: “To get charged for making a playlist is just ridiculous!” (f4b75fa1-e7aa-4264-947b-67d08b357b70).
+`billing.premium_paywall` sits at rank 4 with complaint_count 5307 [C5] and priority_score 15516 [C6]. One reviewer wrote "To get charged for making a playlist is just ridiculous!" (f4b75fa1-e7aa-4264-947b-67d08b357b70).
+
+Topic aggregates (not claims):
+- billing-support is 2nd of 4 families on complaint-or-cancellation records (14692) [F2]
+- billing-support is 1st of 4 families on cancellation-language records (2954) [F5]
+- billing-support is 2nd of 4 families on severity sum (40838) [F10]
+
+Cancellation language is the intent signal that sets billing-support apart in this sample, and the two billing issues above sit at ranks 3 and 4.
 
 ## Alternatives compared
-- Usability: usability is 1st of 4 families on complaint-or-cancellation records (18850) [F1]. usability is 1st of 4 families on severity sum (43797) [F9]. usability is 4th of 4 families on severity-4-plus records (191) [F16]. The highest-ranked usability issue is `usability.ads` at rank 2 [F23], with complaint_count 9817 [C7] and priority_score 21052 [C8]. On cancellation language, usability is 2nd of 4 families on cancellation-language records (1351) [F6].
-- Playback: playback is 1st of 4 families on severity-4-plus records (2955) [F13]. The highest-ranked playback issue is `playback.general` at rank 6 [F24], with complaint_count 3071 [C9]. playback is 3rd of 4 families on cancellation-language records (608) [F7].
-- Access: access is 4th of 4 families on complaint-or-cancellation records (3004) [F4]. access is 2nd of 4 families on severity-4-plus records (2605) [F14]. `access.login_failure` has the highest mean severity among the top 12 ranked issues (3.934722) [F21]; it sits at rank 7 with mean_severity 3.934722 [C10].
+Usability: usability is 1st of 4 families on complaint-or-cancellation records (18859) [F1]. This is driven by `usability.ads` at rank 2 with complaint_count 9821 [C9] and priority_score 21060 [C10]. usability is 4th of 4 families on severity-4-plus records (192) [F16], so its complaint volume is a weak proxy for severity.
 
-The rank 1 item, `other.general_dislike`, sits outside the four families and is not used for the recommendation.
+Playback: playback is 1st of 4 families on severity-4-plus records (2955) [F13]. Its issues sit at rank 6 (`playback.general`), rank 8 (`playback.crash_freeze`, complaint_count 2068 [C7]), and rank 9 (`playback.stops_pauses`). This is the case for the alternative: a playback quarter would be justified if severity were weighted above intent.
+
+Access: access is 4th of 4 families on complaint-or-cancellation records (3007) [F4]. Its main issue, `access.login_failure`, is at rank 7 with complaint_count 2161 [C8], and access is 2nd of 4 families on severity-4-plus records (2608) [F14].
 
 ## Limitations
-The reviews are self-selected and historical. Cancellation language is intent, not confirmed churn. No revenue or plan data is available, so financial impact is not measured. Model labels have measured disagreement. Unresolved or quarantined records are excluded from counts.
+The reviews are self-selected and historical. Cancellation language is intent, not confirmed churn. There is no revenue or plan data, so billing impact is unmeasured. Model labels have measured disagreement. Unresolved and quarantined records are excluded from counts.

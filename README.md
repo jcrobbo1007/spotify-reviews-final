@@ -18,18 +18,18 @@ inspected without paid model calls, and the ranking reruns deterministically.
 |---|---|---|
 | Source rows accounted for | 660,622 (all brief counts match) | [`outputs/ingestion_report.json`](outputs/ingestion_report.json) |
 | Declared subset | 173,000 = analysis_10000 + golden 50 + 162,950 seeded-random | [`outputs/scope/subset_manifest.json`](outputs/scope/subset_manifest.json) |
-| Completed | **172,960** (99.977% of the subset) | [`grading/records.jsonl.gz`](grading/records.jsonl.gz) |
-| Quarantined in subset | 40, all after one retry: 30 `output_token_cap`, 10 `refusal` | [`outputs/quarantine.jsonl`](outputs/quarantine.jsonl) |
+| Completed | **172,999** (99.9994% of the subset; 172,960 before the [recovery pass](#recovery-pass)) | [`grading/records.jsonl.gz`](grading/records.jsonl.gz) |
+| Quarantined in subset | **1** (`refusal`; text written in look-alike Cherokee letters). Originally 40: 30 output-cap, 10 refusals | [`outputs/quarantine.jsonl`](outputs/quarantine.jsonl) |
 | Empty-text quarantines / not in model scope | 13 / 487,609 | [`outputs/full_corpus_accounting.jsonl.gz`](outputs/full_corpus_accounting.jsonl.gz) |
-| Exact-text cache reuse | 40,168 rows reuse one of 132,792 model-classified distinct texts | [`outputs/run_summary.json`](outputs/run_summary.json) |
+| Exact-text cache reuse | 40,168 rows reuse one of 132,831 model-classified distinct texts | [`outputs/run_summary.json`](outputs/run_summary.json) |
 | Blind verifier (n = 500) | topic 0.900, intent 0.942, severity exact 0.888 (MAE 0.114) | [`evals/verify/`](evals/verify/) |
 | Golden 50 (human) | **pending:** Jack labels them by hand | [`evals/golden_50_labels.csv`](evals/golden_50_labels.csv) |
 | Planted-error test | 40 / 40 caught | [`evals/planted/`](evals/planted/) |
 | Prompt-injection test | 6 / 6 kept their real labels | [`evals/injection/`](evals/injection/) |
-| **Measured** API spend, all stages incl. pilots | **$2.42537** of $5.00 cap | ledger; [`outputs/run_summary.json`](outputs/run_summary.json) |
-| Measured main-run enrichment | $2.374592 for 173,000 rows ($0.0137 per 1,000 rows); wall clock ≈ 6,550 s | [`outputs/calls.jsonl`](outputs/calls.jsonl), [`outputs/run_log.jsonl`](outputs/run_log.jsonl) |
+| **Measured** API spend, all stages incl. pilots | **$2.449436** of $5.00 cap | ledger; [`outputs/run_summary.json`](outputs/run_summary.json) |
+| Measured main-run enrichment | $2.375282 for 173,000 rows incl. the recovery pass ($0.0137 per 1,000 rows); wall clock ≈ 6,550 s (+497 s recovery batch) | [`outputs/calls.jsonl`](outputs/calls.jsonl), [`outputs/run_log.jsonl`](outputs/run_log.jsonl) |
 | **Estimated** before the run (from the pilot) | base $2.37, conservative $4.00 (subset) | [`cost/report.md`](cost/report.md) |
-| Self-check (`check_submission.py`) | only flag: `unfinished_classification` = the 40 disclosed quarantines; coverage-point candidate 0.9999 | [`evals/checker/`](evals/checker/) |
+| Self-check (`check_submission.py`) | only flag: `unfinished_classification` = the 1 remaining disclosed quarantine; coverage-point candidate 1.0 | [`evals/checker/`](evals/checker/) |
 
 Measured and estimated figures are kept separate throughout. Nothing here is a full-corpus measurement. The full-corpus
 cost ($8.60 base / $14.54 conservative) is an estimate only and exceeds the cap.
@@ -37,21 +37,24 @@ cost ($8.60 base / $14.54 conservative) is an estimate only and exceeds the cap.
 ## Recommendation (stage-6 memo, code-checked)
 
 The memo ([`outputs/memo.md`](outputs/memo.md), claims in [`grading/claims.csv`](grading/claims.csv)) recommends
-**billing-support**. Its main reason: billing-support is 1st of 4 areas on cancellation-language records (2,950). Its
-top issues are `billing.subscription_entitlement` (rank 3, 6,029 complaints) and `billing.premium_paywall` (rank 4,
-5,303 complaints).
+**billing-support**. Its main reason: billing-support is 1st of 4 areas on cancellation-language records (2,954). Its
+top issues are `billing.subscription_entitlement` (rank 3, 6,034 complaints) and `billing.premium_paywall` (rank 4,
+5,307 complaints).
 
 Read this together with the baseline ranking. **Usability leads the baseline:** it is 1st of 4 areas on complaint volume
-(18,850) and severity sum (43,797), and `usability.ads` is the rank-2 issue. However, usability's complaints are mostly
-low-severity (191 at severity 4 or above). **Playback** is 1st on severity-4-plus records (2,955). The memo weighs
+(18,859) and severity sum (43,819), and `usability.ads` is the rank-2 issue. However, usability's complaints are mostly
+low-severity (192 at severity 4 or above). **Playback** is 1st on severity-4-plus records (2,955). The memo weighs
 cancellation language over raw volume. Cancellation language is stated intent, not confirmed churn, and there is no
 revenue data, so this is a judgement the reader should weigh, not a measured outcome. The rank-1 issue,
-`other.general_dislike` (24,283 generic complaints with no specific defect, per the rubric), is outside the four options.
+`other.general_dislike` (24,284 generic complaints with no specific defect, per the rubric), is outside the four options.
 
 How the memo was checked: every issue-level number is a claim checked against `ranking.csv`. Every comparison sentence
 must quote, word for word, a statement code computed from the aggregates. Any other number in the prose is rejected.
 Two earlier drafts were rejected for wrong comparisons, for example "billing ranks second in cancellation language"
-when it ranks first. Both are kept in [`evals/memo/`](evals/memo/) with every attempt.
+when it ranks first. Both are kept in [`evals/memo/`](evals/memo/) with every attempt. "The highest-ranked X issue is
+`id` at rank N" sentences are verified against the ranking directly. The memo call runs at effort high, because medium
+and low failed these checks; enrichment and verification stay at low. Memo calls cost $0.052428 in total across
+19 attempts, pilot included.
 
 ## Rubric map
 
@@ -80,7 +83,7 @@ flowchart LR
   E2 --> V3[3 Verify — separate blind prompt<br/>seeded 500]
   E2 --> G4
   G4 -. names only, 1 call .-> N[issue naming — Haiku]
-  G4 --> R5 --> M6[6 Memo — Haiku, effort medium<br/>bounded evidence pack]
+  G4 --> R5 --> M6[6 Memo — Haiku, effort high<br/>bounded evidence pack]
   M6 --> CHK
   CHK -- mismatch → regenerate ≤2 --> M6
   R5 --> X[grading/ export + checker]
@@ -111,15 +114,26 @@ Review `9dc5c7d5-809d-4660-8b32-5f4823919ef9`: *"Why bro cant listen just one vi
    the full text, because it is a short review (`quote_source: code_short_full_text`).
 3. **Verify:** in the blind sample (`msgbatch_01FfyRFqdTMqLP4mHHtiCAL6:verify-002`), labelled `billing / complaint / 3`, so it agrees.
 4. **Group:** the map assigns `billing.subscription_entitlement` (the `premium` entity matched; no paywall keyword).
-5. **Rank:** `billing.subscription_entitlement` is rank 3, with complaint_count 6,029, severity_sum 16,533 and mean 2.742246.
+5. **Rank:** `billing.subscription_entitlement` is rank 3, with complaint_count 6,034, severity_sum 16,547 and mean 2.742294.
 6. **Memo:** claims C1–C4 cite exactly those numbers; the dashboard drill-down lists this review ID under the issue.
 
 **A failed case:** `da5611e7-36ef-4ace-b1c3-bc0230b4e588` *"Just doesn't load at times"*. Its first request (50 reviews) and
 its retry (10 reviews) both stopped at the output-token cap (3,600 and 800 tokens). The saved raw response of the retry
 holds 8 complete, valid items before the cut. The parser treats an unparseable response as all-or-nothing, so all 10 were
-quarantined as `enrich_failed:output_token_cap` after 2 attempts. **Improvement not applied:** salvage complete items
-from truncated JSON. It would have saved most of the 30 `output_token_cap` quarantines. The 10 `refusal` quarantines are
-benign texts sharing one request; refusals have no fallback, by decision.
+quarantined as `enrich_failed:output_token_cap` after 2 attempts. It was later recovered; see below.
+
+### Recovery pass
+Requested by Jack after the run (2026-10-21), and disclosed in full in [`evals/recovery/`](evals/recovery/).
+1. **Salvage (no new calls):** all 30 `output_token_cap` quarantines were rebuilt from complete items before the cut in
+   their saved raw responses, and passed the same code validation. Their original call records in `calls.jsonl` are
+   annotated (`original_outcome: failed`, `salvaged_review_ids`, `post_hoc`). Nothing is logged as a new call.
+2. **Single-review requests:** the 10 refusals were re-sent one review per request (attempt 3, same `label_config`,
+   Batch API, $0.00069). 9 completed. 1 was refused again and stays quarantined: a review written entirely in
+   look-alike Cherokee letters.
+3. Downstream was regenerated with the **declared verifier sample and frozen issue names unchanged**. The memo needed
+   effort **high** to pass the checks on the new numbers: three medium-effort runs failed and were rejected, and every
+   attempt is in [`evals/memo/attempts.jsonl`](evals/memo/attempts.jsonl). Pre-recovery ranking, memo and claims are
+   kept in `evals/recovery/`.
 
 ## Evaluation and verification evidence
 - **Blind verifier:** [`evals/verify/DISAGREEMENTS.md`](evals/verify/DISAGREEMENTS.md). Of 16 hand-read disagreements,
@@ -198,14 +212,14 @@ checks make zero API calls.
   subset includes the course's dev and golden samples.
 - Reviews are self-selected and historical. Cancellation language is intent, not churn. There is no revenue or plan data.
 - Labels come from a small model at low effort. Verifier agreement (0.90 / 0.94 / 0.89) is between two passes of the same
-  model family, so it is not accuracy. The human golden check is pending. 26,047 completed records carry
+  model family, so it is not accuracy. The human golden check is pending. 26,051 completed records carry
   `needs_review = true` (model-flagged, or a code quote repair).
-- Evidence quotes: 154,700 are the full short text (by rule, ≤200 chars), 17,604 are exact model quotes, 467 are a
+- Evidence quotes: 154,730 are the full short text (by rule, ≤200 chars), 17,613 are exact model quotes, 467 are a
   code-repaired matching span and 189 are the opening of the text after a non-exact or empty model quote (flagged
   `needs_review`).
 - Issue membership comes from a deterministic keyword map (v2, refined once after reading unmatched samples, before
   ranking and the memo). `other.general_dislike` is large by design.
-- 40 subset reviews are quarantined and excluded from counts.
+- 1 subset review is quarantined and excluded from counts; 39 were recovered after the main run (see [Recovery pass](#recovery-pass)).
 
 ## Dataset
 Course extract of *3.4 Million Spotify Google Store Reviews* (BwandoWando, CC0, Kaggle v2:

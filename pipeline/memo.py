@@ -13,7 +13,7 @@ from . import common, llm
 PROMPT_PATH = common.PROMPTS / "memo_v1.md"
 # Memo only: low effort failed the comparison checks twice (evals/memo/), so this single call runs at medium
 # effort with adaptive thinking. Enrichment/verification stay at low effort with thinking off.
-MEMO_EFFORT = "medium"
+MEMO_EFFORT = "high"  # 2026-10-21: raised from medium after recovery-pass memo failures (Jack approved one bounded run)
 FAMILIES = {"access": ["access"], "usability": ["usability"], "playback": ["playback"],
             "billing-support": ["billing", "support"]}
 METRICS = ("complaint_count", "severity_sum", "mean_severity", "priority_score")
@@ -121,6 +121,27 @@ def _norm(x):
     return " ".join(x.lower().split())
 
 
+def _verified_rank_sentence(sent, ranking, comparative):
+    """'highest-ranked/top-ranked ... `issue` ... rank N' is checked directly: every issue named this way must be
+    the best-ranked issue of its area, with the stated rank. Any other comparative word still needs a fact tag."""
+    if comparative.search(re.sub(r"\b(highest|top)-ranked\b|`[^`]*`|\[C\d+\]", " ", sent)):
+        return False
+    rank_of = {r["issue_id"]: r["rank"] for r in ranking}
+    fam_of = {t: f for f, ts in FAMILIES.items() for t in ts}
+    best = {}
+    for r in ranking:
+        f = fam_of.get(r["issue_id"].split(".")[0])
+        if f and f not in best:
+            best[f] = r["issue_id"]
+    m = re.search(r"\b(?:highest|top)-ranked\b[^`]*`([a-z]+\.[a-z_]+)`(?:[^`.]*?\brank (\d+))?", sent)
+    if not m or m.group(1) not in rank_of:
+        return False
+    iid, n = m.group(1), m.group(2)
+    if best.get(fam_of.get(iid.split(".")[0])) != iid:
+        return False
+    return n is None or int(n) == rank_of[iid]
+
+
 def check(out, ranking, pack, inputs=None):
     problems = []
     if inputs is not None:
@@ -152,6 +173,8 @@ def check(out, ranking, pack, inputs=None):
             if not comparative.search(re.sub(r"\[F\d+\]|\[C\d+\]|`[^`]*`", " ", sent)):
                 continue
             tags = re.findall(r"\[(F\d+)\]", sent)
+            if not tags and _verified_rank_sentence(sent, ranking, comparative):
+                continue
             if not tags:
                 problems.append(f"comparative sentence without a derived-fact tag: {sent.strip()[:120]}")
             for t in tags:

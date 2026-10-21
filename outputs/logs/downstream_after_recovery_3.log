@@ -1,0 +1,17 @@
+[memo] attempt attempt=1 problems=1
+[memo] attempt attempt=2 problems=5
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 104, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 50, in main
+    vsum, ranking, out = run.downstream(ledger, d["scope"]["label"] + "; counts are subset counts")
+                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\run.py", line 126, in downstream
+    out, _ = memo.run(ranking, agg, mpack, scope_note, ledger, calls, d["memo_model"], run_id, cache_dir=cache_dir)
+             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\memo.py", line 250, in run
+    raise RuntimeError("memo failed code checks twice: " + "; ".join(problems[:5]))
+RuntimeError: memo failed code checks twice: comparative sentence without a derived-fact tag: The lead issue is `billing.subscription_entitlement`, the highest-ranked billing-support issue at rank 3, with complaint; comparative sentence without a derived-fact tag: Usability is a broad, lower-severity area.; comparative sentence without a derived-fact tag: Playback is the strongest case for severe failures, led by `playback.crash_freeze` at rank 8 and `playback.general` at r; comparative sentence without a derived-fact tag: Billing-support was chosen because it leads on cancellation-language intent and sits near the top on complaint volume an; comparative sentence without a derived-fact tag: The paired cancellation and complaint signal makes it the most direct revenue-adjacent risk, though the data does not sh

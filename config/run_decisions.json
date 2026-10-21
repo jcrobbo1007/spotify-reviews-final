@@ -101,6 +101,16 @@
       "when": "2026-10-21T01:08 PDT",
       "what": "interruption/resume demo run during the 173,000-subset stage instead of the 10,000 stage",
       "why": "--requests-per-wave was bound at import, so the 10,000 stage finished in 2 waves before the kill point; fixed"
+    },
+    {
+      "when": "2026-10-21 (morning)",
+      "what": "recovery pass on the 40 quarantines, requested by Jack: 30 salvaged from saved truncated responses (no new calls), 10 re-sent one review per request (9 completed, 1 still refused)",
+      "why": "Jack's instruction after reviewing the overnight run"
+    },
+    {
+      "when": "2026-10-21 (morning)",
+      "what": "memo effort raised from medium to high for one bounded regeneration (Jack approved)",
+      "why": "three medium-effort regenerations on the post-recovery numbers failed the verbatim-fact checks"
     }
   ]
 }

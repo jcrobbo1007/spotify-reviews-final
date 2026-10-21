@@ -95,6 +95,11 @@ def downstream(ledger, scope_note):
     vdir = common.ROOT / "evals" / "verify"
     vdir.mkdir(parents=True, exist_ok=True)
     cached = cache_dir / "verify_predictions.json"
+    if cached.exists():
+        # The verifier sample is declared once; later recoveries must not redraw it.
+        prior = json.loads(cached.read_text(encoding="utf-8"))["sample_ids"]
+        if set(prior) <= set(records):
+            ids = prior
     if cached.exists() and json.loads(cached.read_text(encoding="utf-8"))["sample_ids"] == ids:
         preds = json.loads(cached.read_text(encoding="utf-8"))["predictions"]
     else:
@@ -105,7 +110,14 @@ def downstream(ledger, scope_note):
     group.write_membership(pairs, OUT / "membership.csv")
     pack = group.evidence_pack(pairs, records)
     common.write_json(OUT / "issues_evidence_pack.json", pack)
-    names, _ = group.name_issues(pack, ledger, calls, d["group_naming_model"], run_id, cache_dir=cache_dir)
+    frozen = OUT / "issue_names_frozen.json"
+    issue_ids = {p["issue_id"] for p in pack}
+    if frozen.exists() and issue_ids <= set(json.loads(frozen.read_text(encoding="utf-8"))):
+        names = json.loads(frozen.read_text(encoding="utf-8"))  # stage-4 names are frozen once produced
+    else:
+        names, _ = group.name_issues(pack, ledger, calls, d["group_naming_model"], run_id, cache_dir=cache_dir)
+        if names and issue_ids <= set(names):
+            common.write_json(frozen, names)
     group.write_issues(pairs, names, OUT / "issues.csv")
     ranking = rank.from_files(OUT / "membership.csv", write_records(db), OUT / "ranking.csv")
     agg = memo.aggregates(records, ranking)

@@ -27,6 +27,8 @@ def main(argv=None):
     ev = sub.add_parser("eval", help="Offline evaluations")
     ev.add_argument("which", choices=["golden", "planted", "inject"])
     ev.add_argument("--paid", action="store_true")
+    rc = sub.add_parser("recover", help="Disclosed recovery pass for quarantined subset reviews (salvage, then single-review requests)")
+    rc.add_argument("--paid", action="store_true")
     x = sub.add_parser("export", help="Write grading/ export and run the zero-API checker (no model calls)")
     args = p.parse_args(argv)
     if args.cmd == "prepare":
@@ -72,6 +74,12 @@ def main(argv=None):
             for r in res:
                 print(r["review_id"], r["status"], (r["labels"] or {}).get("topic"), (r["labels"] or {}).get("intent"),
                       (r["labels"] or {}).get("severity"))
+    elif args.cmd == "recover":
+        if not args.paid:
+            p.error("step 2 makes paid single-review requests; add --paid")
+        from . import common, recovery, state
+        d = common.decisions()
+        print(recovery.main(state.Ledger(d["spend_cap_usd"], "main-recovery")))
     elif args.cmd == "export":
         from . import export
         print(export.main())

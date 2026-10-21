@@ -60,6 +60,7 @@ access.general,0b5f8fe3-c975-49d0-903e-1d788e56240e
 access.general,0b69b0ea-eafb-4533-8a1d-3cf754126252
 access.general,0b6d6b57-0c5c-4a34-952e-860e5a096df0
 access.general,0b97836f-78e8-44dd-8166-bf12e89d03e5
+access.general,0b9e91d8-ece5-41f0-a454-a812d1ce8136
 access.general,0b9ec5c5-dec3-4dcc-b3a7-7355f207b694
 access.general,0bb8ae64-41f5-41db-9908-568f265fade5
 access.general,0bd9b537-8c3a-4488-96c7-555018cbfd7d
@@ -643,6 +644,7 @@ access.general,c9519918-bfe9-48d9-85c2-9332ec4b11f0
 access.general,c97fbd13-b028-4970-a8ee-46b28b9a8045
 access.general,c9893971-b239-47c1-8e6c-59eb88d20489
 access.general,c9bbb4c7-5a24-4e18-8519-9425e83ec8c3
+access.general,ca718ca4-1102-4d43-84e6-6c8e1a5686a6
 access.general,ca85238c-6099-4dab-8954-13939161e6b1
 access.general,ca8917ed-abcf-43d8-a0c0-b3d7453d6265
 access.general,cb0de46d-11b8-43de-b208-51501eee857a
@@ -1041,6 +1043,7 @@ access.login_failure,159ceb75-5e7f-42ef-939a-c141dd0781a5
 access.login_failure,15a7c304-d8fe-4ff3-907d-cd53b730683f
 access.login_failure,15ff50dc-b813-40d5-90d7-e7a7f2426613
 access.login_failure,160f24cc-7ff5-429d-bdbd-513ac639f165
+access.login_failure,16367bf4-8eb6-44b0-9ecf-ec5523c1041e
 access.login_failure,16418f90-557c-4c91-9a2e-c7803edc15e9
 access.login_failure,1674f400-5685-4e56-933e-4fa04bd7e11a
 access.login_failure,16b8eda2-8ef0-4829-ba81-af6867d99bd2
@@ -5571,6 +5574,7 @@ billing.premium_paywall,0064606e-b5b2-4661-a308-62b770140a8f
 billing.premium_paywall,007c7722-46ea-4d1c-bcff-47ae71824581
 billing.premium_paywall,008300ad-59ca-4636-8e6d-c10603ce225f
 billing.premium_paywall,00991520-102d-4cbd-bacf-5a85dfd9a749
+billing.premium_paywall,009949d7-74cc-487b-853f-40d778e1d8c5
 billing.premium_paywall,00a3ff98-a653-42e7-9cb7-c0e814026983
 billing.premium_paywall,00a5f9c0-21ca-4862-a147-e96db8b1799d
 billing.premium_paywall,00b3ec0e-ff6f-4fbd-a68d-a52484eb35db
@@ -5743,6 +5747,7 @@ billing.premium_paywall,0882fcb2-f1de-4948-8c9b-43ae491a0b00
 billing.premium_paywall,089f436d-2890-43c1-a438-79f6e3e939ff
 billing.premium_paywall,08c59a57-dd7e-4388-b880-a64aa89a67a2
 billing.premium_paywall,08e59185-9997-4710-add6-d03446008499
+billing.premium_paywall,08ef1918-5c24-4d89-a308-68299d249a14
 billing.premium_paywall,08f2f02f-ca0d-4911-86a2-c219fd26432d
 billing.premium_paywall,08f32cba-6e42-4d2f-a54c-720a9a41a13b
 billing.premium_paywall,08fec0fb-dfcd-45ef-90ad-0fc1058cafe1
@@ -7508,6 +7513,7 @@ billing.premium_paywall,610eebf8-80e9-429e-a5f4-52a213f5d723
 billing.premium_paywall,610f1834-5320-431f-a0cf-a70a40b3f63f
 billing.premium_paywall,610f4dc4-bbd3-4f3b-8acf-b0da8c0de8ff
 billing.premium_paywall,611441f6-95a2-402a-9aa9-8e3968645afd
+billing.premium_paywall,6124f0e8-62f5-4ab1-8d78-de1bffffada0
 billing.premium_paywall,6125b7cd-b89e-4521-8c43-38dd7e641da9
 billing.premium_paywall,6129da8d-b313-4f89-ab81-9e3ee13398b8
 billing.premium_paywall,612e86e5-f169-4355-a343-3e086d20ab2d
@@ -7772,6 +7778,7 @@ billing.premium_paywall,6dad1f78-c6b8-4cf5-a880-9e3de650cc67
 billing.premium_paywall,6db4d5d6-7198-4e04-babb-eb8291471389
 billing.premium_paywall,6dd4472f-1821-4ef7-b122-5854ab8a1871
 billing.premium_paywall,6dd5cda5-c7af-4b58-9358-09edfff9f0ec
+billing.premium_paywall,6de20532-3aa4-4abf-8c14-9a8bb124991b
 billing.premium_paywall,6de64d3d-23b9-4c38-b106-fdc6568f74de
 billing.premium_paywall,6de9330a-08c5-46f8-8e8e-74d7d73e9f36
 billing.premium_paywall,6dee628a-0a44-49be-a88f-6dcef8c8fb2b
@@ -13286,6 +13293,7 @@ billing.subscription_entitlement,4d9c5ef4-433d-4874-8e2c-5d2c01acbede
 billing.subscription_entitlement,4da5b404-c0dd-414d-b89f-87df93535153
 billing.subscription_entitlement,4dbb1014-a40d-4d2f-b0d6-3238b8c0ebe9
 billing.subscription_entitlement,4dbfa15d-dd16-448f-af34-6e67f87d18d3
+billing.subscription_entitlement,4dc25213-5b71-48c0-8637-28578dce61a3
 billing.subscription_entitlement,4dd94096-f694-48da-a0bd-a2df4a087c17
 billing.subscription_entitlement,4de193e3-2996-488f-8e48-1e5191878feb
 billing.subscription_entitlement,4df456ac-9ef1-4c6f-a1d4-bbd0e836ee21
@@ -13724,6 +13732,7 @@ billing.subscription_entitlement,60979cc9-21ec-4b33-bdfb-f3432e9a6edc
 billing.subscription_entitlement,60a06c12-23b2-4b54-bc78-3cb09104cdc0
 billing.subscription_entitlement,60aa357a-77e9-41c0-bc89-15f50e5e72dd
 billing.subscription_entitlement,60af4484-29b7-441e-8a08-7c5e2b3bc1b3
+billing.subscription_entitlement,60d94ac7-e993-474a-aa5f-2cc295431785
 billing.subscription_entitlement,60daea6e-f7e7-4eb1-b494-b6d6693eb5e0
 billing.subscription_entitlement,60deccf3-7066-4bbf-a6a9-1701eddba7dc
 billing.subscription_entitlement,60e2cb40-f923-4453-9e39-4d281bbd7aed
@@ -14024,6 +14033,7 @@ billing.subscription_entitlement,6ccfad57-6317-46c8-89de-cf4df24ffe3e
 billing.subscription_entitlement,6cd085a1-57e4-4071-a6de-74170070667a
 billing.subscription_entitlement,6d0d4ceb-1490-4c84-91bc-9dacbb48b65a
 billing.subscription_entitlement,6d1d7fc4-067f-474d-ac98-9a9dcecf8135
+billing.subscription_entitlement,6d27fd34-0713-4076-9144-730a508bf45e
 billing.subscription_entitlement,6d29050d-a454-40d0-874e-45aaa54ba66b
 billing.subscription_entitlement,6d3c0c30-5df4-49fd-8dfc-4591df1d1a90
 billing.subscription_entitlement,6d55aaf7-340a-4fb3-b2e3-704d20300fa2
@@ -16335,6 +16345,7 @@ billing.subscription_entitlement,cfed4812-d0ae-47f9-a01b-8af65a3767ef
 billing.subscription_entitlement,cfedb65b-8462-402f-8011-138a8f87a4ff
 billing.subscription_entitlement,d00a874f-3e7b-4412-a568-57716112c42b
 billing.subscription_entitlement,d00ed4ce-af96-4e4d-904c-ebf3cafdc35d
+billing.subscription_entitlement,d013544b-adf0-4ba3-ab8c-d40f7ed6b7e9
 billing.subscription_entitlement,d015c178-f23b-4680-8fa3-f52fdf63e350
 billing.subscription_entitlement,d0269b72-54de-4fdd-8bff-4d501193e7f9
 billing.subscription_entitlement,d0368e89-f607-480b-bb40-bbca236e10c0
@@ -17443,6 +17454,7 @@ billing.subscription_entitlement,fdc18f9f-969f-40c6-bf86-ca507a801694
 billing.subscription_entitlement,fdc91662-b549-4f31-888e-5c8b858cfca2
 billing.subscription_entitlement,fdd026d9-99c0-4d1c-adc1-85b9993c3dda
 billing.subscription_entitlement,fddc8d9c-c98f-4381-a172-61b1539b95c9
+billing.subscription_entitlement,fdfd7751-ab15-4e73-b6df-22cd5d6ac5ac
 billing.subscription_entitlement,fe0581ec-9bbf-49ee-b2ec-0c3573b2a532
 billing.subscription_entitlement,fe05c513-debb-4a7d-9b41-7af485201b7c
 billing.subscription_entitlement,fe243de8-83b5-41d1-abf1-b80a13dd2113
@@ -20342,6 +20354,7 @@ catalog.lyrics,a461e287-3c3a-46a1-99bc-59b7677f83f9
 catalog.lyrics,a46573aa-6467-459c-b3a0-20902d13aa6f
 catalog.lyrics,a51ddcf9-7ef7-42d3-ba45-348048d8c45e
 catalog.lyrics,a51e7f20-77fb-4867-9b0f-42cec267d789
+catalog.lyrics,a52c6d9f-25f4-4313-b15e-a168df2ef3ac
 catalog.lyrics,a55933d0-7d09-4e64-97b3-e37f32a95c4d
 catalog.lyrics,a55cd77f-7aa4-4db3-97f7-ce09811fe6c8
 catalog.lyrics,a56ec84d-d28b-4279-b1c7-b2496bb22fa4
@@ -21360,6 +21373,7 @@ catalog.missing_content,c97998b2-6fa1-4549-909d-1d3c4e2137fe
 catalog.missing_content,c9f5d06c-6cec-485e-be47-ffc189cedde7
 catalog.missing_content,caa3654a-0a0c-4e25-a2cd-3a45f08e4ae9
 catalog.missing_content,caf4eb21-e9dc-4d5d-aa33-d91b3f64d83c
+catalog.missing_content,cb24e465-884f-4c9f-807e-7cbfec3fc069
 catalog.missing_content,cb5535e2-fb3b-43d7-97ce-e5e25042db96
 catalog.missing_content,cba398d0-48f6-476f-b399-d71b59c709ef
 catalog.missing_content,cc491f4e-2b19-49a1-b2cc-79f25dac00c4
@@ -21369,6 +21383,7 @@ catalog.missing_content,cd0b5ad3-df38-4c20-b048-bc55489289ce
 catalog.missing_content,cdef1086-daea-40bd-9048-63901496e169
 catalog.missing_content,cdf370da-8263-4661-b47c-6f46432c3c78
 catalog.missing_content,ce1ce97a-89bb-4a81-9b75-1f5e337f31a4
+catalog.missing_content,ceb0d058-95e9-4d1f-a316-0f697b7c5ee1
 catalog.missing_content,d071611b-1780-471c-831d-357f4e86c736
 catalog.missing_content,d0aaf119-2425-4a5d-929e-d56c527cc4ce
 catalog.missing_content,d11d7abd-4861-469c-af1c-0c41c1b8eefa
@@ -31739,6 +31754,7 @@ other.general_dislike,4654541c-0d90-4598-8f41-8c16668f705d
 other.general_dislike,465813dc-5e9c-41af-b729-bd327313fe44
 other.general_dislike,46586eab-fa87-4b98-ac06-7eba8f28ce50
 other.general_dislike,465927f7-68ce-475d-ae3e-7c6dbd060f46
+other.general_dislike,465a04b6-f6e6-465a-a7d9-10a4040ca335
 other.general_dislike,465ca406-aa53-4dc4-90b2-07469f14af95
 other.general_dislike,4662109f-7ba2-481f-9a30-e03fed0b1dc2
 other.general_dislike,466306fe-65c9-406a-a3f4-4ae1c2625ad0
@@ -50184,6 +50200,7 @@ playback.connectivity,4baa1801-756e-405a-b692-0dae8fc18d27
 playback.connectivity,4bb02298-5e30-4e85-bb87-34482f525522
 playback.connectivity,4bb7f552-ab76-4522-bc9c-13ddf53ba5a6
 playback.connectivity,4bc6d2ea-c467-4ade-847c-1976f554dc29
+playback.connectivity,4c8f4fe8-4c9e-4f3c-a1a4-39e9d7285810
 playback.connectivity,4ca3c4b7-fc86-4f15-b28e-bf2cba09dc3e
 playback.connectivity,4cada3cf-3148-484f-8d4b-9454f3ca087a
 playback.connectivity,4cb1eb1b-e9bf-4cfe-9def-550b441eeccc
@@ -54521,6 +54538,7 @@ playback.general,7183fdb8-70a2-4aa8-a96f-e1f3e441dea9
 playback.general,7190c4ce-a2c3-489c-9300-99662a981cf0
 playback.general,719a947b-a086-43b2-a40c-151a948f1a8e
 playback.general,71a4d793-933a-450f-8e42-2b7148c5c99d
+playback.general,71ad66ae-7bc6-416a-abf9-5d077d7d775a
 playback.general,71b891eb-d42a-4776-99e4-7545e7fa0074
 playback.general,71c3a08a-ff3a-45a5-a797-088d6649caa3
 playback.general,71d681fa-57bf-4bd7-b85e-2dc642eaf36e
@@ -56754,6 +56772,7 @@ playback.lag_loading,d9a0045f-41f4-49e9-a193-bccd6c3212fb
 playback.lag_loading,d9ca5875-44ae-4782-8ceb-1836c65451c9
 playback.lag_loading,d9e2df09-14c3-42cf-a623-5664bd1804ab
 playback.lag_loading,da2ef2e3-4173-4921-ade5-6773c1bc4cdb
+playback.lag_loading,da5611e7-36ef-4ace-b1c3-bc0230b4e588
 playback.lag_loading,db19c763-5c9d-402d-8b51-b4c37e41a8ae
 playback.lag_loading,dbedafae-36c8-48eb-adf9-b16f4ff2d38a
 playback.lag_loading,dcd16df9-d69d-4f8c-818e-a642bfd77fd2
@@ -57007,6 +57026,7 @@ playback.song_choice_restricted,36469882-fd58-4927-8c29-f04148e3a9d8
 playback.song_choice_restricted,369d9bba-a2e3-43a0-aa5a-ba68b9694ff8
 playback.song_choice_restricted,36e54447-d925-470e-aa25-d2efe5017cc6
 playback.song_choice_restricted,38069e33-0a3d-44fd-9b31-af045cd88985
+playback.song_choice_restricted,38b99c9e-3bba-492e-ad70-d49d7d6ef884
 playback.song_choice_restricted,38e01334-85f3-41ce-a115-7f1c40bc3a37
 playback.song_choice_restricted,39609af3-8dc2-4dad-b541-82df3d626b24
 playback.song_choice_restricted,39c0cc38-b0bf-4bd0-b24b-4abbdb595c45
@@ -59001,6 +59021,7 @@ playback.stops_pauses,ed2a6630-b69f-4381-a18c-f82593a86566
 playback.stops_pauses,ed5a3bd9-40f2-4cc4-9ebc-58bd84b60784
 playback.stops_pauses,ed9de2e1-ad15-4319-a987-0f77055a6306
 playback.stops_pauses,edc7a84e-fc12-4f2e-ab50-00f924c01645
+playback.stops_pauses,edfef068-9551-4ec2-98ee-01573b8a261f
 playback.stops_pauses,ee31ed86-ae49-489c-8f4a-51f10855ebed
 playback.stops_pauses,ee4bc056-d515-4aa3-a8fe-ae8266476172
 playback.stops_pauses,ee6318ad-b1d9-4f3f-a1d5-8b468b4da89b
@@ -60363,6 +60384,7 @@ usability.ads,1a8d6788-7ad3-482c-8435-c4e099591c43
 usability.ads,1a9961fd-3725-436d-86d5-3eedb311e822
 usability.ads,1a9e758c-9098-404c-a8a6-c7ae9536a874
 usability.ads,1a9fccd7-8358-4db4-8ba6-bff19c5970c0
+usability.ads,1aa1acbc-0023-4905-9914-f88d63a6bafe
 usability.ads,1aa3482b-e8f2-4b8f-9af0-7c3a9e3298ce
 usability.ads,1aa943d5-cb4b-432d-a3f1-6d2935cf1caa
 usability.ads,1ab7d180-79f2-45f3-9535-3be8d522ff25
@@ -63373,6 +63395,7 @@ usability.ads,689dd430-eef5-4dd6-9427-afdf650769ba
 usability.ads,68aac3bb-3d8c-4eb8-908c-aa5f2b5be7c3
 usability.ads,68b6f056-6432-42fc-bf0f-d050198268fc
 usability.ads,68baf213-3f79-4827-a210-ccca0b64c064
+usability.ads,68bd29c9-a145-428b-8a6d-ef9ae5233d0f
 usability.ads,68bfc3dd-48ac-428f-ad8a-372b4bc6fae4
 usability.ads,68cad8fe-e8e3-42f9-919e-1c05d95fb76f
 usability.ads,68cb6b48-0d98-43ca-a591-fc509eb18130
@@ -64366,6 +64389,7 @@ usability.ads,827cd3cf-2f4b-4d38-b20a-606df4e2900d
 usability.ads,8282ca99-c65d-4365-94b8-f124ab4b6161
 usability.ads,828dce56-52f8-49bc-95d2-3159889c9468
 usability.ads,829b4bdb-50da-4971-a49a-65c9a01cc036
+usability.ads,829cb38a-ac48-4cf9-b738-23fcca7563cb
 usability.ads,829e7c92-eea9-4756-be2c-57ba7ee3af02
 usability.ads,82bb13d2-7923-4c05-b5ba-98006083c05b
 usability.ads,82c89499-46cf-42af-af3e-94a515ff9b4a
@@ -65202,6 +65226,7 @@ usability.ads,98f62c29-da97-4afb-8a7c-eac1b5e257e9
 usability.ads,99057cd1-a859-4424-8948-b31284e5974e
 usability.ads,99155e8d-8713-469c-b886-753bf7b7a384
 usability.ads,991b6b3a-f511-458a-a5b7-234f78048fb5
+usability.ads,993521e0-b274-486d-8e8f-c5d006ef4f63
 usability.ads,9935f64e-0603-4e6a-8a3a-e1a956303471
 usability.ads,99385678-0f64-4850-9561-f84d94bb61b4
 usability.ads,99387fe1-b575-4144-a8f6-b3a500cbb179
@@ -69557,6 +69582,7 @@ usability.general,42c7da49-18c4-4a90-9e07-4cf7173f69d8
 usability.general,4373f85f-6722-4b23-afb4-cdb8b2dfdc2b
 usability.general,4464a9be-e202-442e-b86e-584c3ee0ccfd
 usability.general,452cdc2c-da5e-47fc-86ad-6c9f22feb1fd
+usability.general,45398340-85fb-49c4-b65a-0e3e43ca4100
 usability.general,4598fc33-c9f9-4c7c-9a55-d41fcef7cb3c
 usability.general,45a1ac86-13d4-4c57-8977-ec368913ae89
 usability.general,45cfe18d-f5e9-43ca-abbc-c11bad274a6c
@@ -71138,6 +71164,7 @@ usability.playlist_library,43f7bad8-59ee-4ef9-9976-c131dbfa911b
 usability.playlist_library,4400317d-21f8-4602-8445-0e0033ee0672
 usability.playlist_library,440f4e5a-6f54-49c3-bb3f-4ebc610a98fb
 usability.playlist_library,442e8ea2-5bc6-4580-987c-9000717f9cd2
+usability.playlist_library,454c609d-42d8-4c48-882c-6b2f6c32fe22
 usability.playlist_library,455b7dd4-db9d-4991-93b0-e46e332ad9ee
 usability.playlist_library,45bbc93c-498a-4c26-8eb0-466b626c3397
 usability.playlist_library,46162258-63c5-4323-9659-fb8c3c028be1
@@ -72633,6 +72660,7 @@ usability.shuffle_queue,1e041cd0-31e3-4860-8ad6-7231e04afd8c
 usability.shuffle_queue,1e29a000-f05e-410b-80a4-b81b9597ba01
 usability.shuffle_queue,1e4d21d0-4c8c-43ca-a850-55a09715f414
 usability.shuffle_queue,1e562213-623f-4212-ac3a-6e17b245dcc5
+usability.shuffle_queue,1e6c12fa-796d-44e2-aba1-3e027c668c5f
 usability.shuffle_queue,1e6e5dbe-db1a-4a4c-8479-8cbbb623c30c
 usability.shuffle_queue,1e72c41e-3413-49d2-a237-aaef6b99b584
 usability.shuffle_queue,1e7723d5-f8e6-420b-b0d0-6afb81357dc8
@@ -74930,6 +74958,7 @@ usability.shuffle_queue,a5f86d7f-b163-45df-85a7-197a6f0162fb
 usability.shuffle_queue,a6060cf5-f93f-4d75-94c6-2e66c544cd89
 usability.shuffle_queue,a6083c76-fafc-464a-b704-b6d3e33d9bff
 usability.shuffle_queue,a608b883-da3c-4e8b-af81-72956b8a1f3b
+usability.shuffle_queue,a6560246-d6bb-4ab4-ac7c-40facaf85896
 usability.shuffle_queue,a65a70ec-dc78-417c-bfad-0b17843ecc82
 usability.shuffle_queue,a682d5dc-f0d3-4db0-b796-752b03dbb38e
 usability.shuffle_queue,a691267e-beb4-4c0a-91fa-6bb3b7b028c4
@@ -77237,6 +77266,7 @@ usability.ui_layout,74c06b13-3e01-48b3-a33a-87268a8d1130
 usability.ui_layout,75026177-87c5-461d-bdd6-b19ac4af01c5
 usability.ui_layout,7547dca0-619f-475b-bcda-af9a983309e3
 usability.ui_layout,7550f2d2-2699-4aee-9fff-156d73fff7d5
+usability.ui_layout,755127a4-c465-46bf-8b07-1cab32a1de28
 usability.ui_layout,757c0950-3ccd-4b6f-a5a7-acb78d85fdca
 usability.ui_layout,757cf49d-9460-4b6f-a524-3ef1c806b9ec
 usability.ui_layout,7586328d-3bad-407a-a155-75e1e1ab785c

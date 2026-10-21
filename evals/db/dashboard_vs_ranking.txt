@@ -1,1 +1,2 @@
-live rows 35 csv rows 35 identical: True
+2026-10-21 09:05 PDT after recovery pass:
+live /api/ranking rows 35 ranking.csv rows 35 identical: True

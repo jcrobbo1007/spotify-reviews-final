@@ -4,54 +4,54 @@
   "counts": {
     "source_rows": 660622,
     "subset_rows": 173000,
-    "completed": 172960,
-    "quarantined_subset": 40,
+    "completed": 172999,
+    "quarantined_subset": 1,
     "empty_text_quarantines": 13,
     "not_in_model_scope": 487609,
     "pending": 0,
     "cache_reused_rows": 40168,
-    "model_classified_distinct_texts": 132792,
-    "needs_review": 26047
+    "model_classified_distinct_texts": 132831,
+    "needs_review": 26051
   },
   "quarantine_reasons": {
     "empty_review_text": 13,
-    "enrich_failed:output_token_cap": 30,
-    "enrich_failed:refusal": 10
+    "enrich_failed:refusal": 1
   },
   "quote_sources": {
     "code_repair_head": 189,
     "code_repair_span": 467,
-    "code_short_full_text": 154700,
-    "model_exact": 17604
+    "code_short_full_text": 154730,
+    "model_exact": 17613
   },
   "cost": {
-    "api_spend_usd": 2.42537,
+    "api_spend_usd": 2.449436,
     "cap_usd": 5.0,
     "by_experiment": {
       "main-10000": 0.137564,
       "main-500": 0.008424,
-      "main-subset": 2.26205,
+      "main-recovery": 0.00069,
+      "main-subset": 2.285426,
       "pilot-cold": 0.014,
       "pilot-warm": 0.003195,
       "synthetic-injection": 0.000137
     },
     "by_role": {
-      "enrich": 2.382265,
+      "enrich": 2.382955,
       "group": 0.005912,
-      "memo": 0.029052,
+      "memo": 0.052428,
       "verify": 0.008141
     },
     "measured": "ledger of actual usage x rates.csv; includes all pilot attempts and tests"
   },
   "main_run_calls": {
-    "total": 2728,
+    "total": 2745,
     "by_role": {
-      "enrich": 2707,
+      "enrich": 2717,
       "verify": 10,
       "group": 1,
-      "memo": 10
+      "memo": 17
     },
-    "failed": 19
+    "failed": 20
   },
   "verification": {
     "compared": 500,

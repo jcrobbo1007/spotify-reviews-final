@@ -1,0 +1,17 @@
+[memo] attempt attempt=1 problems=2
+[memo] attempt attempt=2 problems=4
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 104, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 50, in main
+    vsum, ranking, out = run.downstream(ledger, d["scope"]["label"] + "; counts are subset counts")
+                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\run.py", line 126, in downstream
+    out, _ = memo.run(ranking, agg, mpack, scope_note, ledger, calls, d["memo_model"], run_id, cache_dir=cache_dir)
+             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\memo.py", line 227, in run
+    raise RuntimeError("memo failed code checks twice: " + "; ".join(problems[:5]))
+RuntimeError: memo failed code checks twice: comparative sentence without a derived-fact tag: Its highest-ranked issue, `usability.ads`, sits at rank 2 with complaint_count 9821 [C6].; comparative sentence without a derived-fact tag: Its highest-ranked issue, `playback.general`, is at rank 6, and `playback.crash_freeze` is at rank 8.; comparative sentence without a derived-fact tag: Its highest-ranked issue, `access.login_failure`, is at rank 7.; comparative sentence without a derived-fact tag: A targeted playback or access follow-up remains reasonable for severe failures, but it is not the recommended lead for t

@@ -23,7 +23,7 @@
   },
   {
     "issue_id": "access.general",
-    "members": 773,
+    "members": 775,
     "examples": [
       {
         "review_id": "24198f98-c761-4430-b5a9-6d4f87c98d86",
@@ -67,7 +67,7 @@
   },
   {
     "issue_id": "access.login_failure",
-    "members": 2160,
+    "members": 2161,
     "examples": [
       {
         "review_id": "ae1e47d1-45b9-4ee2-b436-a2de4e6ebdfd",
@@ -133,7 +133,7 @@
   },
   {
     "issue_id": "billing.premium_paywall",
-    "members": 5303,
+    "members": 5307,
     "examples": [
       {
         "review_id": "e7747485-42c5-4bb9-b1e2-1b4044eedb5a",
@@ -177,7 +177,7 @@
   },
   {
     "issue_id": "billing.subscription_entitlement",
-    "members": 6029,
+    "members": 6034,
     "examples": [
       {
         "review_id": "c917e047-2d4b-41c5-ad41-bc9355b6d6e4",
@@ -221,7 +221,7 @@
   },
   {
     "issue_id": "catalog.lyrics",
-    "members": 1237,
+    "members": 1238,
     "examples": [
       {
         "review_id": "0ea431d0-665f-4abe-a0cf-8e92a3a3fadc",
@@ -243,7 +243,7 @@
   },
   {
     "issue_id": "catalog.missing_content",
-    "members": 744,
+    "members": 746,
     "examples": [
       {
         "review_id": "fe95880b-5ea5-404d-9065-aad0c35a2673",
@@ -419,7 +419,7 @@
   },
   {
     "issue_id": "other.general_dislike",
-    "members": 24283,
+    "members": 24284,
     "examples": [
       {
         "review_id": "e8273497-06d8-4f7f-a8d7-b51e5873fd64",
@@ -485,7 +485,7 @@
   },
   {
     "issue_id": "playback.connectivity",
-    "members": 1274,
+    "members": 1275,
     "examples": [
       {
         "review_id": "bfbda8a1-54fa-4e2c-860a-457e27549861",
@@ -529,7 +529,7 @@
   },
   {
     "issue_id": "playback.general",
-    "members": 3071,
+    "members": 3072,
     "examples": [
       {
         "review_id": "ec296b31-61cb-4588-ba80-e8ab992b2281",
@@ -551,7 +551,7 @@
   },
   {
     "issue_id": "playback.lag_loading",
-    "members": 628,
+    "members": 629,
     "examples": [
       {
         "review_id": "2ea07cff-f68d-4c0d-b083-1e9aa5d74630",
@@ -573,7 +573,7 @@
   },
   {
     "issue_id": "playback.song_choice_restricted",
-    "members": 586,
+    "members": 587,
     "examples": [
       {
         "review_id": "c44c78fd-400f-410f-8ca6-28a2653a096a",
@@ -595,7 +595,7 @@
   },
   {
     "issue_id": "playback.stops_pauses",
-    "members": 1678,
+    "members": 1679,
     "examples": [
       {
         "review_id": "13eb028f-6277-4463-8bb8-2c4fc2225df3",
@@ -661,7 +661,7 @@
   },
   {
     "issue_id": "usability.ads",
-    "members": 9817,
+    "members": 9821,
     "examples": [
       {
         "review_id": "0d3ad186-3a08-45e2-a3d2-afb773921738",
@@ -683,7 +683,7 @@
   },
   {
     "issue_id": "usability.general",
-    "members": 1614,
+    "members": 1615,
     "examples": [
       {
         "review_id": "3955def8-eb30-41ef-8c14-b41ae97a6a81",
@@ -705,7 +705,7 @@
   },
   {
     "issue_id": "usability.playlist_library",
-    "members": 1368,
+    "members": 1369,
     "examples": [
       {
         "review_id": "5185fc7e-8e72-45e4-8d85-91ab76c43fae",
@@ -727,7 +727,7 @@
   },
   {
     "issue_id": "usability.shuffle_queue",
-    "members": 4317,
+    "members": 4319,
     "examples": [
       {
         "review_id": "6f8060ce-d45e-4e30-be3f-477a88a5cb36",
@@ -749,7 +749,7 @@
   },
   {
     "issue_id": "usability.ui_layout",
-    "members": 1734,
+    "members": 1735,
     "examples": [
       {
         "review_id": "7d6af566-62cf-490a-b39f-e005ceccfb40",

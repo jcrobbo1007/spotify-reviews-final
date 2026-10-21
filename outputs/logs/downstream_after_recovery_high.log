@@ -1,0 +1,3 @@
+[memo] attempt attempt=1 problems=0
+verify: {'compared': 500, 'topic_agreement': 0.9, 'intent_agreement': 0.942, 'severity_agreement': 0.888, 'severity_mae': 0.114, 'sentiment_mae': 0.0768, 'records_with_any_disagreement': 109} | issues: 35 | memo: True
+ledger: {'cap_usd': 5.0, 'spent_usd': 2.449436, 'reserved_usd': 0}

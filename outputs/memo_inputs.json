@@ -4,58 +4,58 @@
     {
       "rank": "1",
       "issue_id": "other.general_dislike",
-      "complaint_count": "24283",
-      "severity_sum": "48514",
-      "mean_severity": "1.997859",
-      "priority_score": "48514"
+      "complaint_count": "24284",
+      "severity_sum": "48517",
+      "mean_severity": "1.997900",
+      "priority_score": "48517"
     },
     {
       "rank": "2",
       "issue_id": "usability.ads",
-      "complaint_count": "9817",
-      "severity_sum": "21052",
-      "mean_severity": "2.144443",
-      "priority_score": "21052"
+      "complaint_count": "9821",
+      "severity_sum": "21060",
+      "mean_severity": "2.144384",
+      "priority_score": "21060"
     },
     {
       "rank": "3",
       "issue_id": "billing.subscription_entitlement",
-      "complaint_count": "6029",
-      "severity_sum": "16533",
-      "mean_severity": "2.742246",
-      "priority_score": "16533"
+      "complaint_count": "6034",
+      "severity_sum": "16547",
+      "mean_severity": "2.742294",
+      "priority_score": "16547"
     },
     {
       "rank": "4",
       "issue_id": "billing.premium_paywall",
-      "complaint_count": "5303",
-      "severity_sum": "15505",
-      "mean_severity": "2.923817",
-      "priority_score": "15505"
+      "complaint_count": "5307",
+      "severity_sum": "15516",
+      "mean_severity": "2.923686",
+      "priority_score": "15516"
     },
     {
       "rank": "5",
       "issue_id": "usability.shuffle_queue",
-      "complaint_count": "4317",
-      "severity_sum": "11342",
-      "mean_severity": "2.627287",
-      "priority_score": "11342"
+      "complaint_count": "4319",
+      "severity_sum": "11348",
+      "mean_severity": "2.627460",
+      "priority_score": "11348"
     },
     {
       "rank": "6",
       "issue_id": "playback.general",
-      "complaint_count": "3071",
-      "severity_sum": "9385",
-      "mean_severity": "3.056008",
-      "priority_score": "9385"
+      "complaint_count": "3072",
+      "severity_sum": "9387",
+      "mean_severity": "3.055664",
+      "priority_score": "9387"
     },
     {
       "rank": "7",
       "issue_id": "access.login_failure",
-      "complaint_count": "2160",
-      "severity_sum": "8499",
-      "mean_severity": "3.934722",
-      "priority_score": "8499"
+      "complaint_count": "2161",
+      "severity_sum": "8503",
+      "mean_severity": "3.934752",
+      "priority_score": "8503"
     },
     {
       "rank": "8",
@@ -68,10 +68,10 @@
     {
       "rank": "9",
       "issue_id": "playback.stops_pauses",
-      "complaint_count": "1678",
-      "severity_sum": "5289",
-      "mean_severity": "3.151967",
-      "priority_score": "5289"
+      "complaint_count": "1679",
+      "severity_sum": "5292",
+      "mean_severity": "3.151876",
+      "priority_score": "5292"
     },
     {
       "rank": "10",
@@ -84,10 +84,10 @@
     {
       "rank": "11",
       "issue_id": "usability.ui_layout",
-      "complaint_count": "1734",
-      "severity_sum": "4107",
-      "mean_severity": "2.368512",
-      "priority_score": "4107"
+      "complaint_count": "1735",
+      "severity_sum": "4110",
+      "mean_severity": "2.368876",
+      "priority_score": "4110"
     },
     {
       "rank": "12",
@@ -102,30 +102,30 @@
   "topic_aggregates": [
     {
       "topic": "access",
-      "records": 3162,
-      "complaint_or_cancellation": 3004,
+      "records": 3165,
+      "complaint_or_cancellation": 3007,
       "cancellation": 177,
-      "severity_sum": 11590,
-      "severity_4_plus": 2605,
+      "severity_sum": 11602,
+      "severity_4_plus": 2608,
       "needs_review": 302
     },
     {
       "topic": "usability",
-      "records": 23451,
-      "complaint_or_cancellation": 18850,
-      "cancellation": 1351,
-      "severity_sum": 43797,
-      "severity_4_plus": 191,
+      "records": 23461,
+      "complaint_or_cancellation": 18859,
+      "cancellation": 1353,
+      "severity_sum": 43819,
+      "severity_4_plus": 192,
       "needs_review": 1556
     },
     {
       "topic": "playback",
-      "records": 12335,
-      "complaint_or_cancellation": 9819,
+      "records": 12340,
+      "complaint_or_cancellation": 9824,
       "cancellation": 608,
-      "severity_sum": 30610,
+      "severity_sum": 30623,
       "severity_4_plus": 2955,
-      "needs_review": 931
+      "needs_review": 933
     },
     {
       "topic": "downloads",
@@ -138,19 +138,19 @@
     },
     {
       "topic": "catalog",
-      "records": 16156,
-      "complaint_or_cancellation": 5371,
+      "records": 16161,
+      "complaint_or_cancellation": 5374,
       "cancellation": 262,
-      "severity_sum": 13011,
+      "severity_sum": 13019,
       "severity_4_plus": 136,
       "needs_review": 1315
     },
     {
       "topic": "billing",
-      "records": 16828,
-      "complaint_or_cancellation": 14488,
-      "cancellation": 2928,
-      "severity_sum": 40302,
+      "records": 16837,
+      "complaint_or_cancellation": 14497,
+      "cancellation": 2932,
+      "severity_sum": 40327,
       "severity_4_plus": 850,
       "needs_review": 1733
     },
@@ -165,59 +165,59 @@
     },
     {
       "topic": "other",
-      "records": 97424,
-      "complaint_or_cancellation": 24283,
+      "records": 97431,
+      "complaint_or_cancellation": 24284,
       "cancellation": 1992,
-      "severity_sum": 48514,
+      "severity_sum": 48517,
       "severity_4_plus": 82,
-      "needs_review": 19828
+      "needs_review": 19830
     }
   ],
   "derived_facts": {
     "families": {
       "access": {
-        "records": 3162,
-        "complaint_or_cancellation": 3004,
+        "records": 3165,
+        "complaint_or_cancellation": 3007,
         "cancellation": 177,
-        "severity_sum": 11590,
-        "severity_4_plus": 2605,
+        "severity_sum": 11602,
+        "severity_4_plus": 2608,
         "issues": 4,
         "top_issue": "access.login_failure",
         "top_issue_rank": 7,
-        "priority_score_total": 11590
+        "priority_score_total": 11602
       },
       "usability": {
-        "records": 23451,
-        "complaint_or_cancellation": 18850,
-        "cancellation": 1351,
-        "severity_sum": 43797,
-        "severity_4_plus": 191,
+        "records": 23461,
+        "complaint_or_cancellation": 18859,
+        "cancellation": 1353,
+        "severity_sum": 43819,
+        "severity_4_plus": 192,
         "issues": 5,
         "top_issue": "usability.ads",
         "top_issue_rank": 2,
-        "priority_score_total": 43797
+        "priority_score_total": 43819
       },
       "playback": {
-        "records": 12335,
-        "complaint_or_cancellation": 9819,
+        "records": 12340,
+        "complaint_or_cancellation": 9824,
         "cancellation": 608,
-        "severity_sum": 30610,
+        "severity_sum": 30623,
         "severity_4_plus": 2955,
         "issues": 8,
         "top_issue": "playback.general",
         "top_issue_rank": 6,
-        "priority_score_total": 30610
+        "priority_score_total": 30623
       },
       "billing-support": {
-        "records": 17238,
-        "complaint_or_cancellation": 14683,
-        "cancellation": 2950,
-        "severity_sum": 40813,
+        "records": 17247,
+        "complaint_or_cancellation": 14692,
+        "cancellation": 2954,
+        "severity_sum": 40838,
         "severity_4_plus": 876,
         "issues": 7,
         "top_issue": "billing.subscription_entitlement",
         "top_issue_rank": 3,
-        "priority_score_total": 40813
+        "priority_score_total": 40838
       }
     },
     "family_rank_order_desc": {
@@ -253,27 +253,27 @@
       ]
     },
     "statements": {
-      "F1": "usability is 1st of 4 families on complaint-or-cancellation records (18850)",
-      "F2": "billing-support is 2nd of 4 families on complaint-or-cancellation records (14683)",
-      "F3": "playback is 3rd of 4 families on complaint-or-cancellation records (9819)",
-      "F4": "access is 4th of 4 families on complaint-or-cancellation records (3004)",
-      "F5": "billing-support is 1st of 4 families on cancellation-language records (2950)",
-      "F6": "usability is 2nd of 4 families on cancellation-language records (1351)",
+      "F1": "usability is 1st of 4 families on complaint-or-cancellation records (18859)",
+      "F2": "billing-support is 2nd of 4 families on complaint-or-cancellation records (14692)",
+      "F3": "playback is 3rd of 4 families on complaint-or-cancellation records (9824)",
+      "F4": "access is 4th of 4 families on complaint-or-cancellation records (3007)",
+      "F5": "billing-support is 1st of 4 families on cancellation-language records (2954)",
+      "F6": "usability is 2nd of 4 families on cancellation-language records (1353)",
       "F7": "playback is 3rd of 4 families on cancellation-language records (608)",
       "F8": "access is 4th of 4 families on cancellation-language records (177)",
-      "F9": "usability is 1st of 4 families on severity sum (43797)",
-      "F10": "billing-support is 2nd of 4 families on severity sum (40813)",
-      "F11": "playback is 3rd of 4 families on severity sum (30610)",
-      "F12": "access is 4th of 4 families on severity sum (11590)",
+      "F9": "usability is 1st of 4 families on severity sum (43819)",
+      "F10": "billing-support is 2nd of 4 families on severity sum (40838)",
+      "F11": "playback is 3rd of 4 families on severity sum (30623)",
+      "F12": "access is 4th of 4 families on severity sum (11602)",
       "F13": "playback is 1st of 4 families on severity-4-plus records (2955)",
-      "F14": "access is 2nd of 4 families on severity-4-plus records (2605)",
+      "F14": "access is 2nd of 4 families on severity-4-plus records (2608)",
       "F15": "billing-support is 3rd of 4 families on severity-4-plus records (876)",
-      "F16": "usability is 4th of 4 families on severity-4-plus records (191)",
-      "F17": "usability is 1st of 4 families on total priority score of its issues (43797)",
-      "F18": "billing-support is 2nd of 4 families on total priority score of its issues (40813)",
-      "F19": "playback is 3rd of 4 families on total priority score of its issues (30610)",
-      "F20": "access is 4th of 4 families on total priority score of its issues (11590)",
-      "F21": "access.login_failure has the highest mean severity among the top 12 ranked issues (3.934722)",
+      "F16": "usability is 4th of 4 families on severity-4-plus records (192)",
+      "F17": "usability is 1st of 4 families on total priority score of its issues (43819)",
+      "F18": "billing-support is 2nd of 4 families on total priority score of its issues (40838)",
+      "F19": "playback is 3rd of 4 families on total priority score of its issues (30623)",
+      "F20": "access is 4th of 4 families on total priority score of its issues (11602)",
+      "F21": "access.login_failure has the highest mean severity among the top 12 ranked issues (3.934752)",
       "F22": "the highest-ranked access issue is access.login_failure at rank 7",
       "F23": "the highest-ranked usability issue is usability.ads at rank 2",
       "F24": "the highest-ranked playback issue is playback.general at rank 6",
