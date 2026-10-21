@@ -1,0 +1,18 @@
+[
+  {
+    "checkpoint": "500",
+    "enrich_requests": 10,
+    "failed_requests": 0,
+    "distinct_texts_classified": 479,
+    "reviews_sent_incl_retries": 479,
+    "retry_fraction": 0.0,
+    "measured_enrich_usd": 0.008424,
+    "usd_per_distinct_text": 1.75876e-05,
+    "projected_subset_enrich_base_usd": 2.3362,
+    "projected_subset_enrich_conservative_usd": 3.5043,
+    "projected_full_corpus_enrich_base_usd": 8.5157,
+    "ledger_spent_all_stages_usd": 0.025619,
+    "cap_usd": 5.0,
+    "fits_cap_conservative": true
+  }
+]

@@ -7,3 +7,9 @@
 {"ts":"2026-10-21T00:42:42-0700","stage":"prepare","event":"ingested","records":660622,"all_match":true}
 {"ts":"2026-10-21T00:42:44-0700","stage":"prepare","event":"subset_built","path":"outputs\\scope\\subset_173000.csv","rows":173000,"seed":"spotify-reviews-final-subset-v1","sha256":"f782fb3170ff1d7de92de3337f063f569bdd84b3ab2ebe43aa62967287a0f19b","fixed_members":10050,"random_members":162950,"distinct_texts":132832}
 {"ts":"2026-10-21T00:42:56-0700","stage":"prepare","event":"state_seeded","not_in_model_scope":487609,"pending":173000,"quarantined":13}
+{"ts":"2026-10-21T00:44:00-0700","stage":"enrich","event":"start","phase":"initial","label_config":"claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups","cap_usd":5.0,"spent_usd":0.017195,"reserved_usd":0}
+{"ts":"2026-10-21T00:44:03-0700","stage":"enrich","event":"batch_submitted","batch_id":"msgbatch_01Gje3QM7EkYt4w2Jk49GbC9","requests":10,"reviews":479,"reserved_usd":0.014825,"phase":"initial"}
+{"ts":"2026-10-21T00:51:19-0700","stage":"enrich","event":"batch_committed","batch_id":"msgbatch_01Gje3QM7EkYt4w2Jk49GbC9","completed_reps":479,"wait_s":436.0,"usd":0.008424,"cap_usd":5.0,"spent_usd":0.025619,"reserved_usd":0}
+{"ts":"2026-10-21T00:51:19-0700","stage":"enrich","event":"cache_fanout","rows":21}
+{"ts":"2026-10-21T00:51:20-0700","stage":"enrich","event":"finished","completed":500,"not_in_model_scope":487609,"pending":172500,"quarantined":13,"cap_usd":5.0,"spent_usd":0.025619,"reserved_usd":0}
+{"ts":"2026-10-21T00:51:20-0700","stage":"run","event":"enrich_stage_done","scope":"500","wall_s":440.1,"completed":500,"not_in_model_scope":487609,"pending":172500,"quarantined":13}

@@ -1,0 +1,18 @@
+[enrich] start phase=initial label_config=claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups cap_usd=5.0 spent_usd=0.017195 reserved_usd=0
+[enrich] batch_submitted batch_id=msgbatch_01Gje3QM7EkYt4w2Jk49GbC9 requests=10 reviews=479 reserved_usd=0.014825 phase=initial
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01Gje3QM7EkYt4w2Jk49GbC9: in_progress processing=10 succeeded=0 errored=0
+[enrich] batch_committed batch_id=msgbatch_01Gje3QM7EkYt4w2Jk49GbC9 completed_reps=479 wait_s=436.0 usd=0.008424 cap_usd=5.0 spent_usd=0.025619 reserved_usd=0
+[enrich] cache_fanout rows=21
+[enrich] finished completed=500 not_in_model_scope=487609 pending=172500 quarantined=13 cap_usd=5.0 spent_usd=0.025619 reserved_usd=0
+[run] enrich_stage_done scope=500 wall_s=440.1 completed=500 not_in_model_scope=487609 pending=172500 quarantined=13
+{'completed': 500, 'not_in_model_scope': 487609, 'pending': 172500, 'quarantined': 13}
+ledger: {'cap_usd': 5.0, 'spent_usd': 0.025619, 'reserved_usd': 0}
