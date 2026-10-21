@@ -25,7 +25,7 @@ def parse_alts(s):
 
 
 def main():
-    rows = list(csv.DictReader(open(LABELS, encoding="utf-8", newline="")))
+    rows = list(csv.DictReader(open(LABELS, encoding="utf-8-sig", newline="")))  # sheet is saved with a BOM for Excel
     filled = [r for r in rows if r["topic"].strip() and r["intent"].strip() and r["severity"].strip()]
     if len(filled) < len(rows):
         print(f"{len(rows) - len(filled)} of {len(rows)} golden rows are not labelled yet; fill evals/golden_50_labels.csv first.")
