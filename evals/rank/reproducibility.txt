@@ -1,0 +1,5 @@
+$ python -m pipeline rank (twice) vs outputs/ranking.csv and grading/ranking.csv
+c3f40da9e21dd467cd0815c28b011d77f15a8a8d04224ae71c75c0b3b436ec2e *rerun:rank_1.csv
+c3f40da9e21dd467cd0815c28b011d77f15a8a8d04224ae71c75c0b3b436ec2e *rerun:rank_2.csv
+c3f40da9e21dd467cd0815c28b011d77f15a8a8d04224ae71c75c0b3b436ec2e *outputs/ranking.csv
+c3f40da9e21dd467cd0815c28b011d77f15a8a8d04224ae71c75c0b3b436ec2e *grading/ranking.csv

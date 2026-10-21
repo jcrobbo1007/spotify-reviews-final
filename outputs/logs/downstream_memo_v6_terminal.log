@@ -1,0 +1,18 @@
+[group] names_cache_hit cache=group_names_94b6dfb82e320b1c.json
+[memo] attempt attempt=1 problems=1
+[memo] attempt attempt=2 problems=4
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 96, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 48, in main
+    vsum, ranking, out = run.downstream(ledger, d["scope"]["label"] + "; counts are subset counts")
+                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\run.py", line 114, in downstream
+    out, _ = memo.run(ranking, agg, mpack, scope_note, ledger, calls, d["memo_model"], run_id, cache_dir=cache_dir)
+             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\memo.py", line 227, in run
+    raise RuntimeError("memo failed code checks twice: " + "; ".join(problems[:5]))
+RuntimeError: memo failed code checks twice: F25 must be quoted verbatim: 'the highest-ranked billing-support issue is billing.subscription_entitlement at rank 3'; F23 must be quoted verbatim: 'the highest-ranked usability issue is usability.ads at rank 2'; F24 must be quoted verbatim: 'the highest-ranked playback issue is playback.general at rank 6'; F21 must be quoted verbatim: 'access.login_failure has the highest mean severity among the top 12 ranked issues (3.934722)'

@@ -1,0 +1,67 @@
+{
+  "scope_label": "Declared 173,000-review subset — not a full-corpus model run",
+  "scope_detail": "All 660,622 source rows accounted for; 173,000 classified (seeded subset). Not a full-corpus model run; counts are subset counts.",
+  "counts": {
+    "source_rows": 660622,
+    "subset_rows": 173000,
+    "completed": 172960,
+    "quarantined_subset": 40,
+    "empty_text_quarantines": 13,
+    "not_in_model_scope": 487609,
+    "pending": 0,
+    "cache_reused_rows": 40168,
+    "model_classified_distinct_texts": 132792,
+    "needs_review": 26047
+  },
+  "quarantine_reasons": {
+    "empty_review_text": 13,
+    "enrich_failed:output_token_cap": 30,
+    "enrich_failed:refusal": 10
+  },
+  "quote_sources": {
+    "code_repair_head": 189,
+    "code_repair_span": 467,
+    "code_short_full_text": 154700,
+    "model_exact": 17604
+  },
+  "cost": {
+    "api_spend_usd": 2.42537,
+    "cap_usd": 5.0,
+    "by_experiment": {
+      "main-10000": 0.137564,
+      "main-500": 0.008424,
+      "main-subset": 2.26205,
+      "pilot-cold": 0.014,
+      "pilot-warm": 0.003195,
+      "synthetic-injection": 0.000137
+    },
+    "by_role": {
+      "enrich": 2.382265,
+      "group": 0.005912,
+      "memo": 0.029052,
+      "verify": 0.008141
+    },
+    "measured": "ledger of actual usage x rates.csv; includes all pilot attempts and tests"
+  },
+  "main_run_calls": {
+    "total": 2728,
+    "by_role": {
+      "enrich": 2707,
+      "verify": 10,
+      "group": 1,
+      "memo": 10
+    },
+    "failed": 19
+  },
+  "verification": {
+    "compared": 500,
+    "topic_agreement": 0.9,
+    "intent_agreement": 0.942,
+    "severity_agreement": 0.888,
+    "severity_mae": 0.114,
+    "sentiment_mae": 0.0768,
+    "records_with_any_disagreement": 109
+  },
+  "model": "claude-haiku-5-5",
+  "label_config": "claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups"
+}

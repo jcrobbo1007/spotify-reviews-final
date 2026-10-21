@@ -1,0 +1,7 @@
+2026-10-21 ~03:00 PDT — Supabase project dwaxmlvprifialyopqpq, anonymous (publishable) key via REST:
+GET  /rest/v1/ranking?order=rank.asc&limit=3   -> 200, rows: other.general_dislike 48514, usability.ads 21052, billing.subscription_entitlement 16533
+POST /rest/v1/claims                           -> 401 (insert refused)
+DELETE /rest/v1/ranking?rank=eq.1              -> 401 (delete refused); rank 1 still present afterwards
+HEAD /rest/v1/records (count=exact)            -> Content-Range 0-999/173000
+Supabase security advisor (get_advisors security): no lints.
+Loaded by `python db/load.py`: records 173000, issues 35, membership 78163, ranking 35, claims 10.

@@ -1,3 +1,15 @@
 [verify] batch_submitted batch_id=msgbatch_01FfyRFqdTMqLP4mHHtiCAL6 requests=10 reviews=500
   batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
   batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+  batch msgbatch_01FfyRFqdTMqLP4mHHtiCAL6: in_progress processing=10 succeeded=0 errored=0
+[verify] done predicted=500 of=500 usd=0.006182
+[memo] attempt attempt=1 problems=0
+verify: {'compared': 500, 'topic_agreement': 0.9, 'intent_agreement': 0.942, 'severity_agreement': 0.888, 'severity_mae': 0.114, 'sentiment_mae': 0.0768, 'records_with_any_disagreement': 109} | issues: 35 | memo: True
+ledger: {'cap_usd': 5.0, 'spent_usd': 2.401981, 'reserved_usd': 0}

@@ -25,7 +25,8 @@ def main(argv=None):
     k.add_argument("--records", default="outputs/records.jsonl")
     k.add_argument("--out", default="outputs/ranking.csv")
     ev = sub.add_parser("eval", help="Offline evaluations")
-    ev.add_argument("which", choices=["golden"])
+    ev.add_argument("which", choices=["golden", "planted", "inject"])
+    ev.add_argument("--paid", action="store_true")
     x = sub.add_parser("export", help="Write grading/ export and run the zero-API checker (no model calls)")
     args = p.parse_args(argv)
     if args.cmd == "prepare":
@@ -52,11 +53,29 @@ def main(argv=None):
         rows = rank.from_files(args.membership, args.records, args.out)
         print(f"wrote {args.out}: {len(rows)} issues")
     elif args.cmd == "eval":
-        from . import golden
-        golden.main()
+        if args.which == "golden":
+            from . import golden
+            golden.main()
+        elif args.which == "planted":
+            import json as _j
+            from . import common, run, state, synthetic
+            db = state.connect()
+            recs = run.completed_records(db)
+            preds = _j.loads((common.OUT / "artifact_cache" / "verify_predictions.json").read_text(encoding="utf-8"))["predictions"]
+            print(synthetic.planted(recs, preds))
+        else:
+            if not args.paid:
+                p.error("the injection test makes one small paid batch; add --paid")
+            from . import common, state, synthetic
+            d = common.decisions()
+            res = synthetic.inject(state.Ledger(d["spend_cap_usd"], "synthetic-injection"), d["enrich_model"])
+            for r in res:
+                print(r["review_id"], r["status"], (r["labels"] or {}).get("topic"), (r["labels"] or {}).get("intent"),
+                      (r["labels"] or {}).get("severity"))
     elif args.cmd == "export":
         from . import export
         print(export.main())
+        export.run_summary()
         res = export.checker()
         print({k: res.get(k) for k in ("status", "coverage", "issue_counts")})
     elif args.cmd == "cost":

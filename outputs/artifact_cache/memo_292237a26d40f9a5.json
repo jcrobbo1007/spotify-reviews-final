@@ -1,0 +1,422 @@
+{
+  "recommendation": "playback",
+  "memo_markdown": "## Recommendation\n\nNext quarter's product effort should go to **playback**. Playback has the strongest combined signal of severity and crash-like reports in the declared subset. This is a 173,000-review declared subset, not a full-corpus model run; all counts below are sample counts from that subset.\n\n## Evidence\n\nIssue-level ranking (declared subset):\n\n- `playback.general` is at rank 6 with complaint_count 3071 [C1], severity_sum 9385 [C2], and mean_severity 3.056008 [C3].\n- `playback.crash_freeze` is at rank 8 with complaint_count 2068 [C4], severity_sum 7182 [C5], and mean_severity 3.472921 [C6].\n- `playback.stops_pauses` is at rank 9 with complaint_count 1678 [C7], severity_sum 5289 [C8], and mean_severity 3.151967 [C9].\n\nTopic aggregate (not claims): playback has 12,335 records, 2,955 with severity 4 or higher, and 30,610 total severity, the second-highest severity sum among topics after other and billing.\n\nRepresentative reviews from the evidence pack:\n\n- `playback.general`: \"Won't work anymore. Can't play anything\" (dc0c2fb5-9d6a-4b66-89fb-090e2ee8ca59).\n- `playback.general`: \"my phone is getting restarted while opening Spotify\" (09aae8ef-6c97-426d-8c2b-16d1d358b6bf).\n\n## Alternatives compared\n\n- **Billing-support:** `billing.subscription_entitlement` is at rank 3 with complaint_count 6029 [C10] and severity_sum 16533 [C11]; `billing.premium_paywall` is at rank 4 with complaint_count 5303 [C12] and severity_sum 15505 [C13]. Billing has the largest complaint volume among topic-specific issues and the highest cancellation count (2928, topic aggregate), but its mean severity is higher than playback's only for `billing.premium_paywall` (2.923817 [C14]) and lower for `billing.subscription_entitlement` (2.742246 [C15]), and playback's crash-related severity is higher per complaint.\n- **Usability:** `usability.ads` is at rank 2 with complaint_count 9817 [C16] and severity_sum 21052 [C17], and `usability.shuffle_queue` is at rank 5 with complaint_count 4317 [C18] and severity_sum 11342 [C19]. Usability has the largest record volume but low severity_4_plus count (191, topic aggregate).\n- **Access:** `access.login_failure` is at rank 7 with complaint_count 2160 [C20], severity_sum 8499 [C21], and mean_severity 3.934722 [C22], the highest mean severity in the top rows, but it is a smaller volume issue.\n\nPlayback is recommended because it pairs high severity (2,955 severity-4+ records, topic aggregate) with several distinct crash and stop issues that a single engineering effort can address.\n\n## Limitations\n\n- Reviews are self-selected and historical.\n- Cancellation language reflects stated intent, not confirmed churn.\n- The data contains no revenue or plan data.\n- Model labels have measured disagreement.\n- Unresolved and quarantined records are excluded from counts.",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "issue_id": "playback.general",
+      "metric": "complaint_count",
+      "value": "3071"
+    },
+    {
+      "claim_id": "C2",
+      "issue_id": "playback.general",
+      "metric": "severity_sum",
+      "value": "9385"
+    },
+    {
+      "claim_id": "C3",
+      "issue_id": "playback.general",
+      "metric": "mean_severity",
+      "value": "3.056008"
+    },
+    {
+      "claim_id": "C4",
+      "issue_id": "playback.crash_freeze",
+      "metric": "complaint_count",
+      "value": "2068"
+    },
+    {
+      "claim_id": "C5",
+      "issue_id": "playback.crash_freeze",
+      "metric": "severity_sum",
+      "value": "7182"
+    },
+    {
+      "claim_id": "C6",
+      "issue_id": "playback.crash_freeze",
+      "metric": "mean_severity",
+      "value": "3.472921"
+    },
+    {
+      "claim_id": "C7",
+      "issue_id": "playback.stops_pauses",
+      "metric": "complaint_count",
+      "value": "1678"
+    },
+    {
+      "claim_id": "C8",
+      "issue_id": "playback.stops_pauses",
+      "metric": "severity_sum",
+      "value": "5289"
+    },
+    {
+      "claim_id": "C9",
+      "issue_id": "playback.stops_pauses",
+      "metric": "mean_severity",
+      "value": "3.151967"
+    },
+    {
+      "claim_id": "C10",
+      "issue_id": "billing.subscription_entitlement",
+      "metric": "complaint_count",
+      "value": "6029"
+    },
+    {
+      "claim_id": "C11",
+      "issue_id": "billing.subscription_entitlement",
+      "metric": "severity_sum",
+      "value": "16533"
+    },
+    {
+      "claim_id": "C12",
+      "issue_id": "billing.premium_paywall",
+      "metric": "complaint_count",
+      "value": "5303"
+    },
+    {
+      "claim_id": "C13",
+      "issue_id": "billing.premium_paywall",
+      "metric": "severity_sum",
+      "value": "15505"
+    },
+    {
+      "claim_id": "C14",
+      "issue_id": "billing.premium_paywall",
+      "metric": "mean_severity",
+      "value": "2.923817"
+    },
+    {
+      "claim_id": "C15",
+      "issue_id": "billing.subscription_entitlement",
+      "metric": "mean_severity",
+      "value": "2.742246"
+    },
+    {
+      "claim_id": "C16",
+      "issue_id": "usability.ads",
+      "metric": "complaint_count",
+      "value": "9817"
+    },
+    {
+      "claim_id": "C17",
+      "issue_id": "usability.ads",
+      "metric": "severity_sum",
+      "value": "21052"
+    },
+    {
+      "claim_id": "C18",
+      "issue_id": "usability.shuffle_queue",
+      "metric": "complaint_count",
+      "value": "4317"
+    },
+    {
+      "claim_id": "C19",
+      "issue_id": "usability.shuffle_queue",
+      "metric": "severity_sum",
+      "value": "11342"
+    },
+    {
+      "claim_id": "C20",
+      "issue_id": "access.login_failure",
+      "metric": "complaint_count",
+      "value": "2160"
+    },
+    {
+      "claim_id": "C21",
+      "issue_id": "access.login_failure",
+      "metric": "severity_sum",
+      "value": "8499"
+    },
+    {
+      "claim_id": "C22",
+      "issue_id": "access.login_failure",
+      "metric": "mean_severity",
+      "value": "3.934722"
+    }
+  ],
+  "cited_review_ids": [
+    "dc0c2fb5-9d6a-4b66-89fb-090e2ee8ca59",
+    "09aae8ef-6c97-426d-8c2b-16d1d358b6bf"
+  ],
+  "inputs": {
+    "scope": "Declared 173,000-review subset — not a full-corpus model run; counts are subset counts",
+    "ranking_top": [
+      {
+        "rank": "1",
+        "issue_id": "other.general_dislike",
+        "complaint_count": "24283",
+        "severity_sum": "48514",
+        "mean_severity": "1.997859",
+        "priority_score": "48514"
+      },
+      {
+        "rank": "2",
+        "issue_id": "usability.ads",
+        "complaint_count": "9817",
+        "severity_sum": "21052",
+        "mean_severity": "2.144443",
+        "priority_score": "21052"
+      },
+      {
+        "rank": "3",
+        "issue_id": "billing.subscription_entitlement",
+        "complaint_count": "6029",
+        "severity_sum": "16533",
+        "mean_severity": "2.742246",
+        "priority_score": "16533"
+      },
+      {
+        "rank": "4",
+        "issue_id": "billing.premium_paywall",
+        "complaint_count": "5303",
+        "severity_sum": "15505",
+        "mean_severity": "2.923817",
+        "priority_score": "15505"
+      },
+      {
+        "rank": "5",
+        "issue_id": "usability.shuffle_queue",
+        "complaint_count": "4317",
+        "severity_sum": "11342",
+        "mean_severity": "2.627287",
+        "priority_score": "11342"
+      },
+      {
+        "rank": "6",
+        "issue_id": "playback.general",
+        "complaint_count": "3071",
+        "severity_sum": "9385",
+        "mean_severity": "3.056008",
+        "priority_score": "9385"
+      },
+      {
+        "rank": "7",
+        "issue_id": "access.login_failure",
+        "complaint_count": "2160",
+        "severity_sum": "8499",
+        "mean_severity": "3.934722",
+        "priority_score": "8499"
+      },
+      {
+        "rank": "8",
+        "issue_id": "playback.crash_freeze",
+        "complaint_count": "2068",
+        "severity_sum": "7182",
+        "mean_severity": "3.472921",
+        "priority_score": "7182"
+      },
+      {
+        "rank": "9",
+        "issue_id": "playback.stops_pauses",
+        "complaint_count": "1678",
+        "severity_sum": "5289",
+        "mean_severity": "3.151967",
+        "priority_score": "5289"
+      },
+      {
+        "rank": "10",
+        "issue_id": "catalog.general",
+        "complaint_count": "2060",
+        "severity_sum": "4892",
+        "mean_severity": "2.374757",
+        "priority_score": "4892"
+      },
+      {
+        "rank": "11",
+        "issue_id": "usability.ui_layout",
+        "complaint_count": "1734",
+        "severity_sum": "4107",
+        "mean_severity": "2.368512",
+        "priority_score": "4107"
+      },
+      {
+        "rank": "12",
+        "issue_id": "billing.charges_refund",
+        "complaint_count": "1387",
+        "severity_sum": "4015",
+        "mean_severity": "2.894737",
+        "priority_score": "4015"
+      }
+    ],
+    "issues_total": 35,
+    "topic_aggregates": [
+      {
+        "topic": "access",
+        "records": 3162,
+        "complaint_or_cancellation": 3004,
+        "cancellation": 177,
+        "severity_sum": 11590,
+        "severity_4_plus": 2605,
+        "needs_review": 302
+      },
+      {
+        "topic": "usability",
+        "records": 23451,
+        "complaint_or_cancellation": 18850,
+        "cancellation": 1351,
+        "severity_sum": 43797,
+        "severity_4_plus": 191,
+        "needs_review": 1556
+      },
+      {
+        "topic": "playback",
+        "records": 12335,
+        "complaint_or_cancellation": 9819,
+        "cancellation": 608,
+        "severity_sum": 30610,
+        "severity_4_plus": 2955,
+        "needs_review": 931
+      },
+      {
+        "topic": "downloads",
+        "records": 3194,
+        "complaint_or_cancellation": 2153,
+        "cancellation": 143,
+        "severity_sum": 6994,
+        "severity_4_plus": 787,
+        "needs_review": 337
+      },
+      {
+        "topic": "catalog",
+        "records": 16156,
+        "complaint_or_cancellation": 5371,
+        "cancellation": 262,
+        "severity_sum": 13011,
+        "severity_4_plus": 136,
+        "needs_review": 1315
+      },
+      {
+        "topic": "billing",
+        "records": 16828,
+        "complaint_or_cancellation": 14488,
+        "cancellation": 2928,
+        "severity_sum": 40302,
+        "severity_4_plus": 850,
+        "needs_review": 1733
+      },
+      {
+        "topic": "support",
+        "records": 410,
+        "complaint_or_cancellation": 195,
+        "cancellation": 22,
+        "severity_sum": 511,
+        "severity_4_plus": 26,
+        "needs_review": 45
+      },
+      {
+        "topic": "other",
+        "records": 97424,
+        "complaint_or_cancellation": 24283,
+        "cancellation": 1992,
+        "severity_sum": 48514,
+        "severity_4_plus": 82,
+        "needs_review": 19828
+      }
+    ],
+    "evidence": [
+      {
+        "issue_id": "other.general_dislike",
+        "examples": [
+          {
+            "review_id": "888185f9-9da8-4ca2-9390-18a3471f2a7f",
+            "quote": "This is really useless app I ever seen it stoll your data everything it control your gallery be careful"
+          },
+          {
+            "review_id": "2c9db841-2a39-46ae-b518-f2117496e2bb",
+            "quote": "This is very bad application for Android the data is leaked when you playing a song and very ad he is give"
+          },
+          {
+            "review_id": "f33622b9-a964-47a8-ab03-c6326245fa3e",
+            "quote": "I dont want my data sold uninstalled"
+          }
+        ]
+      },
+      {
+        "issue_id": "usability.ads",
+        "examples": [
+          {
+            "review_id": "36d4588e-9ef2-4669-a0bc-f58fc276b2d4",
+            "quote": "none of my playlists are even Opening... crashing tremendously...tired of it... uninstalling it"
+          },
+          {
+            "review_id": "d49d44bd-ffdb-413a-a5eb-eb96f24a9e62",
+            "quote": "Camera man yha focus na kro Last update k baad to spotify bhot kharab hogya h kuch bhi nhi sunne deta ads deta tha phle ab to apni mrzi k song bhi nhi chalne deta"
+          },
+          {
+            "review_id": "810ae28f-6ae8-4116-9796-14a6df631f9b",
+            "quote": "different song than you want"
+          }
+        ]
+      },
+      {
+        "issue_id": "billing.subscription_entitlement",
+        "examples": [
+          {
+            "review_id": "01bae9e0-2ad4-4ce4-98ee-aaac1fa9235a",
+            "quote": "Yo estoy pagando el Spotify premium, para que me cuenten el stream que hago y ahorita le quitan eso, APRENDAN A MÁS QUE SEA DISIMULAR PORQUE LO QUE HICIERON ES UN ROBO AL OJO"
+          },
+          {
+            "review_id": "5157428f-8f40-4ce7-8e24-2d2c438b212c",
+            "quote": "Amount debited twice but still Premium account not renewed"
+          },
+          {
+            "review_id": "2dc9db93-8cb2-458f-8a05-f56adde6eb00",
+            "quote": "I forgot and managed to pay it and it got rid of my subscription I actually paid for more than once"
+          }
+        ]
+      },
+      {
+        "issue_id": "billing.premium_paywall",
+        "examples": [
+          {
+            "review_id": "feded429-c541-464a-b77d-a23bcde044a4",
+            "quote": "you used an old and destroyed card to pay for this months fee, even though my new card details are available"
+          },
+          {
+            "review_id": "f4b75fa1-e7aa-4264-947b-67d08b357b70",
+            "quote": "To get charged for making a playlist is just ridiculous!"
+          },
+          {
+            "review_id": "630ccf1f-27ca-498b-b731-318d859faa46",
+            "quote": "Don't understand why I had to pay for the 12.99 plan for 2 people when I am 1 person"
+          }
+        ]
+      },
+      {
+        "issue_id": "usability.shuffle_queue",
+        "examples": [
+          {
+            "review_id": "025cf0e8-c489-4bfe-8618-6cea10f18a88",
+            "quote": "I can't play the music that I want anymore and I can't repeat any of the songs, neither can I add any songs to the queue I am very disappointed it has only been asking for premium"
+          },
+          {
+            "review_id": "df083849-e8ef-4e86-b407-005c25b90808",
+            "quote": "Worst update ever.. you can't choose which song you want to play from any playlist , can't skip the song"
+          },
+          {
+            "review_id": "77c8c8a4-7819-412a-8a09-cf83e8cc9c59",
+            "quote": "they ruined the UI and they've refused to listen to any user feedback"
+          }
+        ]
+      },
+      {
+        "issue_id": "playback.general",
+        "examples": [
+          {
+            "review_id": "e6cf9934-4ecf-4417-b91a-6a615127aefb",
+            "quote": "So annoying...paid for premium...had more than 200 songs on my playlist all of a sudden they just wiped out 😩😭...this app sucks man..."
+          },
+          {
+            "review_id": "dc0c2fb5-9d6a-4b66-89fb-090e2ee8ca59",
+            "quote": "Won't work anymore. Can't play anything"
+          },
+          {
+            "review_id": "09aae8ef-6c97-426d-8c2b-16d1d358b6bf",
+            "quote": "From yesterday onwards, my phone is getting restarted while opening Spotify. Unable to uninstall also. I am using samsung note20 ultra. Otherwise it was really good"
+          }
+        ]
+      }
+    ]
+  }
+}

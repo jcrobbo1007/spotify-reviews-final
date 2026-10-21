@@ -1,0 +1,18 @@
+[group] names_cache_hit cache=group_names_94b6dfb82e320b1c.json
+[memo] attempt attempt=1 problems=6
+[memo] attempt attempt=2 problems=2
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 96, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 48, in main
+    vsum, ranking, out = run.downstream(ledger, d["scope"]["label"] + "; counts are subset counts")
+                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\run.py", line 114, in downstream
+    out, _ = memo.run(ranking, agg, mpack, scope_note, ledger, calls, d["memo_model"], run_id, cache_dir=cache_dir)
+             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\memo.py", line 218, in run
+    raise RuntimeError("memo failed code checks twice: " + "; ".join(problems[:5]))
+RuntimeError: memo failed code checks twice: F5 must be quoted verbatim: 'billing-support is 1st of 4 families on cancellation-language records (2950)'; F10 must be quoted verbatim: 'billing-support is 2nd of 4 families on severity sum (40813)'

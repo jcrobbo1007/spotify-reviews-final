@@ -16,7 +16,8 @@ GRADING = common.ROOT / "grading"
 
 
 def gz_copy(src, dst):
-    with open(src, "rb") as f, gzip.open(dst, "wb", compresslevel=9, mtime=0) as g:
+    with open(src, "rb") as f, open(dst, "wb") as raw, \
+            gzip.GzipFile(fileobj=raw, mode="wb", compresslevel=9, mtime=0) as g:
         shutil.copyfileobj(f, g)
 
 
@@ -50,6 +51,49 @@ def main():
                                 **({"reason": reason} if reason and status != "completed" else {}),
                                 "attempts": att}, separators=(",", ":")) + "\n")
     return run
+
+
+def run_summary():
+    """All figures recomputed from saved state/files; written to outputs/run_summary.json."""
+    import sqlite3
+    d = common.decisions()
+    db = state.connect()
+    q = lambda sql: db.execute(sql).fetchone()[0]
+    counts = {
+        "source_rows": q("SELECT COUNT(*) FROM reviews"),
+        "subset_rows": q("SELECT COUNT(*) FROM reviews WHERE in_scope=1"),
+        "completed": q("SELECT COUNT(*) FROM reviews WHERE status='completed'"),
+        "quarantined_subset": q("SELECT COUNT(*) FROM reviews WHERE status='quarantined' AND in_scope=1"),
+        "empty_text_quarantines": q("SELECT COUNT(*) FROM reviews WHERE reason='empty_review_text'"),
+        "not_in_model_scope": q("SELECT COUNT(*) FROM reviews WHERE status='not_in_model_scope'"),
+        "pending": q("SELECT COUNT(*) FROM reviews WHERE status='pending'"),
+        "cache_reused_rows": q("SELECT COUNT(*) FROM reviews WHERE status='completed' AND cache_source_id IS NOT NULL"),
+        "model_classified_distinct_texts": q("SELECT COUNT(*) FROM reviews WHERE status='completed' AND cache_source_id IS NULL"),
+        "needs_review": q("SELECT COUNT(*) FROM reviews WHERE status='completed' AND json_extract(result_json,'$.needs_review')=1"),
+    }
+    quarantine_reasons = dict(db.execute("SELECT reason, COUNT(*) FROM reviews WHERE status='quarantined' GROUP BY reason"))
+    quote_sources = dict(db.execute("SELECT json_extract(result_json,'$.quote_source'), COUNT(*) FROM reviews"
+                                    " WHERE status='completed' GROUP BY 1"))
+    led = sqlite3.connect(common.STATE / "ledger.sqlite")
+    by_exp = {e: round(u, 6) for e, u in led.execute("SELECT experiment, SUM(usd) FROM spend GROUP BY experiment")}
+    by_role = {r: round(u, 6) for r, u in led.execute("SELECT role, SUM(usd) FROM spend GROUP BY role")}
+    total = round(led.execute("SELECT SUM(usd) FROM spend").fetchone()[0], 6)
+    calls = common.read_jsonl(common.OUT / "calls.jsonl")
+    vs = common.ROOT / "evals" / "verify" / "verify_summary.json"
+    summary = {
+        "scope_label": d["scope"]["label"],
+        "scope_detail": f"All 660,622 source rows accounted for; {d['scope']['subset_size']:,} classified (seeded subset). "
+                        "Not a full-corpus model run; counts are subset counts.",
+        "counts": counts, "quarantine_reasons": quarantine_reasons, "quote_sources": quote_sources,
+        "cost": {"api_spend_usd": total, "cap_usd": d["spend_cap_usd"], "by_experiment": by_exp, "by_role": by_role,
+                 "measured": "ledger of actual usage x rates.csv; includes all pilot attempts and tests"},
+        "main_run_calls": {"total": len(calls), "by_role": dict(__import__("collections").Counter(c["role"] for c in calls)),
+                           "failed": sum(c["outcome"] == "failed" for c in calls)},
+        "verification": json.loads(vs.read_text()) if vs.exists() else None,
+        "model": d["enrich_model"], "label_config": calls[0]["label_config"] if calls else None,
+    }
+    common.write_json(common.OUT / "run_summary.json", summary)
+    return summary
 
 
 def checker(out_path=None):

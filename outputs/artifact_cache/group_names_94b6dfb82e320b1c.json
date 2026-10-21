@@ -1,0 +1,142 @@
+{
+  "access.account_lost": {
+    "name": "Account hacked or lost",
+    "description": "Reviewers report their accounts were hacked or taken over, leaving them locked out and unable to get support help."
+  },
+  "access.general": {
+    "name": "App won't open or work",
+    "description": "Reviewers say the app won't open or function even after reinstalling, clearing data, or resetting their phone."
+  },
+  "access.logged_out": {
+    "name": "Unexpected logouts and freezes",
+    "description": "Reviewers report being logged out unexpectedly, after which the app gets stuck on the logo or a loading screen."
+  },
+  "access.login_failure": {
+    "name": "Cannot log in",
+    "description": "Reviewers cannot sign in with their email, password, or Facebook login, even with premium accounts."
+  },
+  "billing.charges_refund": {
+    "name": "Unfair charges and payment prompts",
+    "description": "Reviewers feel pressured to pay, with aggressive payment reminders and charges they see as unfair or forced."
+  },
+  "billing.general": {
+    "name": "Paid features feel unfair",
+    "description": "Reviewers object to features moved behind a paywall, feeling the free service has become less useful."
+  },
+  "billing.premium_paywall": {
+    "name": "Basic features locked behind premium",
+    "description": "Reviewers are frustrated that basic controls like shuffle, skip, and replay require a premium subscription."
+  },
+  "billing.price": {
+    "name": "Subscription too expensive",
+    "description": "Reviewers say the premium subscription costs too much and some say they may cancel because of it."
+  },
+  "billing.subscription_entitlement": {
+    "name": "Ads and features tied to premium",
+    "description": "Reviewers complain that ads persist for free users or that favourite songs and features stop working without premium."
+  },
+  "catalog.general": {
+    "name": "Limited or unwanted songs",
+    "description": "Reviewers feel the song selection is limited and that songs they did not choose appear in their playlists."
+  },
+  "catalog.lyrics": {
+    "name": "Lyrics missing or not loading",
+    "description": "Reviewers report lyrics no longer appear or fail to load, and some feel removing them was unnecessary."
+  },
+  "catalog.missing_content": {
+    "name": "Songs and features removed",
+    "description": "Reviewers notice songs disappearing from the catalogue, some regional features restricted, and playlist songs they cannot find."
+  },
+  "catalog.podcasts": {
+    "name": "Podcast and audiobook problems",
+    "description": "Reviewers report podcasts in the wrong language, unfollowed shows still appearing, and disappointment with audiobooks."
+  },
+  "catalog.recommendations": {
+    "name": "Unwanted recommended songs",
+    "description": "Reviewers say the app adds random recommended songs to playlists and repeats songs they do not want to hear."
+  },
+  "catalog.search": {
+    "name": "Hard to find wanted songs",
+    "description": "Reviewers find search returns the wrong songs, artists are hard to find, and their own lists are difficult to locate."
+  },
+  "downloads.download_failure": {
+    "name": "Downloads fail or stop playing",
+    "description": "Reviewers report downloads failing on new phones or previously downloaded songs not playing after restarts."
+  },
+  "downloads.downloads_lost": {
+    "name": "Downloaded songs deleted",
+    "description": "Reviewers say many of their downloaded songs were removed, sometimes after updates, and cannot be moved to storage."
+  },
+  "downloads.general": {
+    "name": "Local and personal files missing",
+    "description": "Reviewers say songs and personal lists fail to appear or play without Wi-Fi, and local files do not show up."
+  },
+  "downloads.offline_play": {
+    "name": "Offline listening broken",
+    "description": "Reviewers report offline playback failing, premium benefits not working offline, and downloads cleared without consent."
+  },
+  "other.general_dislike": {
+    "name": "General dissatisfaction with app",
+    "description": "Reviewers express broad dislike of the app or recent updates, often without describing a specific problem."
+  },
+  "playback.audio_quality": {
+    "name": "Poor sound quality",
+    "description": "Reviewers say the audio sounds poor, songs cut off on mobile, and quality drops after recent updates."
+  },
+  "playback.battery_resource": {
+    "name": "Battery and data drain",
+    "description": "Reviewers say the app runs in the background, drains battery, and uses a lot of data."
+  },
+  "playback.connectivity": {
+    "name": "Connection and car audio issues",
+    "description": "Reviewers get false no-internet messages, slow performance, and trouble connecting the app to car audio systems."
+  },
+  "playback.crash_freeze": {
+    "name": "App crashes or freezes",
+    "description": "Reviewers report the app closing unexpectedly, freezing, or refusing to pause or stop playback."
+  },
+  "playback.general": {
+    "name": "Playback not working properly",
+    "description": "Reviewers say playback stops working, the app does not stay active in the background, and some features are unsupported."
+  },
+  "playback.lag_loading": {
+    "name": "Slow loading and lag",
+    "description": "Reviewers report the app lagging, taking a long time to load songs, and glitching even with premium."
+  },
+  "playback.song_choice_restricted": {
+    "name": "Wrong song plays",
+    "description": "Reviewers say tapping a favourite song plays a different one, and the app stutters or glitches during playback."
+  },
+  "playback.stops_pauses": {
+    "name": "Music stops unexpectedly",
+    "description": "Reviewers report songs stopping on their own, playlists halting after one track, and errors persisting after updates."
+  },
+  "support.general": {
+    "name": "Poor support and survey annoyance",
+    "description": "Reviewers feel the company does not respond to feedback and that surveys and premium prompts are intrusive."
+  },
+  "support.support_response": {
+    "name": "Customer support unhelpful",
+    "description": "Reviewers say chat support takes too long, rarely solves problems, and offers no direct customer service options."
+  },
+  "usability.ads": {
+    "name": "Too many ads",
+    "description": "Reviewers complain of frequent ads, including back-to-back ads during songs, making the app frustrating to use."
+  },
+  "usability.general": {
+    "name": "Basic controls and privacy concerns",
+    "description": "Reviewers report missing basic controls like rewind and sharing, lost search history, and feeling their privacy was breached."
+  },
+  "usability.playlist_library": {
+    "name": "Playlists and liked songs hard to use",
+    "description": "Reviewers say liked songs display blank, playlists play only suggestions, and the like button is harder to find."
+  },
+  "usability.shuffle_queue": {
+    "name": "Can't control song order",
+    "description": "Reviewers feel unable to skip, unshuffle, or play songs in their chosen order, with unwanted songs auto-playing."
+  },
+  "usability.ui_layout": {
+    "name": "Layout changes disliked",
+    "description": "Reviewers want recent home page and interface changes reverted, including the missing history, heart button, and canvas features."
+  }
+}

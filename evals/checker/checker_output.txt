@@ -1,0 +1,6 @@
+$ .\.venv\Scripts\python.exe .\vendor\check_submission.py reference --full .\data\spotify_reviews_18months.csv --analysis .\outputs\scope\subset_173000.csv --out .\evals\checker\local-reference.json
+Saved deterministic audit output to C:\Users\jcrob\code\spotify-reviews-final\evals\checker\local-reference.json
+
+
+$ .\.venv\Scripts\python.exe .\vendor\check_submission.py check --reference .\evals\checker\local-reference.json --submission .\grading --out .\evals\checker\self-check.json
+Saved deterministic audit output to C:\Users\jcrob\code\spotify-reviews-final\evals\checker\self-check.json

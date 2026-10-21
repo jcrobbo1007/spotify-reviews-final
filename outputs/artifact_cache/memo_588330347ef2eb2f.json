@@ -1,0 +1,465 @@
+{
+  "recommendation": "billing-support",
+  "memo_markdown": "## Recommendation\nRecommend billing-support for next quarter. billing-support is 1st of 4 families on cancellation-language records (2950) [F5]. The highest-ranked billing-support issue is `billing.subscription_entitlement` at rank 3 [F25], with complaint_count 6029 [C1] and priority_score 16533 [C4]. All counts are sample counts from the declared subset.\n\n## Evidence\nScope: Declared 173,000-review subset — not a full-corpus model run; counts are subset counts.\n\n- `billing.subscription_entitlement` (rank 3): complaint_count 6029 [C1], severity_sum 16533 [C2], mean_severity 2.742246 [C3], priority_score 16533 [C4]. Quote: “Amount debited twice but still Premium account not renewed” (5157428f-8f40-4ce7-8e24-2d2c438b212c).\n- `billing.premium_paywall` (rank 4): complaint_count 5303 [C5], priority_score 15505 [C6]. Quote: “To get charged for making a playlist is just ridiculous!” (f4b75fa1-e7aa-4264-947b-67d08b357b70).\n\n## Alternatives compared\n- Usability: usability is 1st of 4 families on complaint-or-cancellation records (18850) [F1]. usability is 1st of 4 families on severity sum (43797) [F9]. usability is 4th of 4 families on severity-4-plus records (191) [F16]. The highest-ranked usability issue is `usability.ads` at rank 2 [F23], with complaint_count 9817 [C7] and priority_score 21052 [C8]. On cancellation language, usability is 2nd of 4 families on cancellation-language records (1351) [F6].\n- Playback: playback is 1st of 4 families on severity-4-plus records (2955) [F13]. The highest-ranked playback issue is `playback.general` at rank 6 [F24], with complaint_count 3071 [C9]. playback is 3rd of 4 families on cancellation-language records (608) [F7].\n- Access: access is 4th of 4 families on complaint-or-cancellation records (3004) [F4]. access is 2nd of 4 families on severity-4-plus records (2605) [F14]. `access.login_failure` has the highest mean severity among the top 12 ranked issues (3.934722) [F21]; it sits at rank 7 with mean_severity 3.934722 [C10].\n\nThe rank 1 item, `other.general_dislike`, sits outside the four families and is not used for the recommendation.\n\n## Limitations\nThe reviews are self-selected and historical. Cancellation language is intent, not confirmed churn. No revenue or plan data is available, so financial impact is not measured. Model labels have measured disagreement. Unresolved or quarantined records are excluded from counts.",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "issue_id": "billing.subscription_entitlement",
+      "metric": "complaint_count",
+      "value": "6029"
+    },
+    {
+      "claim_id": "C2",
+      "issue_id": "billing.subscription_entitlement",
+      "metric": "severity_sum",
+      "value": "16533"
+    },
+    {
+      "claim_id": "C3",
+      "issue_id": "billing.subscription_entitlement",
+      "metric": "mean_severity",
+      "value": "2.742246"
+    },
+    {
+      "claim_id": "C4",
+      "issue_id": "billing.subscription_entitlement",
+      "metric": "priority_score",
+      "value": "16533"
+    },
+    {
+      "claim_id": "C5",
+      "issue_id": "billing.premium_paywall",
+      "metric": "complaint_count",
+      "value": "5303"
+    },
+    {
+      "claim_id": "C6",
+      "issue_id": "billing.premium_paywall",
+      "metric": "priority_score",
+      "value": "15505"
+    },
+    {
+      "claim_id": "C7",
+      "issue_id": "usability.ads",
+      "metric": "complaint_count",
+      "value": "9817"
+    },
+    {
+      "claim_id": "C8",
+      "issue_id": "usability.ads",
+      "metric": "priority_score",
+      "value": "21052"
+    },
+    {
+      "claim_id": "C9",
+      "issue_id": "playback.general",
+      "metric": "complaint_count",
+      "value": "3071"
+    },
+    {
+      "claim_id": "C10",
+      "issue_id": "access.login_failure",
+      "metric": "mean_severity",
+      "value": "3.934722"
+    }
+  ],
+  "cited_review_ids": [
+    "5157428f-8f40-4ce7-8e24-2d2c438b212c",
+    "f4b75fa1-e7aa-4264-947b-67d08b357b70"
+  ],
+  "accepted_from": {
+    "request_id": "msg_011CgFB7LR3EKSUiW52qF23n",
+    "run_id": "main-downstream-20261021T025015",
+    "attempt": 2,
+    "note": "rejected at generation time only by a checker bug (fact statements lacked the backticks the prompt requires around issue IDs); re-checked offline after the fix with zero problems and hand-reviewed"
+  },
+  "inputs": {
+    "scope": "Declared 173,000-review subset — not a full-corpus model run; counts are subset counts",
+    "ranking_top": [
+      {
+        "rank": "1",
+        "issue_id": "other.general_dislike",
+        "complaint_count": "24283",
+        "severity_sum": "48514",
+        "mean_severity": "1.997859",
+        "priority_score": "48514"
+      },
+      {
+        "rank": "2",
+        "issue_id": "usability.ads",
+        "complaint_count": "9817",
+        "severity_sum": "21052",
+        "mean_severity": "2.144443",
+        "priority_score": "21052"
+      },
+      {
+        "rank": "3",
+        "issue_id": "billing.subscription_entitlement",
+        "complaint_count": "6029",
+        "severity_sum": "16533",
+        "mean_severity": "2.742246",
+        "priority_score": "16533"
+      },
+      {
+        "rank": "4",
+        "issue_id": "billing.premium_paywall",
+        "complaint_count": "5303",
+        "severity_sum": "15505",
+        "mean_severity": "2.923817",
+        "priority_score": "15505"
+      },
+      {
+        "rank": "5",
+        "issue_id": "usability.shuffle_queue",
+        "complaint_count": "4317",
+        "severity_sum": "11342",
+        "mean_severity": "2.627287",
+        "priority_score": "11342"
+      },
+      {
+        "rank": "6",
+        "issue_id": "playback.general",
+        "complaint_count": "3071",
+        "severity_sum": "9385",
+        "mean_severity": "3.056008",
+        "priority_score": "9385"
+      },
+      {
+        "rank": "7",
+        "issue_id": "access.login_failure",
+        "complaint_count": "2160",
+        "severity_sum": "8499",
+        "mean_severity": "3.934722",
+        "priority_score": "8499"
+      },
+      {
+        "rank": "8",
+        "issue_id": "playback.crash_freeze",
+        "complaint_count": "2068",
+        "severity_sum": "7182",
+        "mean_severity": "3.472921",
+        "priority_score": "7182"
+      },
+      {
+        "rank": "9",
+        "issue_id": "playback.stops_pauses",
+        "complaint_count": "1678",
+        "severity_sum": "5289",
+        "mean_severity": "3.151967",
+        "priority_score": "5289"
+      },
+      {
+        "rank": "10",
+        "issue_id": "catalog.general",
+        "complaint_count": "2060",
+        "severity_sum": "4892",
+        "mean_severity": "2.374757",
+        "priority_score": "4892"
+      },
+      {
+        "rank": "11",
+        "issue_id": "usability.ui_layout",
+        "complaint_count": "1734",
+        "severity_sum": "4107",
+        "mean_severity": "2.368512",
+        "priority_score": "4107"
+      },
+      {
+        "rank": "12",
+        "issue_id": "billing.charges_refund",
+        "complaint_count": "1387",
+        "severity_sum": "4015",
+        "mean_severity": "2.894737",
+        "priority_score": "4015"
+      }
+    ],
+    "issues_total": 35,
+    "topic_aggregates": [
+      {
+        "topic": "access",
+        "records": 3162,
+        "complaint_or_cancellation": 3004,
+        "cancellation": 177,
+        "severity_sum": 11590,
+        "severity_4_plus": 2605,
+        "needs_review": 302
+      },
+      {
+        "topic": "usability",
+        "records": 23451,
+        "complaint_or_cancellation": 18850,
+        "cancellation": 1351,
+        "severity_sum": 43797,
+        "severity_4_plus": 191,
+        "needs_review": 1556
+      },
+      {
+        "topic": "playback",
+        "records": 12335,
+        "complaint_or_cancellation": 9819,
+        "cancellation": 608,
+        "severity_sum": 30610,
+        "severity_4_plus": 2955,
+        "needs_review": 931
+      },
+      {
+        "topic": "downloads",
+        "records": 3194,
+        "complaint_or_cancellation": 2153,
+        "cancellation": 143,
+        "severity_sum": 6994,
+        "severity_4_plus": 787,
+        "needs_review": 337
+      },
+      {
+        "topic": "catalog",
+        "records": 16156,
+        "complaint_or_cancellation": 5371,
+        "cancellation": 262,
+        "severity_sum": 13011,
+        "severity_4_plus": 136,
+        "needs_review": 1315
+      },
+      {
+        "topic": "billing",
+        "records": 16828,
+        "complaint_or_cancellation": 14488,
+        "cancellation": 2928,
+        "severity_sum": 40302,
+        "severity_4_plus": 850,
+        "needs_review": 1733
+      },
+      {
+        "topic": "support",
+        "records": 410,
+        "complaint_or_cancellation": 195,
+        "cancellation": 22,
+        "severity_sum": 511,
+        "severity_4_plus": 26,
+        "needs_review": 45
+      },
+      {
+        "topic": "other",
+        "records": 97424,
+        "complaint_or_cancellation": 24283,
+        "cancellation": 1992,
+        "severity_sum": 48514,
+        "severity_4_plus": 82,
+        "needs_review": 19828
+      }
+    ],
+    "derived_facts": {
+      "families": {
+        "access": {
+          "records": 3162,
+          "complaint_or_cancellation": 3004,
+          "cancellation": 177,
+          "severity_sum": 11590,
+          "severity_4_plus": 2605,
+          "issues": 4,
+          "top_issue": "access.login_failure",
+          "top_issue_rank": 7,
+          "priority_score_total": 11590
+        },
+        "usability": {
+          "records": 23451,
+          "complaint_or_cancellation": 18850,
+          "cancellation": 1351,
+          "severity_sum": 43797,
+          "severity_4_plus": 191,
+          "issues": 5,
+          "top_issue": "usability.ads",
+          "top_issue_rank": 2,
+          "priority_score_total": 43797
+        },
+        "playback": {
+          "records": 12335,
+          "complaint_or_cancellation": 9819,
+          "cancellation": 608,
+          "severity_sum": 30610,
+          "severity_4_plus": 2955,
+          "issues": 8,
+          "top_issue": "playback.general",
+          "top_issue_rank": 6,
+          "priority_score_total": 30610
+        },
+        "billing-support": {
+          "records": 17238,
+          "complaint_or_cancellation": 14683,
+          "cancellation": 2950,
+          "severity_sum": 40813,
+          "severity_4_plus": 876,
+          "issues": 7,
+          "top_issue": "billing.subscription_entitlement",
+          "top_issue_rank": 3,
+          "priority_score_total": 40813
+        }
+      },
+      "family_rank_order_desc": {
+        "complaint_or_cancellation": [
+          "usability",
+          "billing-support",
+          "playback",
+          "access"
+        ],
+        "cancellation": [
+          "billing-support",
+          "usability",
+          "playback",
+          "access"
+        ],
+        "severity_sum": [
+          "usability",
+          "billing-support",
+          "playback",
+          "access"
+        ],
+        "severity_4_plus": [
+          "playback",
+          "access",
+          "billing-support",
+          "usability"
+        ],
+        "priority_score_total": [
+          "usability",
+          "billing-support",
+          "playback",
+          "access"
+        ]
+      },
+      "statements": {
+        "F1": "usability is 1st of 4 families on complaint-or-cancellation records (18850)",
+        "F2": "billing-support is 2nd of 4 families on complaint-or-cancellation records (14683)",
+        "F3": "playback is 3rd of 4 families on complaint-or-cancellation records (9819)",
+        "F4": "access is 4th of 4 families on complaint-or-cancellation records (3004)",
+        "F5": "billing-support is 1st of 4 families on cancellation-language records (2950)",
+        "F6": "usability is 2nd of 4 families on cancellation-language records (1351)",
+        "F7": "playback is 3rd of 4 families on cancellation-language records (608)",
+        "F8": "access is 4th of 4 families on cancellation-language records (177)",
+        "F9": "usability is 1st of 4 families on severity sum (43797)",
+        "F10": "billing-support is 2nd of 4 families on severity sum (40813)",
+        "F11": "playback is 3rd of 4 families on severity sum (30610)",
+        "F12": "access is 4th of 4 families on severity sum (11590)",
+        "F13": "playback is 1st of 4 families on severity-4-plus records (2955)",
+        "F14": "access is 2nd of 4 families on severity-4-plus records (2605)",
+        "F15": "billing-support is 3rd of 4 families on severity-4-plus records (876)",
+        "F16": "usability is 4th of 4 families on severity-4-plus records (191)",
+        "F17": "usability is 1st of 4 families on total priority score of its issues (43797)",
+        "F18": "billing-support is 2nd of 4 families on total priority score of its issues (40813)",
+        "F19": "playback is 3rd of 4 families on total priority score of its issues (30610)",
+        "F20": "access is 4th of 4 families on total priority score of its issues (11590)",
+        "F21": "access.login_failure has the highest mean severity among the top 12 ranked issues (3.934722)",
+        "F22": "the highest-ranked access issue is access.login_failure at rank 7",
+        "F23": "the highest-ranked usability issue is usability.ads at rank 2",
+        "F24": "the highest-ranked playback issue is playback.general at rank 6",
+        "F25": "the highest-ranked billing-support issue is billing.subscription_entitlement at rank 3"
+      },
+      "highest_mean_severity_in_ranking_top": "access.login_failure",
+      "note": "'other' (general dislike, no specific topic) is not one of the four options; its counts are in topic_aggregates."
+    },
+    "evidence": [
+      {
+        "issue_id": "other.general_dislike",
+        "examples": [
+          {
+            "review_id": "888185f9-9da8-4ca2-9390-18a3471f2a7f",
+            "quote": "This is really useless app I ever seen it stoll your data everything it control your gallery be careful"
+          },
+          {
+            "review_id": "2c9db841-2a39-46ae-b518-f2117496e2bb",
+            "quote": "This is very bad application for Android the data is leaked when you playing a song and very ad he is give"
+          },
+          {
+            "review_id": "f33622b9-a964-47a8-ab03-c6326245fa3e",
+            "quote": "I dont want my data sold uninstalled"
+          }
+        ]
+      },
+      {
+        "issue_id": "usability.ads",
+        "examples": [
+          {
+            "review_id": "36d4588e-9ef2-4669-a0bc-f58fc276b2d4",
+            "quote": "none of my playlists are even Opening... crashing tremendously...tired of it... uninstalling it"
+          },
+          {
+            "review_id": "d49d44bd-ffdb-413a-a5eb-eb96f24a9e62",
+            "quote": "Camera man yha focus na kro Last update k baad to spotify bhot kharab hogya h kuch bhi nhi sunne deta ads deta tha phle ab to apni mrzi k song bhi nhi chalne deta"
+          },
+          {
+            "review_id": "810ae28f-6ae8-4116-9796-14a6df631f9b",
+            "quote": "different song than you want"
+          }
+        ]
+      },
+      {
+        "issue_id": "billing.subscription_entitlement",
+        "examples": [
+          {
+            "review_id": "01bae9e0-2ad4-4ce4-98ee-aaac1fa9235a",
+            "quote": "Yo estoy pagando el Spotify premium, para que me cuenten el stream que hago y ahorita le quitan eso, APRENDAN A MÁS QUE SEA DISIMULAR PORQUE LO QUE HICIERON ES UN ROBO AL OJO"
+          },
+          {
+            "review_id": "5157428f-8f40-4ce7-8e24-2d2c438b212c",
+            "quote": "Amount debited twice but still Premium account not renewed"
+          },
+          {
+            "review_id": "2dc9db93-8cb2-458f-8a05-f56adde6eb00",
+            "quote": "I forgot and managed to pay it and it got rid of my subscription I actually paid for more than once"
+          }
+        ]
+      },
+      {
+        "issue_id": "billing.premium_paywall",
+        "examples": [
+          {
+            "review_id": "feded429-c541-464a-b77d-a23bcde044a4",
+            "quote": "you used an old and destroyed card to pay for this months fee, even though my new card details are available"
+          },
+          {
+            "review_id": "f4b75fa1-e7aa-4264-947b-67d08b357b70",
+            "quote": "To get charged for making a playlist is just ridiculous!"
+          },
+          {
+            "review_id": "630ccf1f-27ca-498b-b731-318d859faa46",
+            "quote": "Don't understand why I had to pay for the 12.99 plan for 2 people when I am 1 person"
+          }
+        ]
+      },
+      {
+        "issue_id": "usability.shuffle_queue",
+        "examples": [
+          {
+            "review_id": "025cf0e8-c489-4bfe-8618-6cea10f18a88",
+            "quote": "I can't play the music that I want anymore and I can't repeat any of the songs, neither can I add any songs to the queue I am very disappointed it has only been asking for premium"
+          },
+          {
+            "review_id": "df083849-e8ef-4e86-b407-005c25b90808",
+            "quote": "Worst update ever.. you can't choose which song you want to play from any playlist , can't skip the song"
+          },
+          {
+            "review_id": "77c8c8a4-7819-412a-8a09-cf83e8cc9c59",
+            "quote": "they ruined the UI and they've refused to listen to any user feedback"
+          }
+        ]
+      },
+      {
+        "issue_id": "playback.general",
+        "examples": [
+          {
+            "review_id": "e6cf9934-4ecf-4417-b91a-6a615127aefb",
+            "quote": "So annoying...paid for premium...had more than 200 songs on my playlist all of a sudden they just wiped out 😩😭...this app sucks man..."
+          },
+          {
+            "review_id": "dc0c2fb5-9d6a-4b66-89fb-090e2ee8ca59",
+            "quote": "Won't work anymore. Can't play anything"
+          },
+          {
+            "review_id": "09aae8ef-6c97-426d-8c2b-16d1d358b6bf",
+            "quote": "From yesterday onwards, my phone is getting restarted while opening Spotify. Unable to uninstall also. I am using samsung note20 ultra. Otherwise it was really good"
+          }
+        ]
+      }
+    ]
+  }
+}

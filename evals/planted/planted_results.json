@@ -1,0 +1,335 @@
+{
+  "summary": {
+    "planted": 40,
+    "caught": 40,
+    "by_kind": {
+      "wrong_topic": 10,
+      "wrong_severity": 10,
+      "bad_quote": 10,
+      "severity_out_of_range": 10
+    },
+    "note": "test copies only; never written to records/aggregates"
+  },
+  "cases": [
+    {
+      "review_id": "cfacb31d-97a6-44be-9c8f-8cdfb433d92d",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "d0424280-2c78-403d-ae69-d9914cde9a1c",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "8529a753-5292-4620-8ba2-5d4279ef16c6",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "26957bfc-ea5d-4472-91e7-9680dd26dee8",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "b7d8d5fc-fd38-4667-a096-20535b786dbe",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "29dfea7c-5304-4a25-8c96-e2ec49d6c1e6",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "3a418904-31e2-493e-9827-01a33ded581a",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "90d4faf9-2425-42ef-86e8-11c15f931221",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "e4205dae-ba5f-4be4-98d7-48587a466584",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "2dc1c97b-dcf6-45fc-832a-a8946d62e709",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "fd735ea1-8330-4a22-bdad-6362ae251a81",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "4fd9568c-855a-4c4c-9ebd-88820c131bf1",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "29cce86b-1780-44cd-a328-7eb800feaa95",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "f2e51749-827e-417a-9a08-1e95ed0988f5",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "f5194438-db9c-4b0d-8721-45c257ee6941",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "58408a62-3142-4283-ac1d-2bd45c15bdd5",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "b176bf08-5647-4ecb-95b7-8363a7a630ea",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "a8c3af35-40f7-4a0f-a8b9-2dbdce6453a1",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "f1a7d574-9da5-4788-8f61-b6a1be13f7cb",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "e3a6cd90-10dd-47b2-a04c-dd3a27a2c812",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "924e88ba-72c2-45e4-b51d-ba28d628a534",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "219f6834-c9ab-4a83-b427-e577565adef4",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "23354413-d8ef-4c62-82af-8219081b8a6b",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "137f274f-b2ca-444e-afc3-b68a4dba9af5",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "9f735b99-8120-46d9-8ae7-9d1bf44ac5bd",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "a31aca49-26f9-4a66-8d13-67d4192ab0e5",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "e2119d7d-3e83-42ba-99d4-2fe571e953ec",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "9418c139-6f70-4179-91f8-435c5332c6b5",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "89a8e180-7846-4421-a2b6-fa7787e9d0d2",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "c491b7f5-77c0-468b-9f0b-80ecd8534f4a",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "bec75f3d-3f92-4a22-9b61-ecdc33952f4d",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "492323c4-2fe1-441c-b5ee-2f5db0a04736",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "fbbc7e2b-64c7-4fe8-93f5-dac9d640cf50",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "094b3ca6-f725-4a43-9484-bc3bcdabc589",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "f54936c2-b7f1-47ba-ae8e-e1be896c7074",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "a77e24df-03b0-411a-9868-6b6991d6aae2",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "15daa613-0c74-4a74-9fa4-a15ffde9693a",
+      "synthetic": true,
+      "planted": "wrong_topic",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "0cc5a3be-e40c-4e9f-918d-53d284e2e5b3",
+      "synthetic": true,
+      "planted": "wrong_severity",
+      "caught_by_code": false,
+      "caught_by_verifier": true,
+      "caught": true
+    },
+    {
+      "review_id": "137a84b4-96c6-4c91-9c77-34dceae5d270",
+      "synthetic": true,
+      "planted": "bad_quote",
+      "caught_by_code": true,
+      "caught_by_verifier": false,
+      "caught": true
+    },
+    {
+      "review_id": "36758c0b-f125-4a5a-9a5c-9be2caea181e",
+      "synthetic": true,
+      "planted": "severity_out_of_range",
+      "caught_by_code": true,
+      "caught_by_verifier": true,
+      "caught": true
+    }
+  ]
+}

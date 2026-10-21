@@ -1,0 +1,18 @@
+[group] names_cache_hit cache=group_names_94b6dfb82e320b1c.json
+[memo] attempt attempt=1 problems=7
+[memo] attempt attempt=2 problems=7
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 96, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\__main__.py", line 48, in main
+    vsum, ranking, out = run.downstream(ledger, d["scope"]["label"] + "; counts are subset counts")
+                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\run.py", line 114, in downstream
+    out, _ = memo.run(ranking, agg, mpack, scope_note, ledger, calls, d["memo_model"], run_id, cache_dir=cache_dir)
+             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jcrob\code\spotify-reviews-final\pipeline\memo.py", line 213, in run
+    raise RuntimeError("memo failed code checks twice: " + "; ".join(problems[:5]))
+RuntimeError: memo failed code checks twice: comparative sentence without a derived-fact tag: Usability has the largest complaint volume, but billing-support is the strongest proxy for churn intent in this subset.; comparative sentence without a derived-fact tag: Its top-ranked issue is `billing.subscription_entitlement` at rank 3 with 6029 complaints [C1], severity_sum 16533 [C2],; comparative sentence without a derived-fact tag: Its top-ranked issue is `usability.ads` at rank 2 with 9817 complaints [C5], severity_sum 21052 [C6], and mean_severity ; comparative sentence without a derived-fact tag: Its top-ranked issue is `playback.general` at rank 6 with 3071 complaints [C8] and severity_sum 9385 [C9].; comparative sentence without a derived-fact tag: Its top-ranked issue is `access.login_failure` at rank 7 with 2160 complaints [C10] and mean_severity 3.934722 [C11].
