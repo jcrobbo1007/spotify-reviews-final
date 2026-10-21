@@ -1,0 +1,78 @@
+{
+  "input": "data\\spotify_reviews_18months.csv",
+  "sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+  "profile": {
+    "records": 660622,
+    "duplicate_review_ids": 0,
+    "empty_review_text": 13,
+    "missing_app_version": 159701,
+    "distinct_nonempty_texts": 484189,
+    "rows_with_exact_duplicate_text": 192342,
+    "first_review": "2022-05-17 00:01:07",
+    "last_review": "2023-11-15 23:16:10",
+    "reviews_by_rating": {
+      "1": 242620,
+      "2": 31034,
+      "3": 33268,
+      "4": 54140,
+      "5": 299560
+    },
+    "reviews_by_month": {
+      "2022-05": 15461,
+      "2022-06": 30338,
+      "2022-07": 32784,
+      "2022-08": 30732,
+      "2022-09": 26933,
+      "2022-10": 27572,
+      "2022-11": 27349,
+      "2022-12": 31744,
+      "2023-01": 28609,
+      "2023-02": 20889,
+      "2023-03": 27238,
+      "2023-04": 25014,
+      "2023-05": 28062,
+      "2023-06": 27117,
+      "2023-07": 85079,
+      "2023-08": 30438,
+      "2023-09": 41634,
+      "2023-10": 89104,
+      "2023-11": 34525
+    },
+    "missing_by_field": {
+      "review_id": 0,
+      "review_text": 13,
+      "review_rating": 0,
+      "review_likes": 0,
+      "app_version": 159701,
+      "review_timestamp": 0
+    }
+  },
+  "brief_checks": {
+    "records": {
+      "brief": 660622,
+      "actual": 660622,
+      "match": true
+    },
+    "empty_review_text": {
+      "brief": 13,
+      "actual": 13,
+      "match": true
+    },
+    "missing_app_version": {
+      "brief": 159701,
+      "actual": 159701,
+      "match": true
+    },
+    "duplicate_review_ids": {
+      "brief": 0,
+      "actual": 0,
+      "match": true
+    },
+    "distinct_nonempty_texts": {
+      "brief": 484189,
+      "actual": 484189,
+      "match": true
+    }
+  },
+  "all_match": true
+}

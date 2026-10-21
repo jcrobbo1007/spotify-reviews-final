@@ -1,0 +1,6 @@
+{"ts":"2026-10-21T00:11:56-0700","stage":"enrich","event":"start","phase":"initial","label_config":"claude-haiku-5-5+enrich_v1.1ab080f4+schema_v1+effort-low+thinking-off+short200+qrepair1","cap_usd":5.0,"spent_usd":0.006703,"reserved_usd":0}
+{"ts":"2026-10-21T00:11:56-0700","stage":"enrich","event":"cache_fanout","rows":100}
+{"ts":"2026-10-21T00:11:56-0700","stage":"enrich","event":"finished","completed":100,"cap_usd":5.0,"spent_usd":0.006703,"reserved_usd":0}
+{"ts":"2026-10-21T00:11:56-0700","stage":"pilot","event":"warm_enrich_done","new_calls":0,"completed":100}
+{"ts":"2026-10-21T00:11:56-0700","stage":"verify","event":"cache_hit","sample":50}
+{"ts":"2026-10-21T00:12:05-0700","stage":"memo","event":"cache_hit","cache":"memo_bfdad2002f5e658c.json"}

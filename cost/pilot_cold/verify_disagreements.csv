@@ -1,0 +1,14 @@
+review_id,fields,enrich_topic,enrich_intent,enrich_severity,verify_topic,verify_intent,verify_severity,enrich_needs_review,evidence_quote
+89a8e180-7846-4421-a2b6-fa7787e9d0d2,topic,other,complaint,2,usability,complaint,2,True,Too much restrictions
+dd90623c-dcd8-45a2-bb5b-3ace2b383667,intent|severity,catalog,complaint,2,catalog,request,1,False,"Amazing,but you have to give us reggae music colections"
+9c9757da-6b99-4c95-a0e7-0661ee858027,topic,other,complaint,2,playback,complaint,2,False,There is some bugs like music adjustment doesn't work Perporly plz do something about this bug
+618d1dbb-0186-4537-923a-7b4dabf19afb,intent,usability,complaint,2,usability,cancellation,2,False,Please stop with the recommendations! I use the premium family sub and I want to listen to my playlist without your recommendation adds.
+a78d831a-69f4-428a-9235-cfdd9775c509,severity,usability,complaint,4,usability,complaint,3,False,"You can't even listen to music you want it just shuffles it, like what the hell? This app is killing it self and forcing you to pay premium for basic things like just listening to music."
+9d851b7f-a738-449b-a841-de8076f13276,topic,catalog,praise,1,other,praise,1,False,Great music
+1807cc68-ba99-4edc-b6f1-2a1478e69109,intent|severity,catalog,praise,1,catalog,complaint,2,False,I love Spotify recommendations music type before more than now. It was more songs and updated to newest song.
+e25cf0b6-0285-4cc9-9a4a-5a8a05be929e,topic,catalog,praise,1,usability,praise,1,False,Awesome music app can def see y everyone loves it so much best part to me personally is the categories suggested for you personally
+66a29b3c-c14d-440e-b722-b23e0c99ae82,topic,playback,complaint,4,access,complaint,4,False,App is stuck on loading/logo screen
+ff14ea84-fdec-4363-9b1b-a23dcab287c5,intent|severity,other,praise,1,other,complaint,2,False,Good at all
+b9a3e661-0eac-4cc9-a30e-7b1e11ef1315,topic|intent,catalog,unclear,1,other,praise,1,True,"I ended up on Spotify because I wanted to listen to a specific podcast I really thought I was a Pandora lover, but I haven't turned my Pandora on since I loaded Spotify."
+3e82cf28-6b0a-4980-902c-b6aa154d353a,intent|severity,other,complaint,2,other,unclear,1,True,"Aakhir kar spotify ne bhi apni bhikaariyo vali aukaat dikha di ""Gadar karbe"" Chanda mangna got real Bhikaariyo ko training dena bhi shuru kardo haramiyo"
+e16a4550-43e7-4ae1-b538-a65cc652c31b,topic,other,cancellation,3,usability,cancellation,3,False,Am very sad about the new spotfy update. i can't play song happly . Can't repeat and play specific part.please solve this matter. I'm leaving spotfy

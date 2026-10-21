@@ -1,0 +1,9 @@
+topic,records,complaint_or_cancellation,cancellation,severity_sum,severity_4_plus,needs_review
+access,3,3,0,11,2,0
+usability,17,17,3,38,0,4
+playback,6,6,1,20,3,0
+downloads,3,2,1,7,1,0
+catalog,10,5,0,10,0,2
+billing,3,3,1,9,0,0
+support,0,0,0,0,0,0
+other,58,15,3,31,0,13

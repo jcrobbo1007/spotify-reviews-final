@@ -1,0 +1,9 @@
+{
+  "compared": 50,
+  "topic_agreement": 0.86,
+  "intent_agreement": 0.88,
+  "severity_agreement": 0.9,
+  "severity_mae": 0.1,
+  "sentiment_mae": 0.126,
+  "records_with_any_disagreement": 13
+}

@@ -1,0 +1,20 @@
+[enrich] start phase=initial label_config=claude-haiku-5-5+enrich_v1.18fdc419+schema_v1+effort-low+thinking-off+short200+qrepair1 cap_usd=5.0 spent_usd=0.007611 reserved_usd=0
+[enrich] batch_submitted batch_id=msgbatch_018L1F3jyGTqHtWCzyB3fuGa requests=2 reviews=100 reserved_usd=0.003062 phase=initial
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+  batch msgbatch_018L1F3jyGTqHtWCzyB3fuGa: in_progress processing=2 succeeded=0 errored=0
+[enrich] batch_committed batch_id=msgbatch_018L1F3jyGTqHtWCzyB3fuGa completed_reps=100 wait_s=436.2 usd=0.001823 cap_usd=5.0 spent_usd=0.009434 reserved_usd=0
+[enrich] finished completed=100 cap_usd=5.0 spent_usd=0.009434 reserved_usd=0
+[pilot] cold_enrich_done new_calls=2 completed=100
+[verify] batch_submitted batch_id=msgbatch_01UCkgCiFvnDzuL6zZQcm1Md requests=1 reviews=50
+  batch msgbatch_01UCkgCiFvnDzuL6zZQcm1Md: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_01UCkgCiFvnDzuL6zZQcm1Md: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_01UCkgCiFvnDzuL6zZQcm1Md: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_01UCkgCiFvnDzuL6zZQcm1Md: in_progress processing=1 succeeded=0 errored=0

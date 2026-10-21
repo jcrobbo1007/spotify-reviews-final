@@ -1,0 +1,29 @@
+[enrich] start phase=initial label_config=claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups cap_usd=5.0 spent_usd=0.010051 reserved_usd=0
+[enrich] batch_submitted batch_id=msgbatch_01N5aXx2Hriefm1PQPutis36 requests=3 reviews=100 reserved_usd=0.003395 phase=initial
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+  batch msgbatch_01N5aXx2Hriefm1PQPutis36: in_progress processing=3 succeeded=0 errored=0
+[enrich] batch_committed batch_id=msgbatch_01N5aXx2Hriefm1PQPutis36 completed_reps=100 wait_s=617.5 usd=0.002052 cap_usd=5.0 spent_usd=0.012103 reserved_usd=0
+[enrich] finished completed=100 cap_usd=5.0 spent_usd=0.012103 reserved_usd=0
+[pilot] cold_enrich_done new_calls=3 completed=100
+[verify] batch_submitted batch_id=msgbatch_012HaaRdptYauSKyjLV5AXEQ requests=1 reviews=50
+  batch msgbatch_012HaaRdptYauSKyjLV5AXEQ: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_012HaaRdptYauSKyjLV5AXEQ: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_012HaaRdptYauSKyjLV5AXEQ: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_012HaaRdptYauSKyjLV5AXEQ: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_012HaaRdptYauSKyjLV5AXEQ: in_progress processing=1 succeeded=0 errored=0
+  batch msgbatch_012HaaRdptYauSKyjLV5AXEQ: in_progress processing=1 succeeded=0 errored=0
+[verify] done predicted=50 of=50 usd=0.000616
+[memo] attempt attempt=1 problems=0
+{'enrich': {'wall_s': 619.476, 'started': '2026-10-21T00:27:14-0700', 'ended': '2026-10-21T00:37:34-0700', 'new_calls': 3, 'counts': {'completed': 100}, 'label_config': 'claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups', 'run_id': 'pilot-cold-20261021T002714'}, 'verify': {'wall_s': 195.129, 'started': '2026-10-21T00:37:34-0700', 'ended': '2026-10-21T00:40:49-0700', 'sample': 50, 'new_calls': 1, 'compared': 50, 'topic_agreement': 0.86, 'intent_agreement': 0.88, 'severity_agreement': 0.9, 'severity_mae': 0.1, 'sentiment_mae': 0.126, 'records_with_any_disagreement': 13}, 'group': {'wall_s': 5.508, 'started': '2026-10-21T00:40:49-0700', 'ended': '2026-10-21T00:40:54-0700', 'issues': 18, 'members': 52, 'new_calls': 1}, 'rank': {'wall_s': 0.0, 'started': '2026-10-21T00:40:54-0700', 'ended': '2026-10-21T00:40:54-0700', 'issues': 18}, 'memo': {'wall_s': 7.312, 'started': '2026-10-21T00:40:54-0700', 'ended': '2026-10-21T00:41:02-0700', 'new_calls': 1}}
+ledger: {'cap_usd': 5.0, 'spent_usd': 0.014908, 'reserved_usd': 0}

@@ -1,0 +1,8 @@
+[enrich] start phase=initial label_config=claude-haiku-5-5+enrich_v1.1ab080f4+schema_v1+effort-low+thinking-off+short200+qrepair1 cap_usd=5.0 spent_usd=0.006703 reserved_usd=0
+[enrich] cache_fanout rows=100
+[enrich] finished completed=100 cap_usd=5.0 spent_usd=0.006703 reserved_usd=0
+[pilot] warm_enrich_done new_calls=0 completed=100
+[verify] cache_hit sample=50
+[memo] cache_hit cache=memo_bfdad2002f5e658c.json
+{'enrich': {'wall_s': 0.005, 'started': '2026-10-21T00:11:56-0700', 'ended': '2026-10-21T00:11:56-0700', 'new_calls': 0, 'counts': {'completed': 100}, 'label_config': 'claude-haiku-5-5+enrich_v1.1ab080f4+schema_v1+effort-low+thinking-off+short200+qrepair1', 'run_id': 'pilot-warm-20261021T001156'}, 'verify': {'wall_s': 0.003, 'started': '2026-10-21T00:11:56-0700', 'ended': '2026-10-21T00:11:56-0700', 'sample': 50, 'new_calls': 0, 'compared': 50, 'topic_agreement': 0.86, 'intent_agreement': 0.96, 'severity_agreement': 0.96, 'severity_mae': 0.04, 'sentiment_mae': 0.098, 'records_with_any_disagreement': 9}, 'group': {'wall_s': 8.986, 'started': '2026-10-21T00:11:56-0700', 'ended': '2026-10-21T00:12:05-0700', 'issues': 18, 'members': 51, 'new_calls': 1}, 'rank': {'wall_s': 0.001, 'started': '2026-10-21T00:12:05-0700', 'ended': '2026-10-21T00:12:05-0700', 'issues': 18}, 'memo': {'wall_s': 0.007, 'started': '2026-10-21T00:12:05-0700', 'ended': '2026-10-21T00:12:05-0700', 'new_calls': 0}}
+ledger: {'cap_usd': 5.0, 'spent_usd': 0.007611, 'reserved_usd': 0}

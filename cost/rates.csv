@@ -1,0 +1,11 @@
+model,tier,item,unit,usd_per_mtok,source,checked
+claude-haiku-5-5,standard,input,token,0.10,https://platform.claude.com/docs/en/about-claude/pricing#model-pricing,2026-10-20
+claude-haiku-5-5,standard,cache_write_5m,token,0.125,https://platform.claude.com/docs/en/about-claude/pricing#model-pricing,2026-10-20
+claude-haiku-5-5,standard,cache_write_1h,token,0.20,https://platform.claude.com/docs/en/about-claude/pricing#model-pricing,2026-10-20
+claude-haiku-5-5,standard,cache_read,token,0.01,https://platform.claude.com/docs/en/about-claude/pricing#model-pricing,2026-10-20
+claude-haiku-5-5,standard,output,token,0.50,https://platform.claude.com/docs/en/about-claude/pricing#model-pricing,2026-10-20
+claude-haiku-5-5,batch,input,token,0.05,https://platform.claude.com/docs/en/about-claude/pricing#batch-processing,2026-10-20
+claude-haiku-5-5,batch,cache_write_5m,token,0.0625,https://platform.claude.com/docs/en/about-claude/pricing#prompt-caching (multipliers stack with batch 50% discount),2026-10-20
+claude-haiku-5-5,batch,cache_write_1h,token,0.10,https://platform.claude.com/docs/en/about-claude/pricing#prompt-caching (multipliers stack with batch 50% discount),2026-10-20
+claude-haiku-5-5,batch,cache_read,token,0.005,https://platform.claude.com/docs/en/about-claude/pricing#prompt-caching (multipliers stack with batch 50% discount),2026-10-20
+claude-haiku-5-5,batch,output,token,0.25,https://platform.claude.com/docs/en/about-claude/pricing#batch-processing,2026-10-20

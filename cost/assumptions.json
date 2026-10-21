@@ -1,0 +1,43 @@
+{
+  "spend_limit_usd": 5.0,
+  "output_token_cap_per_review": 70,
+  "max_workers": 1,
+  "fallback_fraction": 0.0,
+  "reviews_per_request": 50,
+  "verification_sample": 500,
+  "scenarios": {
+    "subset_173000": {
+      "rows": 173000,
+      "classifications": 173000,
+      "quarantines": 0,
+      "distinct_texts": 132832,
+      "label": "declared 173,000-review subset (planned run)"
+    },
+    "subset_100000": {
+      "rows": 100000,
+      "classifications": 100000,
+      "quarantines": 0,
+      "distinct_texts": 78309,
+      "label": "100,000 core of the subset"
+    },
+    "full_corpus_660609": {
+      "rows": 660622,
+      "classifications": 660609,
+      "quarantines": 13,
+      "distinct_texts": 484189,
+      "label": "full corpus (estimate only, not executed)"
+    }
+  },
+  "base": {
+    "retry_fraction": null,
+    "output_multiplier": 1.0,
+    "batch_wait_s_per_wave": null
+  },
+  "conservative": {
+    "retry_fraction": 0.05,
+    "output_multiplier": 1.5,
+    "batch_wait_s_per_wave_multiplier": 3.0,
+    "cache_miss_fraction": 0.5
+  },
+  "requests_per_wave": 400
+}

@@ -1,0 +1,10 @@
+review_id,fields,enrich_topic,enrich_intent,enrich_severity,verify_topic,verify_intent,verify_severity,enrich_needs_review,evidence_quote
+89a8e180-7846-4421-a2b6-fa7787e9d0d2,topic,other,complaint,2,usability,complaint,2,False,Too much restrictions
+618d1dbb-0186-4537-923a-7b4dabf19afb,topic|intent,catalog,request,2,usability,cancellation,2,False,Please stop with the recommendations!
+e25cf0b6-0285-4cc9-9a4a-5a8a05be929e,topic,catalog,praise,1,usability,praise,1,False,Awesome music app can def see y everyone loves it so much best part to me personally is the categories suggested for you personally
+2ffdf599-a0d5-4c01-bf26-025215d44c06,severity,downloads,cancellation,3,downloads,cancellation,2,False,it is always stuck downloading songs in the background
+66a29b3c-c14d-440e-b722-b23e0c99ae82,topic,playback,complaint,4,access,complaint,4,False,App is stuck on loading/logo screen
+b9a3e661-0eac-4cc9-a30e-7b1e11ef1315,topic,catalog,unclear,1,other,unclear,1,True,"I ended up on Spotify because I wanted to listen to a specific podcast I really thought I was a Pandora lover, but I haven't turned my Pandora on since I loaded Spotify."
+7084ced1-0428-4093-9328-442f74719b4f,topic,other,complaint,3,usability,complaint,3,False,I am using Spotify from past two years From last update they removed basic features of music player
+3e82cf28-6b0a-4980-902c-b6aa154d353a,intent|severity,other,complaint,2,other,unclear,1,True,"Aakhir kar spotify ne bhi apni bhikaariyo vali aukaat dikha di ""Gadar karbe"" Chanda mangna got real Bhikaariyo ko training dena bhi shuru kardo haramiyo"
+e16a4550-43e7-4ae1-b538-a65cc652c31b,topic,playback,cancellation,3,usability,cancellation,3,False,Am very sad about the new spotfy update. i can't play song happly . Can't repeat and play specific part.please solve this matter. I'm leaving spotfy

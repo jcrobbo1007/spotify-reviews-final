@@ -1,0 +1,280 @@
+{
+  "rate_scale": "1",
+  "measured": {
+    "cold": {
+      "enrich": 0.001648,
+      "verify": 0.000726,
+      "group": 0.000929,
+      "memo": 0.001387,
+      "api_subtotal_usd": 0.00469,
+      "new_enrich_calls": 2
+    },
+    "warm": {
+      "group": 0.000908,
+      "api_subtotal_usd": 0.000908,
+      "new_enrich_calls": 0
+    }
+  },
+  "timings": {
+    "cold": {
+      "enrich": {
+        "wall_s": 437.976,
+        "started": "2026-10-21T00:00:54-0700",
+        "ended": "2026-10-21T00:08:12-0700",
+        "new_calls": 2,
+        "counts": {
+          "completed": 100
+        },
+        "label_config": "claude-haiku-5-5+enrich_v1.1ab080f4+schema_v1+effort-low+thinking-off+short200+qrepair1",
+        "run_id": "pilot-cold-20261021T000054"
+      },
+      "verify": {
+        "wall_s": 195.094,
+        "started": "2026-10-21T00:08:12-0700",
+        "ended": "2026-10-21T00:11:27-0700",
+        "sample": 50,
+        "new_calls": 1,
+        "compared": 50,
+        "topic_agreement": 0.86,
+        "intent_agreement": 0.96,
+        "severity_agreement": 0.96,
+        "severity_mae": 0.04,
+        "sentiment_mae": 0.098,
+        "records_with_any_disagreement": 9
+      },
+      "group": {
+        "wall_s": 7.5,
+        "started": "2026-10-21T00:11:27-0700",
+        "ended": "2026-10-21T00:11:35-0700",
+        "issues": 18,
+        "members": 51,
+        "new_calls": 1
+      },
+      "rank": {
+        "wall_s": 0.001,
+        "started": "2026-10-21T00:11:35-0700",
+        "ended": "2026-10-21T00:11:35-0700",
+        "issues": 18
+      },
+      "memo": {
+        "wall_s": 9.886,
+        "started": "2026-10-21T00:11:35-0700",
+        "ended": "2026-10-21T00:11:44-0700",
+        "new_calls": 1
+      }
+    },
+    "warm": {
+      "enrich": {
+        "wall_s": 0.005,
+        "started": "2026-10-21T00:11:56-0700",
+        "ended": "2026-10-21T00:11:56-0700",
+        "new_calls": 0,
+        "counts": {
+          "completed": 100
+        },
+        "label_config": "claude-haiku-5-5+enrich_v1.1ab080f4+schema_v1+effort-low+thinking-off+short200+qrepair1",
+        "run_id": "pilot-warm-20261021T001156"
+      },
+      "verify": {
+        "wall_s": 0.003,
+        "started": "2026-10-21T00:11:56-0700",
+        "ended": "2026-10-21T00:11:56-0700",
+        "sample": 50,
+        "new_calls": 0,
+        "compared": 50,
+        "topic_agreement": 0.86,
+        "intent_agreement": 0.96,
+        "severity_agreement": 0.96,
+        "severity_mae": 0.04,
+        "sentiment_mae": 0.098,
+        "records_with_any_disagreement": 9
+      },
+      "group": {
+        "wall_s": 8.986,
+        "started": "2026-10-21T00:11:56-0700",
+        "ended": "2026-10-21T00:12:05-0700",
+        "issues": 18,
+        "members": 51,
+        "new_calls": 1
+      },
+      "rank": {
+        "wall_s": 0.001,
+        "started": "2026-10-21T00:12:05-0700",
+        "ended": "2026-10-21T00:12:05-0700",
+        "issues": 18
+      },
+      "memo": {
+        "wall_s": 0.007,
+        "started": "2026-10-21T00:12:05-0700",
+        "ended": "2026-10-21T00:12:05-0700",
+        "new_calls": 0
+      }
+    }
+  },
+  "measurements": {
+    "enrich_requests": 2,
+    "enrich_failed_requests": 0,
+    "reviews_sent": 100,
+    "reviews_first_attempt": 100,
+    "retry_fraction": 0.0,
+    "input_per_review": 45.82,
+    "output_per_review": 55.66,
+    "prefix_tokens": 2726,
+    "cache_read_share": 1.0,
+    "enrich_wall_s": 437.976,
+    "verify_calls": 1,
+    "verify_reviews": 50,
+    "group_calls": 1,
+    "group_reviews": 0,
+    "memo_calls": 1,
+    "memo_reviews": 0
+  },
+  "projections": {
+    "subset_187000": {
+      "base": {
+        "case": "base",
+        "distinct_texts": 143114,
+        "reviews_sent_incl_retries": 143114,
+        "requests": 2863,
+        "retry_fraction": 0.0,
+        "output_multiplier": 1.0,
+        "prefix_cache_miss_fraction": 0.0,
+        "enrich_usd": 2.358328,
+        "verify_usd": 0.007264,
+        "group_memo_fixed_usd": 0.002316,
+        "total_api_usd": 2.367908,
+        "waves": 8,
+        "est_wall_s": 3504,
+        "exceeds_cap": false
+      },
+      "conservative": {
+        "case": "conservative",
+        "distinct_texts": 143114,
+        "reviews_sent_incl_retries": 150270,
+        "requests": 3579,
+        "retry_fraction": 0.05,
+        "output_multiplier": 1.5,
+        "prefix_cache_miss_fraction": 0.5,
+        "enrich_usd": 3.992981,
+        "verify_usd": 0.007627,
+        "group_memo_fixed_usd": 0.002316,
+        "total_api_usd": 4.002924,
+        "waves": 9,
+        "est_wall_s": 11825,
+        "exceeds_cap": false
+      }
+    },
+    "subset_100000": {
+      "base": {
+        "case": "base",
+        "distinct_texts": 78309,
+        "reviews_sent_incl_retries": 78309,
+        "requests": 1567,
+        "retry_fraction": 0.0,
+        "output_multiplier": 1.0,
+        "prefix_cache_miss_fraction": 0.0,
+        "enrich_usd": 1.290434,
+        "verify_usd": 0.007264,
+        "group_memo_fixed_usd": 0.002316,
+        "total_api_usd": 1.300014,
+        "waves": 4,
+        "est_wall_s": 1752,
+        "exceeds_cap": false
+      },
+      "conservative": {
+        "case": "conservative",
+        "distinct_texts": 78309,
+        "reviews_sent_incl_retries": 82224,
+        "requests": 1959,
+        "retry_fraction": 0.05,
+        "output_multiplier": 1.5,
+        "prefix_cache_miss_fraction": 0.5,
+        "enrich_usd": 2.184968,
+        "verify_usd": 0.007627,
+        "group_memo_fixed_usd": 0.002316,
+        "total_api_usd": 2.194911,
+        "waves": 5,
+        "est_wall_s": 6570,
+        "exceeds_cap": false
+      }
+    },
+    "full_corpus_660609": {
+      "base": {
+        "case": "base",
+        "distinct_texts": 484189,
+        "reviews_sent_incl_retries": 484189,
+        "requests": 9684,
+        "retry_fraction": 0.0,
+        "output_multiplier": 1.0,
+        "prefix_cache_miss_fraction": 0.0,
+        "enrich_usd": 7.97876,
+        "verify_usd": 0.007264,
+        "group_memo_fixed_usd": 0.002316,
+        "total_api_usd": 7.98834,
+        "waves": 25,
+        "est_wall_s": 10949,
+        "exceeds_cap": true
+      },
+      "conservative": {
+        "case": "conservative",
+        "distinct_texts": 484189,
+        "reviews_sent_incl_retries": 508398,
+        "requests": 12105,
+        "retry_fraction": 0.05,
+        "output_multiplier": 1.5,
+        "prefix_cache_miss_fraction": 0.5,
+        "enrich_usd": 13.508695,
+        "verify_usd": 0.007627,
+        "group_memo_fixed_usd": 0.002316,
+        "total_api_usd": 13.518638,
+        "waves": 31,
+        "est_wall_s": 40732,
+        "exceeds_cap": true
+      }
+    }
+  },
+  "assumptions": {
+    "spend_limit_usd": 5.0,
+    "output_token_cap_per_review": 70,
+    "max_workers": 1,
+    "fallback_fraction": 0.0,
+    "reviews_per_request": 50,
+    "verification_sample": 500,
+    "scenarios": {
+      "subset_187000": {
+        "rows": 187000,
+        "classifications": 187000,
+        "quarantines": 0,
+        "distinct_texts": 143114,
+        "label": "declared 187,000-review subset (planned run)"
+      },
+      "subset_100000": {
+        "rows": 100000,
+        "classifications": 100000,
+        "quarantines": 0,
+        "distinct_texts": 78309,
+        "label": "100,000 core of the subset"
+      },
+      "full_corpus_660609": {
+        "rows": 660622,
+        "classifications": 660609,
+        "quarantines": 13,
+        "distinct_texts": 484189,
+        "label": "full corpus (estimate only, not executed)"
+      }
+    },
+    "base": {
+      "retry_fraction": null,
+      "output_multiplier": 1.0,
+      "batch_wait_s_per_wave": null
+    },
+    "conservative": {
+      "retry_fraction": 0.05,
+      "output_multiplier": 1.5,
+      "batch_wait_s_per_wave_multiplier": 3.0,
+      "cache_miss_fraction": 0.5
+    },
+    "requests_per_wave": 400
+  },
+  "local_compute": "not measured; local CPU/SQLite work only, no GPU; shown separately and excluded from API spend"
+}

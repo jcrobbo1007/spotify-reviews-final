@@ -1,0 +1,5 @@
+{"ts":"2026-10-21T00:41:02-0700","stage":"enrich","event":"start","phase":"initial","label_config":"claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups","cap_usd":5.0,"spent_usd":0.014908,"reserved_usd":0}
+{"ts":"2026-10-21T00:41:02-0700","stage":"enrich","event":"finished","completed":100,"cap_usd":5.0,"spent_usd":0.014908,"reserved_usd":0}
+{"ts":"2026-10-21T00:41:02-0700","stage":"pilot","event":"warm_enrich_done","new_calls":0,"completed":100}
+{"ts":"2026-10-21T00:41:02-0700","stage":"verify","event":"cache_hit","sample":50}
+{"ts":"2026-10-21T00:41:18-0700","stage":"memo","event":"attempt","attempt":1,"problems":0}

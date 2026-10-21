@@ -1,0 +1,93 @@
+{
+  "recorded_at": "2026-10-20",
+  "decided_by": "Jack (pre-flight Q&A)",
+  "scope": {
+    "label": "Declared 173,000-review subset — not a full-corpus model run",
+    "scope_source": "Assignment brief's minimum (>=100,000 classified); Jack's pre-flight instruction 2026-10-20",
+    "ingest_and_account_rows": 660622,
+    "subset_size": 173000,
+    "subset_composition": "analysis_10000 (contains checkpoint_500 and cost_100) + golden 50 + 162,950 seeded-random nonempty reviews",
+    "subset_seed": "spotify-reviews-final-subset-v1",
+    "subset_method": "lowest SHA-256(seed + ':' + review_id) among nonempty rows not already in the dev/golden files",
+    "full_corpus_statuses": {
+      "completed / quarantined": "in-subset rows (contract statuses)",
+      "quarantined: empty_review_text": "the 13 empty texts (outside the subset, still recorded)",
+      "not_in_model_scope": "sampled out; ingested, hashed and accounted for, never sent to a model"
+    },
+    "grading_export_scope": "grading/ is checked with the 100,000-row subset CSV as the checker's --analysis input, so records.jsonl holds exactly those IDs with contract statuses. not_in_model_scope appears only in the full-corpus accounting file.",
+    "golden_labels_policy": "Golden 50 texts are classified as part of the subset; Jack's human labels are never model inputs, examples, thresholds or grouping inputs.",
+    "memo_counts": "All memo/dashboard counts are subset counts.",
+    "full_run_projection": "Calculator projects 660,609 classifications as an estimated-only scenario; not executed.",
+    "subset_core": "the original 100,000 core (analysis_10000 + golden 50 + first 89,950 seeded-random) is kept; extended with the next 73,000 reviews in the same seeded order"
+  },
+  "stages_plan": [
+    "pilot cost_100 (cold + warm)",
+    "checkpoint_500",
+    "analysis_10000 (+ interruption/resume demo)",
+    "173,000 subset",
+    "stop"
+  ],
+  "interruption_resume_demo": "during the analysis_10000 stage",
+  "provider": "anthropic",
+  "enrich_model": "claude-haiku-5-5",
+  "verify_model": "claude-haiku-5-5",
+  "group_naming_model": "claude-haiku-5-5",
+  "memo_model": "claude-haiku-5-5",
+  "effort": "low",
+  "thinking": "disabled",
+  "api_mode": "Message Batches API (50% discount) where available; synchronous Messages API only if batch is unavailable for a call",
+  "prompt_caching": true,
+  "compact_output": true,
+  "reviews_per_request_max": 50,
+  "max_workers": 1,
+  "fallback_model": null,
+  "max_fallback_fraction": 0.0,
+  "verifier_sample_size": 500,
+  "verifier_sample_seed": "spotify-reviews-final-verify-v1",
+  "spend_cap_usd": 5.0,
+  "min_coverage_if_cap_binds": "Pre-pilot gate: if the projected 100k cost does not fit $5.00, report the largest sample that fits and do not start.",
+  "prices_checked": {
+    "date": "2026-10-20",
+    "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "claude-haiku-5-5_per_mtok_prompts_le_100k": {
+      "input": 0.1,
+      "cache_write_5m": 0.125,
+      "cache_write_1h": 0.2,
+      "cache_read": 0.01,
+      "output": 0.5
+    },
+    "claude-haiku-5-5_batch_per_mtok": {
+      "input": 0.05,
+      "output": 0.25
+    },
+    "batch_note": "50% batch discount stacks with prompt-caching multipliers"
+  },
+  "supersedes": "Earlier 10,000-sample/$4.50 note in the same pre-flight; Jack replaced it with this 100,000-subset/$5.00 instruction.",
+  "group_naming_calls": 1,
+  "memo_calls": 1,
+  "spend_cap_enforcement": "in code: shared ledger reserves worst-case cost per in-flight request; stop admitting when spent + reserved + next > cap",
+  "output_controls": {
+    "compact_json": true,
+    "hard_output_token_cap": "set from pilot measurements",
+    "evidence_quote_rule": "code uses the whole review text as evidence_quote for short reviews; the model quotes longer ones and code checks the substring"
+  },
+  "exact_text_result_cache": true,
+  "sizing": {
+    "decided_at": "2026-10-21T00:50 PDT",
+    "rule": "Jack: largest subset whose conservative projected enrichment spend fits $4.00, keeping ~$1 of the $5.00 cap for verifier, grouping, memo and retries",
+    "history": "First sized at N=187,000 from pilot attempt 2 ($2.79e-5 per distinct text). The quote fix (long reviews grouped, explicit quote flag) raised measured output from ~55 to 61.2 tokens/review; re-sized before any main-run work.",
+    "measured_basis": "final clean cold pilot (attempt 4, cost/replay.json): conservative enrichment $4.296266 for 143,114 distinct texts = $0.0000300199 per distinct text (retry 5%, output x1.5, 50% prefix-cache misses)",
+    "search": "extended the seeded order in steps of 1,000 and counted exact distinct texts per N",
+    "result": {
+      "N": 173000,
+      "distinct_texts": 132832,
+      "conservative_enrich_usd": 3.9876,
+      "next_step": {
+        "N": 174000,
+        "distinct_texts": 133558,
+        "conservative_enrich_usd": 4.0094
+      }
+    },
+    "pilot_and_test_spend_so_far_usd": 0.017195
+  }
+}

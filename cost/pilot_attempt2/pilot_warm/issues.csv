@@ -1,0 +1,19 @@
+issue_id,topic,subtopic,name,description,member_count,map_version
+access.general,access,general,Wi-Fi connectivity problems,"Reviewers report the app fails to connect over Wi-Fi while mobile data works, and some song quality seems poor.",1,issue_map_v1.b3c1135c
+access.login_failure,access,login_failure,Login and password failures,"Users report being unable to log into their accounts or having passwords rejected, alongside complaints about excessive ads.",2,issue_map_v1.b3c1135c
+billing.charges_refund,billing,charges_refund,Premium cost concerns,Reviewers feel the app has become premium-only to generate revenue for the company.,1,issue_map_v1.b3c1135c
+billing.premium_paywall,billing,premium_paywall,Features locked behind premium,"Users say basic actions like choosing specific songs, skipping, and replaying parts are restricted to premium subscribers.",2,issue_map_v1.b3c1135c
+catalog.general,catalog,general,Missing songs and genres,"Reviewers say the library lacks many songs and certain music genres, such as gospel.",2,issue_map_v1.b3c1135c
+catalog.lyrics,catalog,lyrics,Lyrics missing or inconsistent,"Users report lyrics sometimes fail to appear, and availability differs unpredictably between songs.",2,issue_map_v1.b3c1135c
+catalog.recommendations,catalog,recommendations,Weaker song recommendations,A reviewer feels recommendations used to offer more songs and more recent releases than they do now.,1,issue_map_v1.b3c1135c
+downloads.download_failure,downloads,download_failure,Downloads get stuck,A user reports song downloads stalling indefinitely in the background.,1,issue_map_v1.b3c1135c
+downloads.offline_play,downloads,offline_play,Offline mode not working,A reviewer says the offline feature does not work as expected.,1,issue_map_v1.b3c1135c
+other.general_dislike,other,general_dislike,General negative sentiment,"Reviewers express broad dissatisfaction with the app, often citing recent updates, without specifying a particular problem.",15,issue_map_v1.b3c1135c
+playback.crash_freeze,playback,crash_freeze,App crashes after update,A user reports the app crashing and becoming unopenable following a recent update.,1,issue_map_v1.b3c1135c
+playback.general,playback,general,General playback bugs,"Users report songs not playing, voice assistant integration failing, and audio adjustment settings not working properly.",3,issue_map_v1.b3c1135c
+playback.lag_loading,playback,lag_loading,App stuck loading,A reviewer reports the app freezing on the loading or logo screen and never getting past it.,1,issue_map_v1.b3c1135c
+playback.stops_pauses,playback,stops_pauses,Playback stops unexpectedly,A user reports music repeatedly stopping midway and failing to resume where it left off.,1,issue_map_v1.b3c1135c
+usability.ads,usability,ads,Too many or loud ads,"Reviewers complain about frequent ads interrupting songs, ads that are very loud, and limited ad-free listening for free users.",8,issue_map_v1.b3c1135c
+usability.playlist_library,usability,playlist_library,Home screen layout disliked,"A user dislikes the new home screen design, finding the one-item-at-a-time scrolling layout cumbersome.",1,issue_map_v1.b3c1135c
+usability.shuffle_queue,usability,shuffle_queue,Shuffle and queue frustrations,"Users report playlists playing songs randomly, limited skipping, and being unable to go back or easily play a single chosen song.",7,issue_map_v1.b3c1135c
+usability.ui_layout,usability,ui_layout,Blend feature requests,"A reviewer praises the blend feature and requests the ability to rename blends, noting a recurring issue from years ago.",1,issue_map_v1.b3c1135c

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.csv -text
+*.jsonl -text
+*.json -text
+*.gz binary
+*.sqlite binary

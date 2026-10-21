@@ -1,0 +1,66 @@
+{
+  "measured": {
+    "cold": {
+      "enrich": 0.002052,
+      "verify": 0.000616,
+      "group": 0.000903,
+      "memo": 0.001286,
+      "api_subtotal_usd": 0.004857,
+      "new_enrich_calls": 3
+    },
+    "warm": {
+      "api_subtotal_usd": 0.0,
+      "new_enrich_calls": 0
+    },
+    "warm_stale_invalid": {
+      "group": 0.000919,
+      "memo": 0.001368,
+      "api_subtotal_usd": 0.002287,
+      "new_enrich_calls": 0
+    }
+  },
+  "projections": {
+    "subset_173000": {
+      "base": {
+        "total_api_usd": 2.365845,
+        "requests": 2657,
+        "exceeds_cap": false,
+        "est_wall_s": 4336
+      },
+      "conservative": {
+        "total_api_usd": 3.99628,
+        "requests": 3322,
+        "exceeds_cap": false,
+        "est_wall_s": 16726
+      }
+    },
+    "subset_100000": {
+      "base": {
+        "total_api_usd": 1.398183,
+        "requests": 1567,
+        "exceeds_cap": false,
+        "est_wall_s": 2478
+      },
+      "conservative": {
+        "total_api_usd": 2.35958,
+        "requests": 1959,
+        "exceeds_cap": false,
+        "est_wall_s": 9292
+      }
+    },
+    "full_corpus_660609": {
+      "base": {
+        "total_api_usd": 8.601692,
+        "requests": 9684,
+        "exceeds_cap": true,
+        "est_wall_s": 15487
+      },
+      "conservative": {
+        "total_api_usd": 14.54343,
+        "requests": 12105,
+        "exceeds_cap": true,
+        "est_wall_s": 57611
+      }
+    }
+  }
+}

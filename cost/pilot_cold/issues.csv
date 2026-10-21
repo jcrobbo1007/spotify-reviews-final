@@ -1,0 +1,19 @@
+issue_id,topic,subtopic,name,description,member_count,map_version
+access.general,access,general,Trouble getting into account,Reviewers say the app blocks access to their account and shows too many ads.,1,issue_map_v1.b3c1135c
+access.login_failure,access,login_failure,Password not accepted,Reviewers report the app rejects their password when they try to log in.,1,issue_map_v1.b3c1135c
+billing.charges_refund,billing,charges_refund,Premium changes feel unfair,"Reviewers feel a recent update pushed features behind premium, making the app useless without paying.",1,issue_map_v1.b3c1135c
+billing.premium_paywall,billing,premium_paywall,Basic features locked behind premium,"Reviewers say skipping, song choice, and queue controls now require a premium subscription, which they find unfair.",5,issue_map_v1.b3c1135c
+catalog.general,catalog,general,Missing songs and genres,"Reviewers say the app lacks certain music, including gospel and reggae, and many songs are unavailable.",3,issue_map_v1.b3c1135c
+catalog.lyrics,catalog,lyrics,Lyrics missing or inconsistent,"Reviewers report lyrics sometimes fail to appear, and availability differs between songs.",2,issue_map_v1.b3c1135c
+downloads.download_failure,downloads,download_failure,Downloads get stuck,Reviewers say songs stall while downloading in the background until they reopen Spotify.,1,issue_map_v1.b3c1135c
+downloads.offline_play,downloads,offline_play,Offline playback not working,Reviewers report that offline listening does not work for them.,1,issue_map_v1.b3c1135c
+other.general_dislike,other,general_dislike,General negative sentiment,"Reviewers express dissatisfaction with the app overall, often criticising recent updates without specifics.",16,issue_map_v1.b3c1135c
+playback.connectivity,playback,connectivity,Wi-Fi connection problems,"Reviewers say the app fails to connect over Wi-Fi while mobile data works, and some song quality is poor.",1,issue_map_v1.b3c1135c
+playback.crash_freeze,playback,crash_freeze,App crashes after update,Reviewers report the app crashes or will not open following a recent update.,1,issue_map_v1.b3c1135c
+playback.general,playback,general,Google Assistant playback fails,Reviewers say Google Assistant reports playing a playlist but the songs do not start.,1,issue_map_v1.b3c1135c
+playback.lag_loading,playback,lag_loading,Stuck on loading screen,Reviewers say the app freezes on the loading or logo screen and never finishes starting.,1,issue_map_v1.b3c1135c
+playback.stops_pauses,playback,stops_pauses,Playback stops unexpectedly,"Reviewers report music stops halfway and does not resume where it left off, starting a new song instead.",1,issue_map_v1.b3c1135c
+usability.ads,usability,ads,Too many ads,"Reviewers complain of frequent, loud ads between songs, especially for free users without premium.",8,issue_map_v1.b3c1135c
+usability.playlist_library,usability,playlist_library,Home screen and playlist changes,Reviewers dislike the new home screen layout and unwanted recommendations cluttering their playlists.,2,issue_map_v1.b3c1135c
+usability.shuffle_queue,usability,shuffle_queue,Can't play chosen songs,Reviewers say songs shuffle randomly within playlists and they cannot choose or skip tracks freely.,3,issue_map_v1.b3c1135c
+usability.ui_layout,usability,ui_layout,Player controls and autoplay issues,"Reviewers report autoplaying audio elements with no setting to disable them, and missing basic player controls like rewind.",3,issue_map_v1.b3c1135c

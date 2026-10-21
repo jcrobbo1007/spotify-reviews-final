@@ -1,0 +1,15 @@
+claim_id,issue_id,metric,value
+C1,other.general_dislike,priority_score,31
+C2,usability.shuffle_queue,priority_score,18
+C3,usability.ads,priority_score,16
+C4,usability.shuffle_queue,complaint_count,7
+C5,usability.shuffle_queue,severity_sum,18
+C6,usability.shuffle_queue,mean_severity,2.571429
+C7,usability.ads,complaint_count,8
+C8,usability.ads,severity_sum,16
+C9,usability.ads,mean_severity,2.000000
+C10,playback.general,complaint_count,3
+C11,playback.crash_freeze,complaint_count,1
+C12,billing.premium_paywall,complaint_count,2
+C13,access.login_failure,complaint_count,2
+C14,access.login_failure,mean_severity,4.000000

@@ -6,3 +6,7 @@ data/
 __pycache__/
 .venv/
 node_modules/
+state/
+*.sqlite*
+outputs/scope/subset_*.csv
+*.tmp

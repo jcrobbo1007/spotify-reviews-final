@@ -1,0 +1,74 @@
+{
+  "access.general": {
+    "name": "Trouble getting into account",
+    "description": "Reviewers say the app blocks access to their account and shows too many ads."
+  },
+  "access.login_failure": {
+    "name": "Password not accepted",
+    "description": "Reviewers report the app rejects their password when they try to log in."
+  },
+  "billing.charges_refund": {
+    "name": "Premium changes feel unfair",
+    "description": "Reviewers feel a recent update pushed features behind premium, making the app useless without paying."
+  },
+  "billing.premium_paywall": {
+    "name": "Basic features locked behind premium",
+    "description": "Reviewers say skipping, song choice, and queue controls now require a premium subscription, which they find unfair."
+  },
+  "catalog.general": {
+    "name": "Missing songs and genres",
+    "description": "Reviewers say the app lacks certain music, including gospel and reggae, and many songs are unavailable."
+  },
+  "catalog.lyrics": {
+    "name": "Lyrics missing or inconsistent",
+    "description": "Reviewers report lyrics sometimes fail to appear, and availability differs between songs."
+  },
+  "downloads.download_failure": {
+    "name": "Downloads get stuck",
+    "description": "Reviewers say songs stall while downloading in the background until they reopen Spotify."
+  },
+  "downloads.offline_play": {
+    "name": "Offline playback not working",
+    "description": "Reviewers report that offline listening does not work for them."
+  },
+  "other.general_dislike": {
+    "name": "General negative sentiment",
+    "description": "Reviewers express dissatisfaction with the app overall, often criticising recent updates without specifics."
+  },
+  "playback.connectivity": {
+    "name": "Wi-Fi connection problems",
+    "description": "Reviewers say the app fails to connect over Wi-Fi while mobile data works, and some song quality is poor."
+  },
+  "playback.crash_freeze": {
+    "name": "App crashes after update",
+    "description": "Reviewers report the app crashes or will not open following a recent update."
+  },
+  "playback.general": {
+    "name": "Google Assistant playback fails",
+    "description": "Reviewers say Google Assistant reports playing a playlist but the songs do not start."
+  },
+  "playback.lag_loading": {
+    "name": "Stuck on loading screen",
+    "description": "Reviewers say the app freezes on the loading or logo screen and never finishes starting."
+  },
+  "playback.stops_pauses": {
+    "name": "Playback stops unexpectedly",
+    "description": "Reviewers report music stops halfway and does not resume where it left off, starting a new song instead."
+  },
+  "usability.ads": {
+    "name": "Too many ads",
+    "description": "Reviewers complain of frequent, loud ads between songs, especially for free users without premium."
+  },
+  "usability.playlist_library": {
+    "name": "Home screen and playlist changes",
+    "description": "Reviewers dislike the new home screen layout and unwanted recommendations cluttering their playlists."
+  },
+  "usability.shuffle_queue": {
+    "name": "Can't play chosen songs",
+    "description": "Reviewers say songs shuffle randomly within playlists and they cannot choose or skip tracks freely."
+  },
+  "usability.ui_layout": {
+    "name": "Player controls and autoplay issues",
+    "description": "Reviewers report autoplaying audio elements with no setting to disable them, and missing basic player controls like rewind."
+  }
+}

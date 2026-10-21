@@ -1,0 +1,14 @@
+{
+  "enrich": {
+    "wall_s": 753.995,
+    "started": "2026-10-20T23:47:35-0700",
+    "ended": "2026-10-21T00:00:09-0700",
+    "new_calls": 3,
+    "counts": {
+      "completed": 99,
+      "quarantined": 1
+    },
+    "label_config": "claude-haiku-5-5+enrich_v1.1ab080f4+schema_v1+effort-low+thinking-off+short200",
+    "run_id": "pilot-cold-20261020T234735"
+  }
+}

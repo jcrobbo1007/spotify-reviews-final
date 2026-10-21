@@ -1,0 +1,8 @@
+{"ts":"2026-10-21T00:27:14-0700","stage":"enrich","event":"start","phase":"initial","label_config":"claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups","cap_usd":5.0,"spent_usd":0.010051,"reserved_usd":0}
+{"ts":"2026-10-21T00:27:16-0700","stage":"enrich","event":"batch_submitted","batch_id":"msgbatch_01N5aXx2Hriefm1PQPutis36","requests":3,"reviews":100,"reserved_usd":0.003395,"phase":"initial"}
+{"ts":"2026-10-21T00:37:34-0700","stage":"enrich","event":"batch_committed","batch_id":"msgbatch_01N5aXx2Hriefm1PQPutis36","completed_reps":100,"wait_s":617.5,"usd":0.002052,"cap_usd":5.0,"spent_usd":0.012103,"reserved_usd":0}
+{"ts":"2026-10-21T00:37:34-0700","stage":"enrich","event":"finished","completed":100,"cap_usd":5.0,"spent_usd":0.012103,"reserved_usd":0}
+{"ts":"2026-10-21T00:37:34-0700","stage":"pilot","event":"cold_enrich_done","new_calls":3,"completed":100}
+{"ts":"2026-10-21T00:37:34-0700","stage":"verify","event":"batch_submitted","batch_id":"msgbatch_012HaaRdptYauSKyjLV5AXEQ","requests":1,"reviews":50}
+{"ts":"2026-10-21T00:40:49-0700","stage":"verify","event":"done","predicted":50,"of":50,"usd":0.000616}
+{"ts":"2026-10-21T00:41:02-0700","stage":"memo","event":"attempt","attempt":1,"problems":0}

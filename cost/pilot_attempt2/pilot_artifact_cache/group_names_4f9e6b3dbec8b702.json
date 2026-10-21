@@ -1,0 +1,74 @@
+{
+  "access.general": {
+    "name": "Wi-Fi connectivity problems",
+    "description": "Reviewers report the app fails to connect over Wi-Fi while mobile data works, and some song quality seems poor."
+  },
+  "access.login_failure": {
+    "name": "Login and password failures",
+    "description": "Users report being unable to log into their accounts or having passwords rejected, alongside complaints about excessive ads."
+  },
+  "billing.charges_refund": {
+    "name": "Premium cost concerns",
+    "description": "Reviewers feel the app has become premium-only to generate revenue for the company."
+  },
+  "billing.premium_paywall": {
+    "name": "Features locked behind premium",
+    "description": "Users say basic actions like choosing specific songs, skipping, and replaying parts are restricted to premium subscribers."
+  },
+  "catalog.general": {
+    "name": "Missing songs and genres",
+    "description": "Reviewers say the library lacks many songs and certain music genres, such as gospel."
+  },
+  "catalog.lyrics": {
+    "name": "Lyrics missing or inconsistent",
+    "description": "Users report lyrics sometimes fail to appear, and availability differs unpredictably between songs."
+  },
+  "catalog.recommendations": {
+    "name": "Weaker song recommendations",
+    "description": "A reviewer feels recommendations used to offer more songs and more recent releases than they do now."
+  },
+  "downloads.download_failure": {
+    "name": "Downloads get stuck",
+    "description": "A user reports song downloads stalling indefinitely in the background."
+  },
+  "downloads.offline_play": {
+    "name": "Offline mode not working",
+    "description": "A reviewer says the offline feature does not work as expected."
+  },
+  "other.general_dislike": {
+    "name": "General negative sentiment",
+    "description": "Reviewers express broad dissatisfaction with the app, often citing recent updates, without specifying a particular problem."
+  },
+  "playback.crash_freeze": {
+    "name": "App crashes after update",
+    "description": "A user reports the app crashing and becoming unopenable following a recent update."
+  },
+  "playback.general": {
+    "name": "General playback bugs",
+    "description": "Users report songs not playing, voice assistant integration failing, and audio adjustment settings not working properly."
+  },
+  "playback.lag_loading": {
+    "name": "App stuck loading",
+    "description": "A reviewer reports the app freezing on the loading or logo screen and never getting past it."
+  },
+  "playback.stops_pauses": {
+    "name": "Playback stops unexpectedly",
+    "description": "A user reports music repeatedly stopping midway and failing to resume where it left off."
+  },
+  "usability.ads": {
+    "name": "Too many or loud ads",
+    "description": "Reviewers complain about frequent ads interrupting songs, ads that are very loud, and limited ad-free listening for free users."
+  },
+  "usability.playlist_library": {
+    "name": "Home screen layout disliked",
+    "description": "A user dislikes the new home screen design, finding the one-item-at-a-time scrolling layout cumbersome."
+  },
+  "usability.shuffle_queue": {
+    "name": "Shuffle and queue frustrations",
+    "description": "Users report playlists playing songs randomly, limited skipping, and being unable to go back or easily play a single chosen song."
+  },
+  "usability.ui_layout": {
+    "name": "Blend feature requests",
+    "description": "A reviewer praises the blend feature and requests the ability to rename blends, noting a recurring issue from years ago."
+  }
+}

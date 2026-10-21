@@ -1,0 +1,47 @@
+{
+  "enrich": {
+    "wall_s": 437.976,
+    "started": "2026-10-21T00:00:54-0700",
+    "ended": "2026-10-21T00:08:12-0700",
+    "new_calls": 2,
+    "counts": {
+      "completed": 100
+    },
+    "label_config": "claude-haiku-5-5+enrich_v1.1ab080f4+schema_v1+effort-low+thinking-off+short200+qrepair1",
+    "run_id": "pilot-cold-20261021T000054"
+  },
+  "verify": {
+    "wall_s": 195.094,
+    "started": "2026-10-21T00:08:12-0700",
+    "ended": "2026-10-21T00:11:27-0700",
+    "sample": 50,
+    "new_calls": 1,
+    "compared": 50,
+    "topic_agreement": 0.86,
+    "intent_agreement": 0.96,
+    "severity_agreement": 0.96,
+    "severity_mae": 0.04,
+    "sentiment_mae": 0.098,
+    "records_with_any_disagreement": 9
+  },
+  "group": {
+    "wall_s": 7.5,
+    "started": "2026-10-21T00:11:27-0700",
+    "ended": "2026-10-21T00:11:35-0700",
+    "issues": 18,
+    "members": 51,
+    "new_calls": 1
+  },
+  "rank": {
+    "wall_s": 0.001,
+    "started": "2026-10-21T00:11:35-0700",
+    "ended": "2026-10-21T00:11:35-0700",
+    "issues": 18
+  },
+  "memo": {
+    "wall_s": 9.886,
+    "started": "2026-10-21T00:11:35-0700",
+    "ended": "2026-10-21T00:11:44-0700",
+    "new_calls": 1
+  }
+}

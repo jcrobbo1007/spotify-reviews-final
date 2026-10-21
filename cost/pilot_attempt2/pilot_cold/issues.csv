@@ -1,0 +1,19 @@
+issue_id,topic,subtopic,name,description,member_count,map_version
+access.general,access,general,general,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+access.login_failure,access,login_failure,login failure,(default name; naming call unavailable),2,issue_map_v1.b3c1135c
+billing.charges_refund,billing,charges_refund,charges refund,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+billing.premium_paywall,billing,premium_paywall,premium paywall,(default name; naming call unavailable),2,issue_map_v1.b3c1135c
+catalog.general,catalog,general,general,(default name; naming call unavailable),2,issue_map_v1.b3c1135c
+catalog.lyrics,catalog,lyrics,lyrics,(default name; naming call unavailable),2,issue_map_v1.b3c1135c
+catalog.recommendations,catalog,recommendations,recommendations,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+downloads.download_failure,downloads,download_failure,download failure,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+downloads.offline_play,downloads,offline_play,offline play,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+other.general_dislike,other,general_dislike,general dislike,(default name; naming call unavailable),15,issue_map_v1.b3c1135c
+playback.crash_freeze,playback,crash_freeze,crash freeze,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+playback.general,playback,general,general,(default name; naming call unavailable),3,issue_map_v1.b3c1135c
+playback.lag_loading,playback,lag_loading,lag loading,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+playback.stops_pauses,playback,stops_pauses,stops pauses,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+usability.ads,usability,ads,ads,(default name; naming call unavailable),8,issue_map_v1.b3c1135c
+usability.playlist_library,usability,playlist_library,playlist library,(default name; naming call unavailable),1,issue_map_v1.b3c1135c
+usability.shuffle_queue,usability,shuffle_queue,shuffle queue,(default name; naming call unavailable),7,issue_map_v1.b3c1135c
+usability.ui_layout,usability,ui_layout,ui layout,(default name; naming call unavailable),1,issue_map_v1.b3c1135c

@@ -1,0 +1,7 @@
+{"ts":"2026-10-21T00:41:53-0700","stage":"enrich","event":"start","phase":"initial","label_config":"claude-haiku-5-5+enrich_v1.044e2ae6+schema_v1+effort-low+thinking-off+short200+qrepair1+lengthgroups","cap_usd":5.0,"spent_usd":0.017195,"reserved_usd":0}
+{"ts":"2026-10-21T00:41:53-0700","stage":"enrich","event":"cache_fanout","rows":100}
+{"ts":"2026-10-21T00:41:53-0700","stage":"enrich","event":"finished","completed":100,"cap_usd":5.0,"spent_usd":0.017195,"reserved_usd":0}
+{"ts":"2026-10-21T00:41:53-0700","stage":"pilot","event":"warm_enrich_done","new_calls":0,"completed":100}
+{"ts":"2026-10-21T00:41:53-0700","stage":"verify","event":"cache_hit","sample":50}
+{"ts":"2026-10-21T00:41:53-0700","stage":"group","event":"names_cache_hit","cache":"group_names_f2a9d2e08b192c69.json"}
+{"ts":"2026-10-21T00:41:53-0700","stage":"memo","event":"cache_hit","cache":"memo_3269c1098c5c0826.json"}

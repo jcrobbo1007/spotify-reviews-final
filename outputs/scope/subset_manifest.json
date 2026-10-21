@@ -1,0 +1,9 @@
+{
+  "path": "outputs\\scope\\subset_173000.csv",
+  "rows": 173000,
+  "seed": "spotify-reviews-final-subset-v1",
+  "sha256": "f782fb3170ff1d7de92de3337f063f569bdd84b3ab2ebe43aa62967287a0f19b",
+  "fixed_members": 10050,
+  "random_members": 162950,
+  "distinct_texts": 132832
+}
