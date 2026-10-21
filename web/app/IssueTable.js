@@ -24,7 +24,7 @@ export default function IssueTable({ ranking }) {
         </tr>
         {open === r.issue_id && (<tr key={r.issue_id + "-d"}><td colSpan={6}><div className="drill">
           {!data[r.issue_id] ? "Loading…" : (<>
-            <div className="muted">{r.description} Showing {data[r.issue_id].shown} of {r.complaint_count} member reviews (highest severity first).</div>
+            <div className="muted">{r.description} Showing {data[r.issue_id].shown} of {r.complaint_count} member reviews (first 50 by review ID, sorted by severity). Full membership: grading/membership.csv.</div>
             <table><thead><tr><th>Review ID</th><th className="n">Sev</th><th>Intent</th><th>Evidence quote</th></tr></thead>
               <tbody>{data[r.issue_id].members.map((m) => (<tr key={m.review_id}><td><code>{m.review_id}</code></td><td className="n">{m.severity}</td><td>{m.intent}</td><td>{m.evidence_quote}{m.needs_review ? " ⚑" : ""}</td></tr>))}</tbody></table>
           </>)}
