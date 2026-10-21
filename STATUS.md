@@ -1,44 +1,53 @@
 # STATUS — read first
 
-_Last updated: 2026-10-21 01:10 PDT_
+_Last updated: 2026-10-21 03:20 PDT. Overnight run finished; nothing is running._
 
-## Blocked / waiting on Jack
-- Nothing blocking right now. Golden-50 labelling waits for you: `evals/golden_50_labels.csv` (blank) + `evals/golden_50_DEFINITIONS.md`.
-- Optional backup: `vercel login` (the Vercel connector is signed in; the CLI is not).
+## Waiting on Jack (blocking items first)
+1. **Label the golden 50** in `evals/golden_50_labels.csv` (blank columns; definitions in `evals/golden_50_DEFINITIONS.md`).
+   Then run `python -m pipeline eval golden` and add the results to the README "Results summary" (currently says pending).
+2. **Repo history has two 83 MB files** (`outputs/records.jsonl`, `outputs/enriched.jsonl`) from commit 45f8cd2. They hold no
+   secrets (labels, IDs, quotes from the CC0 dataset) and are no longer tracked; gzipped copies are. Removing them from
+   history needs a rewrite and force-push of the public repo, so I left it for you. `.git` is 154 MB. Your call.
+3. **Drive link for the raw CSV:** CLAUDE.md asks the README to link the Drive source. I don't have it; the README links
+   the Kaggle source and records the SHA-256. Paste the Drive link if you want it added.
+4. **40 quarantined subset reviews** (30 output-token cap, 10 refusals) are the checker's only flag
+   (`unfinished_classification`). That follows the "retry once → quarantine" rule. Option: a disclosed recovery pass,
+   such as salvaging complete items from the saved truncated responses (no new calls) or single-review requests (about
+   $0.001). Not done without your OK.
+5. **Rubric map:** the brief's itemised criteria aren't in the repo, so the README maps evidence to the 4/3/3 areas. Check
+   it against the brief.
+6. Optional: rotate nothing. No secret was printed, logged or committed (staged diffs scanned before every push;
+   `.env` ignored).
 
 ## Scope (declared)
-**Declared 173,000-review subset — not a full-corpus model run.** All 660,622 rows are ingested, hashed and accounted for:
-173,000 in the subset, 13 `empty_review_text` quarantines, 487,609 `not_in_model_scope` (sampled out).
-Subset = analysis_10000 (contains checkpoint_500 and cost_100) + golden 50 + 162,950 seeded-random nonempty reviews
-(seed `spotify-reviews-final-subset-v1`; the 100,000 core is kept). Subset CSV sha256 `f782fb31…a0f19b`; 132,832 distinct texts.
-Sizing: largest N whose conservative enrichment projection fits $4.00 → N=173,000 ($3.988); see `config/run_decisions.json`.
+**Declared 173,000-review subset — not a full-corpus model run.** All 660,622 rows are accounted for: 172,960 completed,
+40 quarantined in the subset, 13 `empty_review_text`, 487,609 `not_in_model_scope`. Sizing rule: the largest N whose
+conservative enrichment projection fits $4.00 → 173,000 (`config/run_decisions.json`).
 
-## Done
-- Pre-flight; decisions in `config/run_decisions.json` (Haiku 5.5, effort low, thinking off, Batch API, prompt caching, no fallback, verifier 500, **$5.00 hard cap**).
-- Prices saved 2026-10-20 in `cost/rates.csv`.
-- Stage 1: all brief counts match (660,622 / 13 empty / 159,701 missing app_version / 0 dup IDs / 484,189 distinct texts).
-- 100-review pilot, final attempt 4: cold 100/100 completed, $0.004857 all stages, wall 619 s enrich (batch queue) + 195 s verify + 13 s group/memo; warm: 0 calls, $0. Doubling-rates test passes. History of attempts 1–3 and one disclosed stale warm run: `cost/README.md`.
-- Supabase project `spotify-reviews-final` (created by Jack), schema + RLS applied; `DATABASE_URL` works.
+## Done (all pushed to main)
+| Milestone | Commit | Result |
+|---|---|---|
+| 1 Ingest + calculator + 100 pilot | c6cfb11 | brief counts match; final pilot: 100/100 cold, warm 0 calls |
+| 2 500 run + refresh | 4a18dc4 | 500/500, $0.008424 |
+| 3 10,000 run + refresh | 61bb629 | 10,000/10,000, +$0.137564 |
+| 4 Full subset + resume demo | 06ec5ea | 172,960 completed; kill mid-batch, resume, 0 completed IDs resent |
+| 5 Verify/group/rank/memo/export/checker | 45f8cd2 (+0749fcc gz) | verifier 0.900/0.942/0.888; planted 40/40; injection 6/6; checker: only the 40 quarantines |
+| 6 DB + dashboard + README | (this commit) | Supabase loaded, RLS anon read-only; https://spotify-reviews-final-energy-43a6.vercel.app (public); dashboard ranking = ranking.csv (35/35) |
 
-## Running / next
-- **Running:** 173,000-subset enrichment (waves of 300 requests) with the kill-and-resume demo (kill during wave 3).
-- **Deviation (disclosed):** the demo was planned for the 10,000 stage, but `--requests-per-wave` was bound at import time, so that stage finished in 2 waves before the kill point. Fixed; demo moved to the subset stage. Log of the uninterrupted 10k run: `evals/resume/terminal_10000_no_interrupt.log`.
-- Next: verify, group, rank, memo → export + checker → DB load → dashboard deploy → README.
+## Deviations (all disclosed in README / run_decisions.json)
+- Resume demo ran in the subset stage, not the 10,000 stage (wave-size bug; fixed).
+- Memo call runs at effort medium with adaptive thinking; enrichment and verify stay at low with thinking off. Two
+  low-effort drafts were rejected for wrong comparisons; comparisons are now code-computed and checked verbatim. The
+  accepted memo was blocked at generation only by a checker bug (missing backticks), then re-checked offline with 0
+  problems and annotated in `calls.jsonl`.
+- Pilot took 4 attempts (quote-quality fixes) plus one invalid stale warm run, all kept in `cost/`.
+- Issue map refined once (v2) after reading unmatched samples, before ranking and the memo.
 
-## Milestones
-- 500: 500/500 completed, $0.008424, 440 s (commit 4a18dc4)
-- 10,000: 10,000/10,000 completed (8,448 model-classified distinct texts + 1,552 cache reuse), +$0.137, 940 s (commit 61bb629)
-- Projection refreshes: `cost/refresh.md` (after 10k: subset base $2.30, conservative $3.44 — fits)
+## Quote fallback (code-filled evidence_quote), final
+| whole short text (≤200 chars) | model exact quote | code span repair | code head fallback |
+|---|---|---|---|
+| 154,700 | 17,604 | 467 | 189 |
 
-## Quote fallback (code-filled evidence_quote)
-| Run | short reviews: whole text | model exact quote | code span repair | code head fallback |
-|---|---|---|---|---|
-| Pilot (final) | 91 | 8 | 0 | 1 (gibberish review) |
-| Main run, after 10k | 8,944 | 1,025 | 18 | 13 |
-
-## Counts / spend
-| | |
-|---|---|
-| Completed (main run) | 10,000 of 173,000 |
-| Quarantined | 13 (empty text) |
-| Spend vs cap | $0.163183 / $5.00 (all stages incl. pilot) |
+## Spend vs cap
+**$2.42537 / $5.00** (all stages incl. pilots and tests). Main-run enrichment $2.374592; verify $0.006182; naming $0.002253;
+memo $0.025011 (10 calls across drafts). Enrichment wall clock ≈ 6,550 s (500 → 10k → subset incl. kill/restart).

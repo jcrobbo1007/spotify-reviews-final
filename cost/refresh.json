@@ -30,5 +30,21 @@
     "ledger_spent_all_stages_usd": 0.163183,
     "cap_usd": 5.0,
     "fits_cap_conservative": true
+  },
+  {
+    "checkpoint": "final-subset",
+    "enrich_requests": 2707,
+    "failed_requests": 12,
+    "distinct_texts_classified": 132832,
+    "reviews_sent_incl_retries": 133232,
+    "retry_fraction": 0.003,
+    "measured_enrich_usd": 2.374592,
+    "usd_per_distinct_text": 1.78767e-05,
+    "projected_subset_enrich_base_usd": 2.3746,
+    "projected_subset_enrich_conservative_usd": 3.5619,
+    "projected_full_corpus_enrich_base_usd": 8.6557,
+    "ledger_spent_all_stages_usd": 2.42537,
+    "cap_usd": 5.0,
+    "fits_cap_conservative": true
   }
 ]
