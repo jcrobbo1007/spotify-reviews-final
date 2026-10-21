@@ -29,10 +29,27 @@ inspected without paid model calls, and the ranking reruns deterministically.
 | **Measured** API spend, all stages incl. pilots | **$2.449436** of $5.00 cap | ledger; [`outputs/run_summary.json`](outputs/run_summary.json) |
 | Measured main-run enrichment | $2.375282 for 173,000 rows incl. the recovery pass ($0.0137 per 1,000 rows); wall clock ≈ 6,550 s (+497 s recovery batch) | [`outputs/calls.jsonl`](outputs/calls.jsonl), [`outputs/run_log.jsonl`](outputs/run_log.jsonl) |
 | **Estimated** before the run (from the pilot) | base $2.37, conservative $4.00 (subset) | [`cost/report.md`](cost/report.md) |
-| Self-check (`check_submission.py`) | only flag: `unfinished_classification` = the 1 remaining disclosed quarantine; coverage-point candidate 1.0 | [`evals/checker/`](evals/checker/) |
+| Course checker (`check_submission.py`) | against the **full file**: coverage score **0.4095** (≈ 0.41, the expected value for 173k classified); against the declared subset: only flag is the 1 quarantine. See [coverage](#coverage-under-the-course-checker) | [`evals/checker/`](evals/checker/) |
 
 Measured and estimated figures are kept separate throughout. Nothing here is a full-corpus measurement. The full-corpus
 cost ($8.60 base / $14.54 conservative) is an estimate only and exceeds the cap.
+
+## Coverage under the course checker
+
+The same `grading/` folder was checked twice with the provided zero-API `check_submission.py`:
+
+| Reference (`--analysis`) | Expected IDs | Valid completed | Quarantined | Missing | Status / flags | Coverage score |
+|---|---|---|---|---|---|---|
+| **Full source CSV** `spotify_reviews_18months.csv` ([output](evals/checker/full_file/checker_output.txt), [report](evals/checker/full_file/self-check.json)) | 660,622 | 172,999 | 1 | 487,622 | `review_required`: `missing_records`, `run_manifest_mismatch` (×2: `analysis_count`, `analysis_sha256` describe the subset), `unfinished_classification` (1) | **0.4095** |
+| Declared subset `outputs/scope/subset_173000.csv` ([output](evals/checker/checker_output.txt), [report](evals/checker/self-check.json)) | 173,000 | 172,999 | 1 | 0 | `review_required`: `unfinished_classification` (the 1 quarantine) only | not meaningful for the brief: the denominator is the subset |
+
+The brief scores working coverage against the full file:
+`0.2 × ingestion_ok + 0.2 × (valid + quarantined) / 660,622 + 0.6 × valid / 660,609`
+= 0.2 × 1 + 0.2 × 173,000 / 660,622 + 0.6 × 172,999 / 660,609 = 0.2 + 0.0524 + 0.1571 = **0.4095 ≈ 0.41**.
+This is the expected cost of classifying a declared 173k subset instead of the full corpus. The 13 empty-text
+quarantines and the 487,609 sampled-out rows are recorded in
+[`outputs/full_corpus_accounting.jsonl.gz`](outputs/full_corpus_accounting.jsonl.gz), but `grading/records.jsonl.gz`
+holds only subset IDs, so the full-file check counts them as missing.
 
 ## Recommendation (stage-6 memo, code-checked)
 

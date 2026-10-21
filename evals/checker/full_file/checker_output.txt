@@ -1,0 +1,5 @@
+$ python vendor/check_submission.py reference --full data/spotify_reviews_18months.csv --analysis data/spotify_reviews_18months.csv --out evals/checker/full_file/local-reference.json
+Saved deterministic audit output to evals\checker\full_file\local-reference.json
+
+$ python vendor/check_submission.py check --reference evals/checker/full_file/local-reference.json --submission grading --out evals/checker/full_file/self-check.json
+Saved deterministic audit output to evals\checker\full_file\self-check.json
