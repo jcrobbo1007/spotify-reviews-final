@@ -1,10 +1,14 @@
 # STATUS — read first
 
-_Last updated: 2026-10-21 09:10 PDT. Recovery pass done and pushed; nothing is running._
+_Last updated: 2026-10-21. Golden workbook rebuilt with your draft carried over; nothing is running._
 
 ## Waiting on Jack (blocking items first)
-1. **Label the golden 50** in `evals/golden_50_labels.csv` (UTF-8 with BOM so Excel shows emoji; blank columns; definitions in `evals/golden_50_DEFINITIONS.md`).
-   Then run `python -m pipeline eval golden` and add the results to the README "Results summary" (currently says pending).
+1. **Finish the golden 50 in `evals/golden_50_labels.xlsx`.** Your first draft (made in `data/golden_50_to_label.csv`,
+   now saved as `evals/golden/jack_draft_freeform_labels.csv`) used free-form labels outside the contract sets (1/50 topics,
+   0/50 severities valid). The workbook carries over your evidence_quote, entities and needs_review (green cells) and
+   shows your draft topic/intent/severity/sentiment in locked grey columns. Pick topic, intent, severity and sentiment
+   from the dropdowns (yellow), fix the one quote flagged "NOT an exact substring", save, then
+   `python -m pipeline eval golden`. `data/golden_50_to_label.csv` was restored byte-exact to the course original.
 2. ~~Repo history has two 83 MB files~~ **Done (your request):** history rewritten with `git filter-repo` and
    force-pushed. Removed from every commit: the plain `outputs/records.jsonl` / `outputs/enriched.jsonl`, their
    `outputs/*.jsonl.gz` copies, the plain `outputs/calls_raw_responses.jsonl`, and the superseded pre-recovery blob of
